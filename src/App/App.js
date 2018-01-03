@@ -8,11 +8,11 @@ import {
 } from 'react-router-dom';
 
 //Import all the pages
-import Home from '../Home/Home';
-import About from '../About/About';
-import HistoryPage from '../History/HistoryPage';
-import Anthem from '../Anthem/Anthem';
-import Contact from '../Contact/Contact';
+import Home from '../pages/Home/Home';
+import About from '../pages/About/About';
+import HistoryPage from '../pages/History/HistoryPage';
+import Anthem from '../pages/Anthem/Anthem';
+import Contact from '../pages/Contact/Contact';
 
 class App extends Component {
   render() {
