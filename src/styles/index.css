@@ -1,6 +1,25 @@
+@import url('./pages/Home.css');
+
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
   height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+#outer-container {
+  height: 100%;
+}
+
+main {
+  height: 100%;
+  overflow: scroll;
 }
