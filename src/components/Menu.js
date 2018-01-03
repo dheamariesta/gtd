@@ -16,6 +16,8 @@ export class TopMenu extends React.Component {
 				<Menu 
 					pageWrapId={ "page-wrap" } 
 					outerContainerId={ "outer-container" }
+					customBurgerIcon={ <img src="/images/burger.svg" /> }
+					customCrossIcon={ <img src="/images/cross.svg" /> }
 				>
 					<a href="/" className="menu-item">Home</a>
 					<a href="/about" className="menu-item">About</a>
