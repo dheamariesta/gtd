@@ -1,5 +1,5 @@
 // // Components
-import { slide as Menu } from 'react-burger-menu';
+import { push as Menu } from 'react-burger-menu';
 import React from "react";
 
 // Styles
