@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { TopMenu } from "../../components/Menu";
+import { PageWrap } from '../../index';
 
 // Styles
 import '../../styles/pages/Home.css';
@@ -14,7 +15,9 @@ export default class Home extends Component {
 
 	render() {
 		return (
-			<TopMenu />
+			<PageWrap>
+				<h1>Home</h1>
+			</PageWrap>
 		);
 	}
 }

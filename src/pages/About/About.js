@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import { Button } from "react-bootstrap";
 import { TopMenu } from '../../components/Menu';
+import { PageWrap } from '../../index';
 
 export default class About extends React.Component {
 	constructor(props) {
@@ -9,11 +10,9 @@ export default class About extends React.Component {
 
 	render() {
 		return (
-			<div>
-				<TopMenu />
-				About Us
-				<Button bsStyle="primary">PRIMARY</Button>
-      		</div>
+			<PageWrap>
+				<h1>About Us</h1>
+			</PageWrap>
 		);
 	}
 }
