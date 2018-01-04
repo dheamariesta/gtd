@@ -15,8 +15,12 @@ export default class Home extends Component {
 	render() {
 		return (
 			<PageWrap>
-				<div className="container">
-					<div className="row full-height-screen home-bg"></div>
+				<div className="container-fluid">
+					<div className="row full-height-screen home-bg">
+						<div className="col-md-12">
+							<img src="/images/coming_soon.jpg" alt="coming-soon" className="img-responsive"/>
+						</div>
+					</div>
 				</div>
 			</PageWrap>
 		);
