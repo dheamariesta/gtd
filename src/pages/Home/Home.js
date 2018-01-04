@@ -1,7 +1,6 @@
 // Components
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { TopMenu } from "../../components/Menu";
 import { PageWrap } from '../../index';
 
 // Styles

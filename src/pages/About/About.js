@@ -1,6 +1,5 @@
 import React, { PropTypes } from 'react';
 import { Button } from "react-bootstrap";
-import { TopMenu } from '../../components/Menu';
 import { PageWrap } from '../../index';
 
 export default class About extends React.Component {
