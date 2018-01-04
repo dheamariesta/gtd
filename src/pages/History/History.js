@@ -9,7 +9,13 @@ export default class History extends React.Component {
 	render() {
 		return (
 		<PageWrap>
-			<h1>History</h1>
+			<div className="container-fluid">
+				<div className="row default-bg full-height-screen">
+					<div className="col-md-12">
+						
+					</div>
+				</div>
+			</div>
 		</PageWrap>
 		);
 	}
