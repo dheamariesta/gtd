@@ -6,6 +6,7 @@ import { Mission } from './Mission';
 
 // Styles
 import '../../styles/pages/about.css'
+import { Vision } from './Vision';
 
 
 export default class About extends React.Component {
@@ -16,6 +17,7 @@ export default class About extends React.Component {
 	render() {
 		return (
 			<PageWrap>
+				<Vision />
 				<Mission />
 			</PageWrap>
 		);
