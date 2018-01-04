@@ -14,6 +14,7 @@ import History from '../pages/History/History';
 import Anthem from '../pages/Anthem/Anthem';
 import Contact from '../pages/Contact/Contact';
 import { Sidebar } from '../components/Sidebar';
+import { Topbar } from '../components/Topbar';
 
 class App extends Component {
 	constructor(props){
@@ -46,6 +47,7 @@ class App extends Component {
 		if (isDesktop) {
 			return (
 				<div className="App">
+					<Topbar />
 					<Router>
 						<Switch>
 							<Route exact path="/" component={Home} />
