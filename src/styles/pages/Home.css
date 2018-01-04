@@ -1,6 +1,5 @@
 .home-bg {
 	background-image: url('../../../public/images/coming_soon.jpg');
-	min-height: 100vh;
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;

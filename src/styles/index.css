@@ -1,4 +1,4 @@
-@import url('./pages/Home.css');
+@import url('./helpers/typography.css');
 
 html {
   height: 100%;
@@ -23,3 +23,20 @@ main {
   height: 100%;
   overflow: auto;
 }
+
+
+.full-height-screen {
+  min-height: 100vh;
+}
+
+.full-height-screen .full-height {
+  height: 100%;
+}
+
+.flex-center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+
