@@ -12,7 +12,7 @@ export default class History extends React.Component {
 			<div className="container-fluid">
 				<div className="row default-bg full-height-screen">
 					<div className="col-md-12">
-						
+						<h1>History</h1>
 					</div>
 				</div>
 			</div>
