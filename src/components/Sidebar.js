@@ -11,6 +11,10 @@ import { MenuWrap } from '../index';
 
 export class Sidebar extends React.Component {
     render(){
+		const logoSyles = {
+			'maxWidth': '80%',
+			'marginLeft': 'auto'
+		}
         return (
 			<MenuWrap>
 				<Menu 
@@ -25,6 +29,7 @@ export class Sidebar extends React.Component {
 					<a href="/anthem" className="menu-item">Anthem</a>
 					<a href="/contact" className="menu-item">Contact Us</a>
 				</Menu>
+				<img src="images/logo.png" alt="logo" className="img-responsive" style={logoSyles}/>
 
 			</MenuWrap>
         )
