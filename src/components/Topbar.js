@@ -1,7 +1,6 @@
 // Components
 import React from "react";
 import { Navbar, Nav, NavItem } from "react-bootstrap";
-import { Route, Router } from "react-router-dom";
 
 // Styles
 import '../styles/components/topbar.css';
@@ -29,10 +28,10 @@ export class Topbar extends React.Component {
                     </Navbar.Brand>
                 </Navbar.Header>
                 <Nav pullRight>
-                    <NavItem eventKey={1} href="/about" className={ isActive['about']? 'active': '' }>About</NavItem>
-                    <NavItem eventKey={2} href="/history" className={ isActive['history']? 'active': '' }>History</NavItem>
-                    <NavItem eventKey={3} href="/anthem" className={ isActive['anthem']? 'active': '' }>Anthem</NavItem>
-                    <NavItem eventKey={4} href="/contact" className={ isActive['contact']? 'active': '' }>Contact Us</NavItem>
+                    <NavItem eventKey={1} href="/about" active={ isActive['about'] }>About</NavItem>
+                    <NavItem eventKey={2} href="/history" active={ isActive['history'] }>History</NavItem>
+                    <NavItem eventKey={3} href="/anthem" active={ isActive['anthem'] }>Anthem</NavItem>
+                    <NavItem eventKey={4} href="/contact" active={ isActive['contact'] }>Contact Us</NavItem>
                 </Nav>
             </Navbar>
         );
