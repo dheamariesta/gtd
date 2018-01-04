@@ -9,15 +9,15 @@ import { MenuWrap } from '../index';
 
 // Others
 
-export class TopMenu extends React.Component {
+export class Sidebar extends React.Component {
     render(){
         return (
 			<MenuWrap>
 				<Menu 
 					pageWrapId={ "page-wrap" } 
 					outerContainerId={ "outer-container" }
-					customBurgerIcon={ <img src="/images/burger.svg" /> }
-					customCrossIcon={ <img src="/images/cross.svg" /> }
+					customBurgerIcon={ <img src="/images/burger.svg" alt="burger" /> }
+					customCrossIcon={ <img src="/images/cross.svg" alt="cross" /> }
 				>
 					<a href="/" className="menu-item">Home</a>
 					<a href="/about" className="menu-item">About</a>
