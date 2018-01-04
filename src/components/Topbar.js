@@ -3,6 +3,7 @@ import React from "react";
 import { Navbar, Nav, NavItem } from "react-bootstrap";
 
 // Styles
+import '../styles/components/topbar.css';
 
 
 export class Topbar extends React.Component {
@@ -11,7 +12,9 @@ export class Topbar extends React.Component {
             <Navbar>
                 <Navbar.Header>
                     <Navbar.Brand>
-                        <a href="/">Get Together Day</a>
+                        <a href="/">
+                            <img src="/images/logo.png" alt="logo" className="img-responsive"/>
+                        </a>
                     </Navbar.Brand>
                 </Navbar.Header>
                 <Nav pullRight>
