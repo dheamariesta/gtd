@@ -15,7 +15,9 @@ export default class Home extends Component {
 	render() {
 		return (
 			<PageWrap>
-				<h1>Home</h1>
+				<div className="container-fluid">
+					<div className="row home-bg"></div>
+				</div>
 			</PageWrap>
 		);
 	}
