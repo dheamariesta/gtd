@@ -17,8 +17,10 @@ export default class About extends React.Component {
 	render() {
 		return (
 			<PageWrap>
-				<Vision />
-				<Mission />
+				<div className="container-fluid">
+					<Vision />
+					<Mission />
+				</div>
 			</PageWrap>
 		);
 	}
