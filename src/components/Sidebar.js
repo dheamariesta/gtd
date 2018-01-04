@@ -3,7 +3,7 @@ import { push as Menu } from 'react-burger-menu';
 import React from "react";
 
 // Styles
-import '../styles/components/menu.css';
+import '../styles/components/sidebar.css';
 import { MenuWrap } from '../index';
 
 
