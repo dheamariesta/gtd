@@ -20,19 +20,58 @@ class App extends Component {
 	constructor(props){
 		super(props);
 		this.state = {
-			isDesktop : false
+			isDesktop : false,
+			activeMenu: '/'
 		};
 		this.updateView = this.updateView.bind(this);
+		this.getActiveMenu = this.getActiveMenu.bind(this);
 	};
 
 	componentDidMount(){
 		this.updateView();
 		window.addEventListener('resize', this.updateView);
+		this.getActiveMenu();
 	}
 
 	componentWillUnmount(){
 		this.updateView();
 		window.removeEventListener('resize', this.updateView);
+	}
+
+	getActiveMenu(){
+		switch (location.pathname) {
+			case '/':
+				this.setState({
+					activeMenu: '/'
+				});
+				break;
+			case '/about':
+				this.setState({
+					activeMenu: '/about'
+				});
+				break;
+			
+			case '/history':
+				this.setState({
+					activeMenu: '/history'
+				});
+				break;
+			
+			case '/anthem':
+				this.setState({
+					activeMenu: '/anthem'
+				});
+				break;
+
+			case '/contact':
+				this.setState({
+					activeMenu: '/contact'
+				});
+				break;
+		
+			default:
+				break;
+		}
 	}
 
 	updateView(){
@@ -47,7 +86,7 @@ class App extends Component {
 		if (isDesktop) {
 			return (
 				<div className="App">
-					<Topbar />
+					<Topbar activeMenu={this.state.activeMenu} />
 					<Router>
 						<Switch>
 							<Route exact path="/" component={Home} />
