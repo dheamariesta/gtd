@@ -5,3 +5,19 @@
 .navbar {
     margin-bottom: 0;
 }
+.navbar-default {
+    background-color: white;
+}
+
+.navbar-nav>li {
+    padding-left: 25px;
+}
+.navbar-default .navbar-nav>li>a {
+    color: black;
+    font-weight: 900;
+    font-size: larger;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    color: #BE1E2D;
+}
