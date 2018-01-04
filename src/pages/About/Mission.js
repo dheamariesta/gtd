@@ -3,7 +3,7 @@ import React from "react";
 export class Mission extends React.Component {
     render(){
         return(
-            <div className="row mission-bg full-height-screen flex-center">
+            <div className="row default-bg full-height-screen flex-center">
                 <div className="col-md-12">
                     <div className="about-box">
                         <h1 className="title">Misi Kami</h1>
