@@ -16,7 +16,7 @@ export default class Home extends Component {
 		return (
 			<PageWrap>
 				<div className="container-fluid">
-					<div className="row full-height-screen home-bg">
+					<div className="row full-height-screen flex-center">
 						<div className="col-md-12">
 							<img src="/images/coming_soon.jpg" alt="coming-soon" className="img-responsive"/>
 						</div>
