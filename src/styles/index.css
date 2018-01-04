@@ -23,6 +23,13 @@ main {
   height: 100%;
 }
 
+@media(max-width: 767px) {
+  main {
+    /* padding-top: 25%; */
+    font-size: 80%;
+  }
+}
+
 
 .full-height-screen {
   min-height: 100vh;
