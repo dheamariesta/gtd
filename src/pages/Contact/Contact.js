@@ -9,7 +9,13 @@ export default class Contact extends React.Component {
 	render() {
 		return (
 			<PageWrap>
-				<h1>Contact Us</h1>
+				<div className="container-fluid">
+					<div className="row default-bg full-height-screen">
+						<div className="col-md-12">
+							<h1>Contact Us</h1>
+						</div>
+					</div>
+				</div>
 			</PageWrap>
 		);
 	}
