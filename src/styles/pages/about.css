@@ -11,12 +11,12 @@
 
 .vision {
     font-style: italic;
-    font-size: 24px;
+    font-size: x-large;
 }
 
 @media (max-width: 767px) {
     .vision {
-        font-size: 16px;
+        font-size: small;
     }
 }
 
