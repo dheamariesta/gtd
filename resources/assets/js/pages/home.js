@@ -6,15 +6,10 @@ import { DefaultPanel } from "../components/Panel";
 export class Home extends React.Component {
     render() {
         return (
-            <Row>
-                <Col mdOffset="2" md="8">
-                    <DefaultPanel
-                        title="HAIII"
-                        body="This is a body"
-                        withBody
-                    />
+            <Row className="full-height flex-center">
+                <Col md={12}>
+                    <img src="/images/coming_soon.jpg" alt="coming-soon" className="img-responsive" />
                 </Col>
-            
             </Row>
         )
     }

@@ -1,0 +1,58 @@
+.title {
+    display: inline-block;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: solid 3px white;
+    font-weight: 900;
+    z-index: 10;
+}
+
+/* Vision */
+
+.vision {
+    font-style: italic;
+    font-size: x-large;
+}
+
+@media (max-width: 767px) {
+    .vision {
+        font-size: small;
+    }
+}
+
+.vision-container {
+    position: relative;
+    text-align: center;
+    padding: 0;
+}
+
+.vision-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* Mission */
+.mission-container {
+    color: white;
+}
+
+.logo {
+    max-width: 50%;
+    display: inline-block;
+}
+@media(max-width:767px){
+    .logo {
+        max-width: 30%;
+        padding-bottom: 10%;
+    }
+    .mission-container {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+    .mission-item {
+        padding-bottom: 20px;
+    }
+}

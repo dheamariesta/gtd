@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Roboto';
+}
+
+#root {
+  height: 100%;
+}
+
+#outer-container {
+  height: 100%;
+}
+
+main {
+  height: 100%;
+}
+
+@media(max-width: 767px) {
+  main {
+    font-size: small;
+  }
+}
+
+
+.full-height {
+  min-height: 100vh;
+}
+
+
+.flex-center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.default-bg {
+  background-color: $gtd-red;
+}
+
+.app {
+  text-align: center;
+  height: 100%;
+}
+
+a {
+  color: black;
+}
+
+a:hover{
+  text-decoration: none;
+  color: rgb(128, 128, 128);
+}
+
+
+

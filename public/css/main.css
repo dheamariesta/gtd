@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@import url(https://fonts.googleapis.com/css?family=Roboto);@charset "UTF-8";
 
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
@@ -8350,18 +8350,37 @@ button.close {
   }
 }
 
-html,
+html {
+  height: 100%;
+}
+
 body {
-  background-color: #fff;
-  color: #636b6f;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 100;
-  height: 100vh;
   margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Roboto';
+}
+
+#root {
+  height: 100%;
+}
+
+#outer-container {
+  height: 100%;
+}
+
+main {
+  height: 100%;
+}
+
+@media (max-width: 767px) {
+  main {
+    font-size: small;
+  }
 }
 
 .full-height {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .flex-center {
@@ -8376,35 +8395,147 @@ body {
           justify-content: center;
 }
 
-.position-ref {
-  position: relative;
+.default-bg {
+  background-color: #be1e2d;
 }
 
-.top-right {
-  position: absolute;
-  right: 10px;
-  top: 18px;
-}
-
-.content {
+.app {
   text-align: center;
+  height: 100%;
+}
+
+a {
+  color: black;
+}
+
+a:hover {
+  text-decoration: none;
+  color: gray;
 }
 
 .title {
-  font-size: 84px;
+  display: inline-block;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: solid 3px white;
+  font-weight: 900;
+  z-index: 10;
 }
 
-.links > a {
-  color: #636b6f;
-  padding: 0 25px;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: .1rem;
-  text-decoration: none;
-  text-transform: uppercase;
+/* Vision */
+
+.vision {
+  font-style: italic;
+  font-size: x-large;
 }
 
-.m-b-md {
-  margin-bottom: 30px;
+@media (max-width: 767px) {
+  .vision {
+    font-size: small;
+  }
+}
+
+.vision-container {
+  position: relative;
+  text-align: center;
+  padding: 0;
+}
+
+.vision-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+/* Mission */
+
+.mission-container {
+  color: white;
+}
+
+.logo {
+  max-width: 50%;
+  display: inline-block;
+}
+
+@media (max-width: 767px) {
+  .logo {
+    max-width: 30%;
+    padding-bottom: 10%;
+  }
+
+  .mission-container {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+
+  .mission-item {
+    padding-bottom: 20px;
+  }
+}
+
+.anthem-title {
+  /* margin-bottom: 25px; */
+}
+
+.anthem-content {
+  font-size: large;
+}
+
+label {
+  color: white;
+}
+
+.form-container {
+  margin-top: 15%;
+}
+
+.navbar-brand {
+  width: 200px;
+  padding: 0;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.navbar-default > .container {
+  background-color: white;
+}
+
+.navbar-nav > li {
+  padding-left: 25px;
+}
+
+.navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-nav > li.active > a {
+  color: black;
+  font-weight: 900;
+  font-size: larger;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li.active > a,
+.navbar-default .navbar-nav > li.active > a:hover {
+  color: #be1e2d;
+  background-color: white !important;
+  background-image: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: white;
+}
+
+p {
+  color: white;
 }
 

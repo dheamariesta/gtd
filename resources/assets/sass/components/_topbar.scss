@@ -1,0 +1,30 @@
+.navbar-brand {
+    width: 200px;
+    padding: 0;
+}
+.navbar {
+    margin-bottom: 0;
+}
+.navbar-default > .container {
+    background-color: white;
+}
+
+.navbar-nav>li {
+    padding-left: 25px;
+}
+.navbar-default .navbar-nav>li>a,
+.navbar-default .navbar-nav>li.active>a {
+    color: black;
+    font-weight: 900;
+    font-size: larger;
+}
+
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li.active>a,
+.navbar-default .navbar-nav>li.active>a:hover
+{
+    color: $gtd-red;
+    background-color: white !important;
+    background-image: none;
+    box-shadow: none;
+}

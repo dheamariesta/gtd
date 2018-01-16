@@ -1,13 +1,25 @@
+// Variables
+@import "helpers/variables";
+
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 
-// Variables
-@import "helpers/variables";
 
 // Bootstrap
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 
 
+// base
+@import "/base/normalize";
+
 // pages
 @import "/pages/home";
+@import "/pages/about";
+@import "/pages/history";
+@import "/pages/anthem";
+@import "/pages/contact";
+
+// components
+@import "components/topbar";
+@import "components/typography";
 
