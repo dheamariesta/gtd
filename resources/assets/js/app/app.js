@@ -8,6 +8,7 @@ import {
 
 import { Grid } from "react-bootstrap";
 import { Topbar } from "../components/Topbar";
+import { Sidebar } from "../components/Sidebar";
 
 // pages
 import { Home } from "../pages/Home";
@@ -71,7 +72,24 @@ class App extends React.Component {
                 </div>
             );
             
-        }
+		}
+
+		else {
+			return (
+				<div id="outer-container" className="App">
+					<Sidebar />
+					<Router>
+						<Switch>
+							<Route exact path="/" component={Home} />
+							<Route path="/about" component={About} />
+							<Route path="/history" component={History} />
+							<Route path="/anthem" component={Anthem} />
+							<Route path="/contact" component={Contact} />
+						</Switch>
+					</Router>
+				</div>
+			);
+		}
     }
 }
 
