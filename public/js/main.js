@@ -5674,7 +5674,7 @@ var createPath = function createPath(location) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__Accordion__ = __webpack_require__(387);
 /* unused harmony reexport Accordion */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Alert__ = __webpack_require__(426);
-/* unused harmony reexport Alert */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_1__Alert__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Badge__ = __webpack_require__(429);
 /* unused harmony reexport Badge */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Breadcrumb__ = __webpack_require__(430);
@@ -5682,7 +5682,7 @@ var createPath = function createPath(location) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__BreadcrumbItem__ = __webpack_require__(203);
 /* unused harmony reexport BreadcrumbItem */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Button__ = __webpack_require__(69);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_5__Button__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_5__Button__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ButtonGroup__ = __webpack_require__(132);
 /* unused harmony reexport ButtonGroup */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ButtonToolbar__ = __webpack_require__(431);
@@ -5698,9 +5698,9 @@ var createPath = function createPath(location) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__CloseButton__ = __webpack_require__(131);
 /* unused harmony reexport CloseButton */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__ControlLabel__ = __webpack_require__(444);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_13__ControlLabel__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_13__ControlLabel__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__Col__ = __webpack_require__(445);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_14__Col__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_14__Col__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__Collapse__ = __webpack_require__(135);
 /* unused harmony reexport Collapse */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__Dropdown__ = __webpack_require__(83);
@@ -5712,13 +5712,13 @@ var createPath = function createPath(location) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__Form__ = __webpack_require__(458);
 /* unused harmony reexport Form */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__FormControl__ = __webpack_require__(459);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_20__FormControl__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_20__FormControl__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__FormGroup__ = __webpack_require__(462);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_21__FormGroup__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_21__FormGroup__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__Glyphicon__ = __webpack_require__(134);
 /* unused harmony reexport Glyphicon */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__Grid__ = __webpack_require__(212);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_23__Grid__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_23__Grid__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__HelpBlock__ = __webpack_require__(463);
 /* unused harmony reexport HelpBlock */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__Image__ = __webpack_require__(464);
@@ -5748,15 +5748,15 @@ var createPath = function createPath(location) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__ModalTitle__ = __webpack_require__(221);
 /* unused harmony reexport ModalTitle */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__Nav__ = __webpack_require__(222);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_38__Nav__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_38__Nav__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__Navbar__ = __webpack_require__(494);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return __WEBPACK_IMPORTED_MODULE_39__Navbar__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return __WEBPACK_IMPORTED_MODULE_39__Navbar__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__NavbarBrand__ = __webpack_require__(223);
 /* unused harmony reexport NavbarBrand */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__NavDropdown__ = __webpack_require__(498);
 /* unused harmony reexport NavDropdown */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__NavItem__ = __webpack_require__(224);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_42__NavItem__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return __WEBPACK_IMPORTED_MODULE_42__NavItem__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__Overlay__ = __webpack_require__(225);
 /* unused harmony reexport Overlay */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__OverlayTrigger__ = __webpack_require__(505);
@@ -5770,7 +5770,7 @@ var createPath = function createPath(location) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_48__Pagination__ = __webpack_require__(510);
 /* unused harmony reexport Pagination */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_49__Panel__ = __webpack_require__(512);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return __WEBPACK_IMPORTED_MODULE_49__Panel__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return __WEBPACK_IMPORTED_MODULE_49__Panel__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_50__PanelGroup__ = __webpack_require__(199);
 /* unused harmony reexport PanelGroup */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_51__Popover__ = __webpack_require__(518);
@@ -5782,7 +5782,7 @@ var createPath = function createPath(location) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_54__ResponsiveEmbed__ = __webpack_require__(521);
 /* unused harmony reexport ResponsiveEmbed */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_55__Row__ = __webpack_require__(522);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return __WEBPACK_IMPORTED_MODULE_55__Row__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return __WEBPACK_IMPORTED_MODULE_55__Row__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_56__SafeAnchor__ = __webpack_require__(26);
 /* unused harmony reexport SafeAnchor */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_57__SplitButton__ = __webpack_require__(523);
@@ -63412,7 +63412,7 @@ var App = function (_React$Component) {
 					{ className: "app" },
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__components_Topbar__["a" /* Topbar */], { activeMenu: this.state.activeMenu }),
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-						__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["f" /* Grid */],
+						__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["g" /* Grid */],
 						{ fluid: true },
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 							__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["a" /* BrowserRouter */],
@@ -67801,7 +67801,7 @@ var Alert = function (_React$Component) {
 Alert.propTypes = propTypes;
 Alert.defaultProps = defaultProps;
 
-/* unused harmony default export */ var _unused_webpack_default_export = (Object(__WEBPACK_IMPORTED_MODULE_9__utils_bootstrapUtils__["c" /* bsStyles */])(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_values___default()(__WEBPACK_IMPORTED_MODULE_10__utils_StyleConfig__["d" /* State */]), __WEBPACK_IMPORTED_MODULE_10__utils_StyleConfig__["d" /* State */].INFO, Object(__WEBPACK_IMPORTED_MODULE_9__utils_bootstrapUtils__["a" /* bsClass */])('alert', Alert)));
+/* harmony default export */ __webpack_exports__["a"] = (Object(__WEBPACK_IMPORTED_MODULE_9__utils_bootstrapUtils__["c" /* bsStyles */])(__WEBPACK_IMPORTED_MODULE_0_babel_runtime_core_js_object_values___default()(__WEBPACK_IMPORTED_MODULE_10__utils_StyleConfig__["d" /* State */]), __WEBPACK_IMPORTED_MODULE_10__utils_StyleConfig__["d" /* State */].INFO, Object(__WEBPACK_IMPORTED_MODULE_9__utils_bootstrapUtils__["a" /* bsClass */])('alert', Alert)));
 
 /***/ }),
 /* 427 */
@@ -78030,13 +78030,13 @@ var Topbar = function (_React$Component) {
                 'contact': this.props.activeMenu === '/contact'
             };
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["i" /* Navbar */],
+                __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["j" /* Navbar */],
                 null,
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["i" /* Navbar */].Header,
+                    __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["j" /* Navbar */].Header,
                     null,
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["i" /* Navbar */].Brand,
+                        __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["j" /* Navbar */].Brand,
                         null,
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             "a",
@@ -78046,25 +78046,25 @@ var Topbar = function (_React$Component) {
                     )
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["g" /* Nav */],
+                    __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["h" /* Nav */],
                     { pullRight: true },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["h" /* NavItem */],
+                        __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["i" /* NavItem */],
                         { eventKey: 1, href: "/about", active: isActive['about'] },
                         "About"
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["h" /* NavItem */],
+                        __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["i" /* NavItem */],
                         { eventKey: 2, href: "/history", active: isActive['history'] },
                         "History"
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["h" /* NavItem */],
+                        __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["i" /* NavItem */],
                         { eventKey: 3, href: "/anthem", active: isActive['anthem'] },
                         "Anthem"
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["h" /* NavItem */],
+                        __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["i" /* NavItem */],
                         { eventKey: 4, href: "/contact", active: isActive['contact'] },
                         "Contact Us"
                     )
@@ -87733,10 +87733,10 @@ var Home = function (_React$Component) {
         key: "render",
         value: function render() {
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["k" /* Row */],
+                __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["l" /* Row */],
                 { className: "full-height flex-center" },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["b" /* Col */],
+                    __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["c" /* Col */],
                     { md: 12 },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "/images/coming_soon.jpg", alt: "coming-soon", className: "img-responsive" })
                 )
@@ -87785,7 +87785,7 @@ var DefaultPanel = function (_Component) {
             var bodyContainer = '';
             if (this.props.withBody && this.props.body !== '') {
                 bodyContainer = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["j" /* Panel */].Body,
+                    __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["k" /* Panel */].Body,
                     null,
                     this.props.body
                 );
@@ -87794,13 +87794,13 @@ var DefaultPanel = function (_Component) {
             }
 
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["j" /* Panel */],
+                __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["k" /* Panel */],
                 null,
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["j" /* Panel */].Heading,
+                    __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["k" /* Panel */].Heading,
                     null,
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["j" /* Panel */].Title,
+                        __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["k" /* Panel */].Title,
                         { componentClass: 'h1' },
                         this.props.title
                     )
@@ -88207,6 +88207,7 @@ Anthem.propTypes = {};
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Form__ = __webpack_require__(559);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_axios__ = __webpack_require__(142);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_axios__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_Alert__ = __webpack_require__(571);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -88221,18 +88222,127 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
+
 var Contact = function (_React$Component) {
 	_inherits(Contact, _React$Component);
 
 	function Contact(props) {
 		_classCallCheck(this, Contact);
 
-		return _possibleConstructorReturn(this, (Contact.__proto__ || Object.getPrototypeOf(Contact)).call(this, props));
+		var _this = _possibleConstructorReturn(this, (Contact.__proto__ || Object.getPrototypeOf(Contact)).call(this, props));
+
+		_this.state = {
+			errors: {},
+			showAlert: {
+				error: false,
+				success: false
+			}
+		};
+
+		_this.updateError = _this.updateError.bind(_this);
+		_this.updateSuccess = _this.updateSuccess.bind(_this);
+		_this.dismissErrorAlert = _this.dismissErrorAlert.bind(_this);
+		_this.dismissSuccessAlert = _this.dismissSuccessAlert.bind(_this);
+		return _this;
 	}
 
 	_createClass(Contact, [{
+		key: 'updateError',
+		value: function updateError(errors) {
+			this.setState({
+				errors: errors,
+				showAlert: {
+					error: true
+				}
+			});
+		}
+	}, {
+		key: 'updateSuccess',
+		value: function updateSuccess() {
+			this.setState({
+				showAlert: {
+					success: true
+				}
+			});
+		}
+	}, {
+		key: 'dismissErrorAlert',
+		value: function dismissErrorAlert() {
+			this.setState({
+				showAlert: {
+					error: false
+				}
+			});
+		}
+	}, {
+		key: 'dismissSuccessAlert',
+		value: function dismissSuccessAlert() {
+			this.setState({
+				showAlert: {
+					success: false
+				}
+			});
+		}
+	}, {
+		key: 'isEmpty',
+		value: function isEmpty(obj) {
+			for (var key in obj) {
+				if (obj.hasOwnProperty(key)) return false;
+			}
+			return true;
+		}
+	}, {
 		key: 'render',
 		value: function render() {
+			var AlertError = null;
+			var AlertSuccess = null;
+			var errors = this.state.errors;
+			var isError = !this.isEmpty(errors);
+
+			if (isError) {
+				var errorMessages = [];
+				for (var key in errors) {
+					if (errors.hasOwnProperty(key)) {
+						var value = errors[key];
+						for (var i = 0; i < value.length; i++) {
+							var message = value[i];
+							errorMessages.push(message);
+						}
+					}
+				}
+				var listStyle = {
+					'textAlign': 'left'
+				};
+				AlertError = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					__WEBPACK_IMPORTED_MODULE_4__components_Alert__["a" /* AlertDismissable */],
+					{ show: this.state.showAlert.error, onHide: this.dismissErrorAlert },
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						'ul',
+						{ style: listStyle },
+						errorMessages.map(function (message) {
+							return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+								'li',
+								null,
+								message
+							);
+						})
+					)
+				);
+			} else {
+				var paraStyle = {
+					'color': 'black'
+				};
+				AlertSuccess = __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					__WEBPACK_IMPORTED_MODULE_4__components_Alert__["a" /* AlertDismissable */],
+					{ bsStyle: 'success', show: this.state.showAlert.success, onHide: this.dismissSuccessAlert },
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						'p',
+						{ style: paraStyle },
+						'Thank you for contacting us! We will get back to you soon!'
+					)
+				);
+			}
+
 			return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 				__WEBPACK_IMPORTED_MODULE_1__index__["PageWrap"],
 				null,
@@ -88251,9 +88361,13 @@ var Contact = function (_React$Component) {
 							'div',
 							{ className: 'form-container' },
 							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__components_Form__["a" /* ContactForm */], {
-								actionHandler: '/send'
+								actionHandler: '/send',
+								onError: this.updateError,
+								onSuccess: this.updateSuccess
 							})
-						)
+						),
+						AlertError,
+						AlertSuccess
 					)
 				)
 			);
@@ -88297,14 +88411,14 @@ function FieldGroup(_ref) {
         props = _objectWithoutProperties(_ref, ["id", "label", "help"]);
 
     return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-        __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["e" /* FormGroup */],
+        __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["f" /* FormGroup */],
         { controlId: id },
         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-            __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["c" /* ControlLabel */],
+            __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["d" /* ControlLabel */],
             null,
             label
         ),
-        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["d" /* FormControl */], props)
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["e" /* FormControl */], props)
     );
 }
 
@@ -88319,8 +88433,7 @@ var ContactForm = function (_React$Component) {
         _this.state = {
             name: '',
             email: '',
-            message: '',
-            errors: []
+            message: ''
         };
 
         _this.handleSubmit = _this.handleSubmit.bind(_this);
@@ -88338,14 +88451,14 @@ var ContactForm = function (_React$Component) {
                 name: this.state.name,
                 email: this.state.email,
                 message: this.state.message
-            }).catch(function (error) {
+            }).then(function () {
+                this.props.onSuccess();
+            }.bind(this)).catch(function (error) {
                 if (error.response) {
                     // The request was made and the server responded with a status code
                     // that falls out of the range of 2xx
                     var errors = error.response.data.errors;
-                    this.setState({
-                        errors: errors
-                    });
+                    this.props.onError(errors);
                     console.log(error.response.data);
                     console.log(error.response.headers);
                 } else {
@@ -88396,7 +88509,7 @@ var ContactForm = function (_React$Component) {
                 }),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(FieldGroup, {
                     id: "formControlsEmail",
-                    type: "email",
+                    type: "text",
                     label: "Email address",
                     placeholder: "Enter email",
                     name: "email",
@@ -88404,14 +88517,14 @@ var ContactForm = function (_React$Component) {
 
                 }),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["e" /* FormGroup */],
+                    __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["f" /* FormGroup */],
                     { controlId: "formControlsTextarea" },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["c" /* ControlLabel */],
+                        __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["d" /* ControlLabel */],
                         null,
                         "Message"
                     ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["d" /* FormControl */], {
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["e" /* FormControl */], {
                         componentClass: "textarea",
                         placeholder: "Message",
                         name: "message",
@@ -88422,9 +88535,13 @@ var ContactForm = function (_React$Component) {
                     })
                 ),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["a" /* Button */],
-                    { type: "submit", bsStyle: "primary", bsSize: "large" },
-                    "Submit"
+                    __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["f" /* FormGroup */],
+                    null,
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["b" /* Button */],
+                        { type: "submit", bsStyle: "primary", bsSize: "large", block: true },
+                        "Submit"
+                    )
                 )
             );
         }
@@ -88438,6 +88555,81 @@ var ContactForm = function (_React$Component) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 561 */,
+/* 562 */,
+/* 563 */,
+/* 564 */,
+/* 565 */,
+/* 566 */,
+/* 567 */,
+/* 568 */,
+/* 569 */,
+/* 570 */,
+/* 571 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AlertDismissable; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__ = __webpack_require__(63);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+
+
+
+var AlertDismissable = function (_React$Component) {
+	_inherits(AlertDismissable, _React$Component);
+
+	function AlertDismissable() {
+		var _ref;
+
+		_classCallCheck(this, AlertDismissable);
+
+		for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+			args[_key] = arguments[_key];
+		}
+
+		var _this = _possibleConstructorReturn(this, (_ref = AlertDismissable.__proto__ || Object.getPrototypeOf(AlertDismissable)).call.apply(_ref, [this].concat(args)));
+
+		_this.handleAlertDismiss = _this.handleAlertDismiss.bind(_this);
+
+		return _this;
+	}
+
+	_createClass(AlertDismissable, [{
+		key: "handleAlertDismiss",
+		value: function handleAlertDismiss() {
+			this.props.onHide();
+		}
+	}, {
+		key: "render",
+		value: function render() {
+			if (this.props.show) {
+				return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["a" /* Alert */],
+					{ bsStyle: this.props.bsStyle, onDismiss: this.handleAlertDismiss },
+					this.props.children
+				);
+			}
+			return null;
+		}
+	}]);
+
+	return AlertDismissable;
+}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
+
+AlertDismissable.defaultProps = {
+	bsStyle: 'danger'
+};
 
 /***/ })
 /******/ ]);

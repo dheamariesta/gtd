@@ -1,7 +1,6 @@
 import React from "react"
 import {FormGroup, FormControl, ControlLabel, Button } from "react-bootstrap";
 import axios from "axios";
-import { AlertDismissable } from "./Alert";
 
 function FieldGroup({ id, label, help, ...props }) {
 	return (
@@ -33,7 +32,10 @@ export class ContactForm extends React.Component {
 			name : this.state.name,
 			email : this.state.email,
 			message : this.state.message
-		})
+        })
+            .then(function(){
+                this.props.onSuccess();
+            }.bind(this))
             .catch(function (error) {
                 if (error.response) {
                     // The request was made and the server responded with a status code
@@ -86,7 +88,7 @@ export class ContactForm extends React.Component {
                 />
                 <FieldGroup
                     id="formControlsEmail"
-                    type="email"
+                    type="text"
                     label="Email address"
                     placeholder="Enter email"
                     name="email"
@@ -105,9 +107,12 @@ export class ContactForm extends React.Component {
     
                     />
                 </FormGroup>
-                <Button type ="submit" bsStyle="primary" bsSize="large" block>
-                    Submit
-                </Button>
+
+                <FormGroup>
+                    <Button type ="submit" bsStyle="primary" bsSize="large" block>
+                        Submit
+                    </Button>
+                </FormGroup>
             </form>
         )
     }
