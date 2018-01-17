@@ -1,6 +1,7 @@
 import React from "react"
 import {FormGroup, FormControl, ControlLabel, Button } from "react-bootstrap";
 import axios from "axios";
+import { AlertDismissable } from "./Alert";
 
 function FieldGroup({ id, label, help, ...props }) {
 	return (
@@ -18,7 +19,6 @@ export class ContactForm extends React.Component {
             name : '',
             email: '',
             message: '',
-            errors: []
         }
 
         this.handleSubmit= this.handleSubmit.bind(this);
@@ -39,9 +39,7 @@ export class ContactForm extends React.Component {
                     // The request was made and the server responded with a status code
                     // that falls out of the range of 2xx
                     const errors = error.response.data.errors;
-                    this.setState({
-                        errors : errors
-                    });
+                    this.props.onError(errors);
                     console.log(error.response.data);
                     console.log(error.response.headers);
                 }
@@ -107,7 +105,7 @@ export class ContactForm extends React.Component {
     
                     />
                 </FormGroup>
-                <Button type ="submit" bsStyle="primary" bsSize="large">
+                <Button type ="submit" bsStyle="primary" bsSize="large" block>
                     Submit
                 </Button>
             </form>

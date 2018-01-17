@@ -8,7 +8,17 @@ import axios from "axios";
 export class Contact extends React.Component {
 	constructor(props) {
 		super(props);
-		
+		this.state = {
+			errors: []
+		}
+
+		this.updateError = this.updateError.bind(this);
+	}
+
+	updateError(errors){
+		this.setState({
+			errors : errors
+		});
 	}
 
 	render() {
@@ -20,6 +30,7 @@ export class Contact extends React.Component {
                         <div className="form-container">
                             <ContactForm 
 								actionHandler="/send" 
+								onError={this.updateError}
 							/>
                         </div>
                     </div>
