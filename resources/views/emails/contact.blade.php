@@ -7,6 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Welcome to Laracasts, {{ $contact->name }} !!! </h1>
+    <p>Dear {{ config('app.name') }} Administrator, </p>
+    <p>{{ $contact->name }} < {{ $contact->email }} > wrote:  </p>
+    <p> {{ $contact->message }} </p>
 </body>
 </html>
