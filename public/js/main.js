@@ -88236,6 +88236,10 @@ var Contact = function (_React$Component) {
 			showAlert: {
 				error: false,
 				success: false
+			},
+			message: {
+				error: '',
+				success: ''
 			}
 		};
 
@@ -88249,19 +88253,35 @@ var Contact = function (_React$Component) {
 	_createClass(Contact, [{
 		key: 'updateError',
 		value: function updateError(errors) {
+			var errorMessages = [];
+			for (var key in errors) {
+				if (errors.hasOwnProperty(key)) {
+					var value = errors[key];
+					for (var i = 0; i < value.length; i++) {
+						var message = value[i];
+						errorMessages.push(message);
+					}
+				}
+			}
 			this.setState({
 				errors: errors,
 				showAlert: {
 					error: true
+				},
+				message: {
+					error: errorMessages
 				}
 			});
 		}
 	}, {
 		key: 'updateSuccess',
-		value: function updateSuccess() {
+		value: function updateSuccess(success_msg) {
 			this.setState({
 				showAlert: {
 					success: true
+				},
+				message: {
+					success: success_msg
 				}
 			});
 		}
@@ -88300,16 +88320,6 @@ var Contact = function (_React$Component) {
 			var isError = !this.isEmpty(errors);
 
 			if (isError) {
-				var errorMessages = [];
-				for (var key in errors) {
-					if (errors.hasOwnProperty(key)) {
-						var value = errors[key];
-						for (var i = 0; i < value.length; i++) {
-							var message = value[i];
-							errorMessages.push(message);
-						}
-					}
-				}
 				var listStyle = {
 					'textAlign': 'left'
 				};
@@ -88319,7 +88329,7 @@ var Contact = function (_React$Component) {
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 						'ul',
 						{ style: listStyle },
-						errorMessages.map(function (message) {
+						this.state.message.error.map(function (message) {
 							return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 								'li',
 								null,
@@ -88338,7 +88348,7 @@ var Contact = function (_React$Component) {
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 						'p',
 						{ style: paraStyle },
-						'Thank you for contacting us! We will get back to you soon!'
+						this.state.message.success
 					)
 				);
 			}
@@ -88451,8 +88461,9 @@ var ContactForm = function (_React$Component) {
                 name: this.state.name,
                 email: this.state.email,
                 message: this.state.message
-            }).then(function () {
-                this.props.onSuccess();
+            }).then(function (response) {
+                var success_msg = response.data;
+                this.props.onSuccess(success_msg);
             }.bind(this)).catch(function (error) {
                 if (error.response) {
                     // The request was made and the server responded with a status code

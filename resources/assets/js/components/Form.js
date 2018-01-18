@@ -33,9 +33,11 @@ export class ContactForm extends React.Component {
 			email : this.state.email,
 			message : this.state.message
         })
-            .then(function(){
-                this.props.onSuccess();
+            .then(function(response){
+                const success_msg = response.data;
+                this.props.onSuccess(success_msg);
             }.bind(this))
+            
             .catch(function (error) {
                 if (error.response) {
                     // The request was made and the server responded with a status code

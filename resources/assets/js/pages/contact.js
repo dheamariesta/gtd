@@ -14,6 +14,10 @@ export class Contact extends React.Component {
 			showAlert: {
 				error : false,
 				success: false
+			},
+			message: {
+				error: '',
+				success: ''
 			}
 		}
 
@@ -24,18 +28,34 @@ export class Contact extends React.Component {
 	}
 
 	updateError(errors){
+		var errorMessages = [];
+		for (const key in errors) {
+			if (errors.hasOwnProperty(key)) {
+				const value = errors[key];
+				for (let i = 0; i < value.length; i++) {
+					const message = value[i];
+					errorMessages.push(message)
+				}
+			}
+		}
 		this.setState({
 			errors : errors,
 			showAlert : {
 				error : true
+			},
+			message : {
+				error : errorMessages
 			}
 		});
 	}
 
-	updateSuccess(){
+	updateSuccess(success_msg){
 		this.setState({
 			showAlert : {
 				success : true
+			},
+			message : {
+				success: success_msg
 			}
 		});
 	}
@@ -71,23 +91,13 @@ export class Contact extends React.Component {
 		const isError = !this.isEmpty(errors);
 
 		if (isError) {
-			var errorMessages = [];
-			for (const key in errors) {
-				if (errors.hasOwnProperty(key)) {
-					const value = errors[key];
-					for (let i = 0; i < value.length; i++) {
-						const message = value[i];
-						errorMessages.push(message)
-					}
-				}
-			}
 			const listStyle = {
 				'textAlign' : 'left'
 			}
 			AlertError = (
 				<AlertDismissable show={this.state.showAlert.error} onHide={this.dismissErrorAlert}>
 					<ul style={listStyle}>
-						{errorMessages.map(function(message){
+						{this.state.message.error.map(function(message){
 							return (
 								<li>{message}</li>
 							)
@@ -105,7 +115,7 @@ export class Contact extends React.Component {
 			AlertSuccess = (
 				<AlertDismissable bsStyle="success" show={this.state.showAlert.success} onHide={this.dismissSuccessAlert}>
 
-					<p style={paraStyle}>Thank you for contacting us! We will get back to you soon!</p>
+					<p style={paraStyle}>{this.state.message.success}</p>
 				
 				</AlertDismissable>
 			);
