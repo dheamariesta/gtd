@@ -76,17 +76,19 @@ class App extends React.Component {
 
 		else {
 			return (
-				<div id="outer-container" className="App">
+				<div id="outer-container" className="app">
 					<Sidebar />
-					<Router>
-						<Switch>
-							<Route exact path="/" component={Home} />
-							<Route path="/about" component={About} />
-							<Route path="/history" component={History} />
-							<Route path="/anthem" component={Anthem} />
-							<Route path="/contact" component={Contact} />
-						</Switch>
-					</Router>
+					<Grid fluid>
+						<Router>
+							<Switch>
+								<Route exact path="/" component={Home} />
+								<Route path="/about" component={About} />
+								<Route path="/history" component={History} />
+								<Route path="/anthem" component={Anthem} />
+								<Route path="/contact" component={Contact} />
+							</Switch>
+						</Router>
+					</Grid>
 				</div>
 			);
 		}
