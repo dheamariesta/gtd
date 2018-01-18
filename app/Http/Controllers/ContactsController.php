@@ -25,8 +25,7 @@ class ContactsController extends Controller
         ]);
 
         Mail::to('abc@example.com')->send(new VisitorContact($contact));
-        
-        return back();
 
+        return response('Thank you for emailing us! We will get back to you soon!', 200);
     }
 }
