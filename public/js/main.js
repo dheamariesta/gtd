@@ -63367,8 +63367,7 @@ var App = function (_React$Component) {
 		var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
 
 		_this.state = {
-			isDesktop: true,
-			activeMenu: '/'
+			isDesktop: true
 		};
 		_this.updateView = _this.updateView.bind(_this);
 		_this.getActiveMenu = _this.getActiveMenu.bind(_this);
@@ -63389,13 +63388,6 @@ var App = function (_React$Component) {
 			window.removeEventListener('resize', this.updateView);
 		}
 	}, {
-		key: "getActiveMenu",
-		value: function getActiveMenu() {
-			this.setState({
-				activeMenu: location.pathname
-			});
-		}
-	}, {
 		key: "updateView",
 		value: function updateView() {
 			this.setState({
@@ -63410,23 +63402,15 @@ var App = function (_React$Component) {
 				return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 					"div",
 					{ className: "app" },
-					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__components_Topbar__["a" /* Topbar */], { activeMenu: this.state.activeMenu }),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__components_Topbar__["a" /* Topbar */], null),
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 						__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["g" /* Grid */],
 						{ fluid: true },
-						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-							__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["a" /* BrowserRouter */],
-							null,
-							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-								__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["c" /* Switch */],
-								null,
-								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Route */], { exact: true, path: "/", component: __WEBPACK_IMPORTED_MODULE_5__pages_Home__["a" /* Home */] }),
-								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Route */], { path: "/about", component: __WEBPACK_IMPORTED_MODULE_6__pages_about__["a" /* About */] }),
-								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Route */], { path: "/history", component: __WEBPACK_IMPORTED_MODULE_7__pages_History__["a" /* History */] }),
-								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Route */], { path: "/anthem", component: __WEBPACK_IMPORTED_MODULE_8__pages_Anthem__["a" /* Anthem */] }),
-								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Route */], { path: "/contact", component: __WEBPACK_IMPORTED_MODULE_9__pages_Contact__["a" /* Contact */] })
-							)
-						)
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__pages_Home__["a" /* Home */], null),
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__pages_about__["a" /* About */], null),
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__pages_History__["a" /* History */], null),
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__pages_Anthem__["a" /* Anthem */], null),
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__pages_Contact__["a" /* Contact */], null)
 					)
 				);
 			} else {
@@ -63437,19 +63421,11 @@ var App = function (_React$Component) {
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 						__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["g" /* Grid */],
 						{ fluid: true },
-						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-							__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["a" /* BrowserRouter */],
-							null,
-							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-								__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["c" /* Switch */],
-								null,
-								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Route */], { exact: true, path: "/", component: __WEBPACK_IMPORTED_MODULE_5__pages_Home__["a" /* Home */] }),
-								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Route */], { path: "/about", component: __WEBPACK_IMPORTED_MODULE_6__pages_about__["a" /* About */] }),
-								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Route */], { path: "/history", component: __WEBPACK_IMPORTED_MODULE_7__pages_History__["a" /* History */] }),
-								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Route */], { path: "/anthem", component: __WEBPACK_IMPORTED_MODULE_8__pages_Anthem__["a" /* Anthem */] }),
-								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Route */], { path: "/contact", component: __WEBPACK_IMPORTED_MODULE_9__pages_Contact__["a" /* Contact */] })
-							)
-						)
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__pages_Home__["a" /* Home */], null),
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__pages_about__["a" /* About */], null),
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__pages_History__["a" /* History */], null),
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__pages_Anthem__["a" /* Anthem */], null),
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__pages_Contact__["a" /* Contact */], null)
 					)
 				);
 			}
@@ -63467,7 +63443,7 @@ var App = function (_React$Component) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__ = __webpack_require__(361);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__["a"]; });
+/* unused harmony reexport BrowserRouter */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__HashRouter__ = __webpack_require__(363);
 /* unused harmony reexport HashRouter */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Link__ = __webpack_require__(184);
@@ -63481,13 +63457,13 @@ var App = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Redirect__ = __webpack_require__(373);
 /* unused harmony reexport Redirect */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Route__ = __webpack_require__(185);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_7__Route__["a"]; });
+/* unused harmony reexport Route */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Router__ = __webpack_require__(112);
 /* unused harmony reexport Router */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__StaticRouter__ = __webpack_require__(379);
 /* unused harmony reexport StaticRouter */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Switch__ = __webpack_require__(381);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_10__Switch__["a"]; });
+/* unused harmony reexport Switch */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__matchPath__ = __webpack_require__(383);
 /* unused harmony reexport matchPath */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__withRouter__ = __webpack_require__(384);
@@ -63584,7 +63560,7 @@ BrowserRouter.propTypes = {
 };
 
 
-/* harmony default export */ __webpack_exports__["a"] = (BrowserRouter);
+/* unused harmony default export */ var _unused_webpack_default_export = (BrowserRouter);
 
 /***/ }),
 /* 362 */
@@ -66315,7 +66291,7 @@ StaticRouter.childContextTypes = {
 // Written in this round about way for babel-transform-imports
 
 
-/* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Switch__["a" /* default */]);
+/* unused harmony default export */ var _unused_webpack_default_export = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Switch__["a" /* default */]);
 
 /***/ }),
 /* 382 */
@@ -78027,15 +78003,9 @@ var Topbar = function (_React$Component) {
     _createClass(Topbar, [{
         key: "render",
         value: function render() {
-            var isActive = {
-                'about': this.props.activeMenu === '/about',
-                'history': this.props.activeMenu === '/history',
-                'anthem': this.props.activeMenu === '/anthem',
-                'contact': this.props.activeMenu === '/contact'
-            };
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["j" /* Navbar */],
-                { fixedTop: true },
+                { fixedTop: true, id: "navbar-scrollspy" },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["j" /* Navbar */].Header,
                     null,
@@ -78054,22 +78024,22 @@ var Topbar = function (_React$Component) {
                     { pullRight: true },
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["i" /* NavItem */],
-                        { eventKey: 1, href: "/about", active: isActive['about'] },
+                        { eventKey: 1, href: "#about" },
                         "About"
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["i" /* NavItem */],
-                        { eventKey: 2, href: "/history", active: isActive['history'] },
+                        { eventKey: 2, href: "#history" },
                         "History"
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["i" /* NavItem */],
-                        { eventKey: 3, href: "/anthem", active: isActive['anthem'] },
+                        { eventKey: 3, href: "#anthem" },
                         "Anthem"
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["i" /* NavItem */],
-                        { eventKey: 4, href: "/contact", active: isActive['contact'] },
+                        { eventKey: 4, href: "#contact" },
                         "Contact Us"
                     )
                 )
@@ -87865,10 +87835,14 @@ var About = function (_React$Component) {
 		key: 'render',
 		value: function render() {
 			return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-				__WEBPACK_IMPORTED_MODULE_2__index__["PageWrap"],
-				null,
-				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__partials_Vision__["a" /* Vision */], null),
-				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__partials_Mission__["a" /* Mission */], null)
+				'section',
+				{ id: 'about' },
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					__WEBPACK_IMPORTED_MODULE_2__index__["PageWrap"],
+					null,
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__partials_Vision__["a" /* Vision */], null),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__partials_Mission__["a" /* Mission */], null)
+				)
 			);
 		}
 	}]);
@@ -88069,18 +88043,22 @@ var History = function (_React$Component) {
 		key: 'render',
 		value: function render() {
 			return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-				__WEBPACK_IMPORTED_MODULE_1__index__["PageWrap"],
-				null,
+				'section',
+				{ id: 'history' },
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-					'div',
-					{ className: 'row default-bg full-height' },
+					__WEBPACK_IMPORTED_MODULE_1__index__["PageWrap"],
+					null,
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 						'div',
-						{ className: 'col-md-12' },
+						{ className: 'row default-bg full-height' },
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-							'h1',
-							null,
-							'History'
+							'div',
+							{ className: 'col-md-12' },
+							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+								'h1',
+								null,
+								'History'
+							)
 						)
 					)
 				)
@@ -88115,88 +88093,92 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 var Anthem = function (_React$Component) {
-    _inherits(Anthem, _React$Component);
+	_inherits(Anthem, _React$Component);
 
-    function Anthem(props) {
-        _classCallCheck(this, Anthem);
+	function Anthem(props) {
+		_classCallCheck(this, Anthem);
 
-        return _possibleConstructorReturn(this, (Anthem.__proto__ || Object.getPrototypeOf(Anthem)).call(this, props));
-    }
+		return _possibleConstructorReturn(this, (Anthem.__proto__ || Object.getPrototypeOf(Anthem)).call(this, props));
+	}
 
-    _createClass(Anthem, [{
-        key: 'render',
-        value: function render() {
-            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                __WEBPACK_IMPORTED_MODULE_1__index__["PageWrap"],
-                null,
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    'div',
-                    { className: 'row default-bg full-height flex-center' },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        'div',
-                        { className: 'col-md-12' },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'h1',
-                            null,
-                            'Get Together Day\'s Anthem'
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            'div',
-                            { className: 'anthem-content' },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'h3',
-                                null,
-                                'Verse'
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'p',
-                                null,
-                                'From different places, different times ',
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
-                                'With a common goal in our minds ',
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
-                                'We want to enjoy this moment while it lasts ',
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
-                                'Have you ever stopped and wonder why ',
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
-                                'That now we can share a common sky ',
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
-                                'So many of us with different childhoods ',
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
-                                'Different dreams, different lives ',
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null)
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'h3',
-                                null,
-                                'Chorus'
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                'p',
-                                null,
-                                'I know now what the answer is ',
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
-                                'I\'m sure I\'m gonna miss ',
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
-                                'This special day when we get together ',
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
-                                'As clouds drift and seasons flee ',
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
-                                'We will porbably not meet ',
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
-                                'And different lives we\'ll lives ',
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
-                                'No once we\'ll forget this great day we have ',
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null)
-                            )
-                        )
-                    )
-                )
-            );
-        }
-    }]);
+	_createClass(Anthem, [{
+		key: 'render',
+		value: function render() {
+			return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+				'section',
+				{ id: 'anthem' },
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					__WEBPACK_IMPORTED_MODULE_1__index__["PageWrap"],
+					null,
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						'div',
+						{ className: 'row default-bg full-height flex-center' },
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							'div',
+							{ className: 'col-md-12' },
+							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+								'h1',
+								null,
+								'Get Together Day\'s Anthem'
+							),
+							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+								'div',
+								{ className: 'anthem-content' },
+								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+									'h3',
+									null,
+									'Verse'
+								),
+								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+									'p',
+									null,
+									'From different places, different times ',
+									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+									'With a common goal in our minds ',
+									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+									'We want to enjoy this moment while it lasts ',
+									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+									'Have you ever stopped and wonder why ',
+									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+									'That now we can share a common sky ',
+									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+									'So many of us with different childhoods ',
+									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+									'Different dreams, different lives ',
+									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null)
+								),
+								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+									'h3',
+									null,
+									'Chorus'
+								),
+								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+									'p',
+									null,
+									'I know now what the answer is ',
+									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+									'I\'m sure I\'m gonna miss ',
+									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+									'This special day when we get together ',
+									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+									'As clouds drift and seasons flee ',
+									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+									'We will porbably not meet ',
+									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+									'And different lives we\'ll lives ',
+									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+									'No once we\'ll forget this great day we have ',
+									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null)
+								)
+							)
+						)
+					)
+				)
+			);
+		}
+	}]);
 
-    return Anthem;
+	return Anthem;
 }(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
 
 Anthem.propTypes = {};
@@ -88364,30 +88346,34 @@ var Contact = function (_React$Component) {
 			}
 
 			return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-				__WEBPACK_IMPORTED_MODULE_2__index__["PageWrap"],
-				null,
+				'section',
+				{ id: 'contact' },
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-					__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["l" /* Row */],
-					{ className: 'default-bg full-height' },
+					__WEBPACK_IMPORTED_MODULE_2__index__["PageWrap"],
+					null,
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-						__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["c" /* Col */],
-						{ mdOffset: 2, md: 8, xs: 12 },
+						__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["l" /* Row */],
+						{ className: 'default-bg full-height' },
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-							'h1',
-							null,
-							'Contact Us'
-						),
-						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-							'div',
-							{ className: 'form-container' },
-							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__components_Form__["a" /* ContactForm */], {
-								actionHandler: '/send',
-								onError: this.updateError,
-								onSuccess: this.updateSuccess
-							})
-						),
-						AlertError,
-						AlertSuccess
+							__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["c" /* Col */],
+							{ mdOffset: 2, md: 8, xs: 12 },
+							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+								'h1',
+								null,
+								'Contact Us'
+							),
+							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+								'div',
+								{ className: 'form-container' },
+								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__components_Form__["a" /* ContactForm */], {
+									actionHandler: '/send',
+									onError: this.updateError,
+									onSuccess: this.updateSuccess
+								})
+							),
+							AlertError,
+							AlertSuccess
+						)
 					)
 				)
 			);

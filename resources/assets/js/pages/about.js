@@ -13,10 +13,12 @@ export class About extends React.Component {
 
 	render() {
 		return (
-			<PageWrap>
-				<Vision />
-				<Mission />
-			</PageWrap>
+			<section id="about">
+				<PageWrap>
+					<Vision />
+					<Mission />
+				</PageWrap>
+			</section>
 		);
 	}
 }

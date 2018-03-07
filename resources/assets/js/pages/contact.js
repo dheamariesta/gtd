@@ -126,22 +126,24 @@ export class Contact extends React.Component {
 		}
 
 		return (
-			<PageWrap>
-				<Row className="default-bg full-height">
-					<Col mdOffset={2} md={8} xs={12}>
-						<h1>Contact Us</h1>
-						<div className="form-container">
-							<ContactForm 
-								actionHandler="/send" 
-								onError={this.updateError}
-								onSuccess={this.updateSuccess}
-							/>
-						</div>
-						{AlertError}
-						{AlertSuccess}
-					</Col>
-				</Row>
-			</PageWrap>
+			<section id="contact">
+				<PageWrap>
+					<Row className="default-bg full-height">
+						<Col mdOffset={2} md={8} xs={12}>
+							<h1>Contact Us</h1>
+							<div className="form-container">
+								<ContactForm 
+									actionHandler="/send" 
+									onError={this.updateError}
+									onSuccess={this.updateSuccess}
+								/>
+							</div>
+							{AlertError}
+							{AlertSuccess}
+						</Col>
+					</Row>
+				</PageWrap>
+			</section>
 		);
 
 	}

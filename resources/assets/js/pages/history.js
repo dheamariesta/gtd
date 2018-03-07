@@ -8,13 +8,15 @@ export class History extends React.Component {
 
 	render() {
 		return (
-		<PageWrap>
-            <div className="row default-bg full-height">
-                <div className="col-md-12">
-                    <h1>History</h1>
-                </div>
-            </div>
-		</PageWrap>
+		<section id="history">
+			<PageWrap>
+				<div className="row default-bg full-height">
+					<div className="col-md-12">
+						<h1>History</h1>
+					</div>
+				</div>
+			</PageWrap>
+		</section>
 		);
 	}
 }
