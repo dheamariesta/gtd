@@ -16,7 +16,7 @@ export class Topbar extends React.Component {
             'contact' : this.props.activeMenu === '/contact',
         }
         return (
-            <Navbar>
+            <Navbar fixedTop>
                 <Navbar.Header>
                     <Navbar.Brand>
                         <a href="/">

@@ -78035,7 +78035,7 @@ var Topbar = function (_React$Component) {
             };
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["j" /* Navbar */],
-                null,
+                { fixedTop: true },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["j" /* Navbar */].Header,
                     null,
