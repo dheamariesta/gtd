@@ -25,13 +25,11 @@ class App extends React.Component {
 			isDesktop : true,
 		};
 		this.updateView = this.updateView.bind(this);
-		this.getActiveMenu = this.getActiveMenu.bind(this);
 	};
 
 	componentDidMount(){
 		this.updateView();
 		window.addEventListener('resize', this.updateView);
-		this.getActiveMenu();
 	}
 
 	componentWillUnmount(){

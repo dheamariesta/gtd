@@ -8489,10 +8489,6 @@ label {
   color: white;
 }
 
-.form-container {
-  margin-top: 15%;
-}
-
 .navbar-brand {
   width: 200px;
   padding: 0;
@@ -8594,5 +8590,13 @@ h6 {
 
 p {
   color: white;
+}
+
+.section-title {
+  padding-top: 50px;
+}
+
+.thumbnail .caption h3 {
+  color: #be1e2d;
 }
 
