@@ -10,12 +10,12 @@ import { Grid } from "react-bootstrap";
 import { Topbar } from "../components/Topbar";
 import { Sidebar } from "../components/Sidebar";
 
-// pages
-import { Home } from "../pages/Home";
-import { About } from "../pages/about";
-import { History } from "../pages/History";
-import { Anthem } from "../pages/Anthem";
-import { Contact } from "../pages/Contact";
+// sections
+import { Home } from "../sections/Home";
+import { About } from "../sections/about";
+import { History } from "../sections/History";
+import { Anthem } from "../sections/Anthem";
+import { Contact } from "../sections/Contact";
 
 
 class App extends React.Component {
