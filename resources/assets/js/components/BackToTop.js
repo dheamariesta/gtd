@@ -32,7 +32,7 @@ export class BackToTop extends React.Component {
 
 	render(){
 		return (
-			<a href="#" className="back-to-top" onClick={this.handleClick}>
+			<a className="back-to-top" onClick={this.handleClick}>
 				<span className="glyphicon glyphicon-chevron-up"></span>
 			</a>
 		);
