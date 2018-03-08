@@ -63380,36 +63380,11 @@ var App = function (_React$Component) {
 			});
 		}
 	}, {
-		key: "animate",
-		value: function animate() {
-			__WEBPACK_IMPORTED_MODULE_2_jquery___default()('a[href*="#"]')
-			// Remove links that don't actually link to anything
-			.not('[href="#"]').not('[href="#0"]').click(function (event) {
-				// On-page links
-				if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-					// Figure out element to scroll to
-					var target = __WEBPACK_IMPORTED_MODULE_2_jquery___default()(this.hash);
-					target = target.length ? target : __WEBPACK_IMPORTED_MODULE_2_jquery___default()('[name=' + this.hash.slice(1) + ']');
-					// Does a scroll target exist?
-					if (target.length) {
-						// Only prevent default if animation is actually gonna happen
-						// event.preventDefault();
-						__WEBPACK_IMPORTED_MODULE_2_jquery___default()('html, body').animate({
-							scrollTop: target.offset().top
-						}, {
-							duration: 1500
-						});
-					}
-				}
-			});
-		}
-	}, {
 		key: "componentDidMount",
 		value: function componentDidMount() {
 			this.updateView();
 			window.addEventListener('resize', this.updateView);
 			this.scrollSpy();
-			this.animate();
 		}
 	}, {
 		key: "componentWillUnmount",
@@ -78023,6 +77998,8 @@ var Well = function (_React$Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery__ = __webpack_require__(91);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_jquery__);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -78035,63 +78012,95 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 
+
 var Topbar = function (_React$Component) {
-    _inherits(Topbar, _React$Component);
+	_inherits(Topbar, _React$Component);
 
-    function Topbar(props) {
-        _classCallCheck(this, Topbar);
+	function Topbar(props) {
+		_classCallCheck(this, Topbar);
 
-        return _possibleConstructorReturn(this, (Topbar.__proto__ || Object.getPrototypeOf(Topbar)).call(this, props));
-    }
+		return _possibleConstructorReturn(this, (Topbar.__proto__ || Object.getPrototypeOf(Topbar)).call(this, props));
+	}
 
-    _createClass(Topbar, [{
-        key: "render",
-        value: function render() {
-            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["j" /* Navbar */],
-                { fixedTop: true, id: "navbar-scrollspy" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["j" /* Navbar */].Header,
-                    null,
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["j" /* Navbar */].Brand,
-                        null,
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            "a",
-                            { href: "/" },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "/images/logo.png", alt: "logo", className: "img-responsive" })
-                        )
-                    )
-                ),
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["h" /* Nav */],
-                    { pullRight: true },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["i" /* NavItem */],
-                        { eventKey: 1, href: "#about" },
-                        "About"
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["i" /* NavItem */],
-                        { eventKey: 2, href: "#history" },
-                        "History"
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["i" /* NavItem */],
-                        { eventKey: 3, href: "#anthem" },
-                        "Anthem"
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["i" /* NavItem */],
-                        { eventKey: 4, href: "#contact" },
-                        "Contact Us"
-                    )
-                )
-            );
-        }
-    }]);
+	_createClass(Topbar, [{
+		key: "scrollToSection",
+		value: function scrollToSection() {
+			__WEBPACK_IMPORTED_MODULE_2_jquery___default()('a[href*="#"]')
+			// Remove links that don't actually link to anything
+			// .not('[href="#"]')
+			// .not('[href="#0"]')
+			.click(function (event) {
+				// On-page links
+				if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+					// Figure out element to scroll to
+					var target = __WEBPACK_IMPORTED_MODULE_2_jquery___default()(this.hash);
+					target = target.length ? target : __WEBPACK_IMPORTED_MODULE_2_jquery___default()('[name=' + this.hash.slice(1) + ']');
+					// Does a scroll target exist?
+					if (target.length) {
+						// Only prevent default if animation is actually gonna happen
+						// event.preventDefault();
+						__WEBPACK_IMPORTED_MODULE_2_jquery___default()('html, body').animate({
+							scrollTop: target.offset().top
+						}, {
+							duration: 1500
+						});
+					}
+				}
+			});
+		}
+	}, {
+		key: "componentDidMount",
+		value: function componentDidMount() {
+			this.scrollToSection();
+		}
+	}, {
+		key: "render",
+		value: function render() {
+			return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+				__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["j" /* Navbar */],
+				{ fixedTop: true, id: "navbar-scrollspy" },
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["j" /* Navbar */].Header,
+					null,
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["j" /* Navbar */].Brand,
+						null,
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							"a",
+							{ href: "/" },
+							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "/images/logo.png", alt: "logo", className: "img-responsive" })
+						)
+					)
+				),
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["h" /* Nav */],
+					{ pullRight: true },
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["i" /* NavItem */],
+						{ eventKey: 1, href: "#about" },
+						"About"
+					),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["i" /* NavItem */],
+						{ eventKey: 2, href: "#history" },
+						"History"
+					),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["i" /* NavItem */],
+						{ eventKey: 3, href: "#anthem" },
+						"Anthem"
+					),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["i" /* NavItem */],
+						{ eventKey: 4, href: "#contact" },
+						"Contact Us"
+					)
+				)
+			);
+		}
+	}]);
 
-    return Topbar;
+	return Topbar;
 }(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
 
 /***/ }),
@@ -88784,7 +88793,7 @@ var BackToTop = function (_React$Component) {
 		value: function render() {
 			return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 				"a",
-				{ href: "#", className: "back-to-top", onClick: this.handleClick },
+				{ className: "back-to-top", onClick: this.handleClick },
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span", { className: "glyphicon glyphicon-chevron-up" })
 			);
 		}
