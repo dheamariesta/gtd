@@ -78025,27 +78025,23 @@ var Topbar = function (_React$Component) {
 	_createClass(Topbar, [{
 		key: "scrollToSection",
 		value: function scrollToSection() {
-			__WEBPACK_IMPORTED_MODULE_2_jquery___default()('a[href*="#"]')
-			// Remove links that don't actually link to anything
-			// .not('[href="#"]')
-			// .not('[href="#0"]')
-			.click(function (event) {
-				// On-page links
-				if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-					// Figure out element to scroll to
-					var target = __WEBPACK_IMPORTED_MODULE_2_jquery___default()(this.hash);
-					target = target.length ? target : __WEBPACK_IMPORTED_MODULE_2_jquery___default()('[name=' + this.hash.slice(1) + ']');
-					// Does a scroll target exist?
-					if (target.length) {
-						// Only prevent default if animation is actually gonna happen
-						// event.preventDefault();
-						__WEBPACK_IMPORTED_MODULE_2_jquery___default()('html, body').animate({
-							scrollTop: target.offset().top
-						}, {
-							duration: 1500
-						});
-					}
-				}
+			__WEBPACK_IMPORTED_MODULE_2_jquery___default()("a").on('click', function (event) {
+				// Make sure this.hash has a value before overriding default behavior
+				if (this.hash !== "") {
+					// Prevent default anchor click behavior
+					event.preventDefault();
+
+					// Store hash
+					var hash = this.hash;
+
+					__WEBPACK_IMPORTED_MODULE_2_jquery___default()('html, body').animate({
+						scrollTop: __WEBPACK_IMPORTED_MODULE_2_jquery___default()(hash).offset().top
+					}, 1500, function () {
+
+						// Add hash (#) to URL when done scrolling (default click behavior)
+						window.location.hash = hash;
+					});
+				} // End if
 			});
 		}
 	}, {
