@@ -17,6 +17,7 @@ import { History } from "../sections/history";
 import { Anthem } from "../sections/anthem";
 import { Contact } from "../sections/contact";
 import { PageWrap } from "..";
+import { Footer } from "../sections/footer";
 
 
 class App extends React.Component {
@@ -57,6 +58,7 @@ class App extends React.Component {
 						<Anthem />
 						<Contact />
                     </Grid>
+					<Footer />
 					{/* <Router>
 						<Switch>
 							<Route exact path="/" component={Home} />
@@ -81,6 +83,7 @@ class App extends React.Component {
 							<History />
 							<Anthem />
 							<Contact />
+							<Footer />
 						</PageWrap>
 					</Grid>
 				</div>

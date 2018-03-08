@@ -1,0 +1,13 @@
+.copyright {
+	&.navbar-text {
+		float: none;
+		font-size: larger;
+		font-weight: 900;
+		color: black;
+	}	
+	a {
+		&:hover {
+			color: $gtd-red;
+		}
+	}
+}
