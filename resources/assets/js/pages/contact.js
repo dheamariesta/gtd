@@ -128,8 +128,8 @@ export class Contact extends React.Component {
 		return (
 			<section id="contact">
 				<PageWrap>
-					<Row className="default-bg full-height">
-						<Col mdOffset={2} md={8} xs={12}>
+					<Row className="default-bg full-height flex-center">
+						<Col md={8} xs={12}>
 							<h1 className="section-title">Contact Us</h1>
 							<div className="form-container">
 								<ContactForm 

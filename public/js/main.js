@@ -88050,7 +88050,7 @@ var History = function (_React$Component) {
 					null,
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 						__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["l" /* Row */],
-						{ className: 'default-bg full-height' },
+						{ className: 'default-bg full-height flex-center' },
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 							__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["c" /* Col */],
 							{ md: 12 },
@@ -88422,10 +88422,10 @@ var Contact = function (_React$Component) {
 					null,
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 						__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["l" /* Row */],
-						{ className: 'default-bg full-height' },
+						{ className: 'default-bg full-height flex-center' },
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 							__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["c" /* Col */],
-							{ mdOffset: 2, md: 8, xs: 12 },
+							{ md: 8, xs: 12 },
 							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 								'h1',
 								{ className: 'section-title' },
