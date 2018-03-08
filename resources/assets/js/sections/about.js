@@ -14,10 +14,8 @@ export class About extends React.Component {
 	render() {
 		return (
 			<section id="about">
-				<PageWrap>
-					<Vision />
-					<Mission />
-				</PageWrap>
+				<Vision />
+				<Mission />
 			</section>
 		);
 	}

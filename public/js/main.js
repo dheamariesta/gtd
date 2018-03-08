@@ -63335,6 +63335,7 @@ module.exports = ReactDOMInvalidARIAHook;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__sections_History__ = __webpack_require__(567);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__sections_Anthem__ = __webpack_require__(568);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__sections_Contact__ = __webpack_require__(569);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10____ = __webpack_require__(90);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -63352,6 +63353,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 // sections
+
 
 
 
@@ -63419,11 +63421,15 @@ var App = function (_React$Component) {
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 						__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["g" /* Grid */],
 						{ fluid: true },
-						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__sections_Home__["a" /* Home */], null),
-						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__sections_about__["a" /* About */], null),
-						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__sections_History__["a" /* History */], null),
-						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__sections_Anthem__["a" /* Anthem */], null),
-						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__sections_Contact__["a" /* Contact */], null)
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							__WEBPACK_IMPORTED_MODULE_10____["PageWrap"],
+							null,
+							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__sections_Home__["a" /* Home */], null),
+							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__sections_about__["a" /* About */], null),
+							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__sections_History__["a" /* History */], null),
+							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8__sections_Anthem__["a" /* Anthem */], null),
+							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_9__sections_Contact__["a" /* Contact */], null)
+						)
 					)
 				);
 			}
@@ -87851,12 +87857,8 @@ var About = function (_React$Component) {
 			return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 				'section',
 				{ id: 'about' },
-				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-					__WEBPACK_IMPORTED_MODULE_2__index__["PageWrap"],
-					null,
-					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__partials_Vision__["a" /* Vision */], null),
-					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__partials_Mission__["a" /* Mission */], null)
-				)
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__partials_Vision__["a" /* Vision */], null),
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__partials_Mission__["a" /* Mission */], null)
 			);
 		}
 	}]);
@@ -88062,85 +88064,81 @@ var History = function (_React$Component) {
 				'section',
 				{ id: 'history' },
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-					__WEBPACK_IMPORTED_MODULE_1__index__["PageWrap"],
-					null,
+					__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["l" /* Row */],
+					{ className: 'default-bg full-height flex-center' },
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-						__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["l" /* Row */],
-						{ className: 'default-bg full-height flex-center' },
+						__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["c" /* Col */],
+						{ md: 12 },
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-							__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["c" /* Col */],
-							{ md: 12 },
+							'h1',
+							{ className: 'section-title' },
+							'History'
+						),
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["l" /* Row */],
+							null,
 							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-								'h1',
-								{ className: 'section-title' },
-								'History'
+								__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["c" /* Col */],
+								{ mdOffset: 1, md: 2, xs: 12 },
+								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+									__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["m" /* Thumbnail */],
+									{ src: '/images/gtd_15.jpg', alt: 'gtd-15' },
+									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+										'h3',
+										null,
+										' GTD XV Exvoria '
+									)
+								)
 							),
 							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-								__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["l" /* Row */],
-								null,
+								__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["c" /* Col */],
+								{ md: 2, xs: 12 },
 								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-									__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["c" /* Col */],
-									{ mdOffset: 1, md: 2, xs: 12 },
+									__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["m" /* Thumbnail */],
+									{ src: '/images/gtd_16.jpg', alt: 'gtd-16' },
 									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-										__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["m" /* Thumbnail */],
-										{ src: '/images/gtd_15.jpg', alt: 'gtd-15' },
-										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-											'h3',
-											null,
-											' GTD XV Exvoria '
-										)
+										'h3',
+										null,
+										' GTD XVI Olympians '
 									)
-								),
+								)
+							),
+							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+								__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["c" /* Col */],
+								{ md: 2, xs: 12 },
 								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-									__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["c" /* Col */],
-									{ md: 2, xs: 12 },
+									__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["m" /* Thumbnail */],
+									{ src: '/images/gtd_17.jpg', alt: 'gtd-17' },
 									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-										__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["m" /* Thumbnail */],
-										{ src: '/images/gtd_16.jpg', alt: 'gtd-16' },
-										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-											'h3',
-											null,
-											' GTD XVI Olympians '
-										)
+										'h3',
+										null,
+										' GTD XVII Enigma '
 									)
-								),
+								)
+							),
+							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+								__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["c" /* Col */],
+								{ md: 2, xs: 12 },
 								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-									__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["c" /* Col */],
-									{ md: 2, xs: 12 },
+									__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["m" /* Thumbnail */],
+									{ src: '/images/gtd_18.jpg', alt: 'gtd-18' },
 									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-										__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["m" /* Thumbnail */],
-										{ src: '/images/gtd_17.jpg', alt: 'gtd-17' },
-										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-											'h3',
-											null,
-											' GTD XVII Enigma '
-										)
+										'h3',
+										null,
+										' GTD XVIII Aetheria'
 									)
-								),
+								)
+							),
+							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+								__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["c" /* Col */],
+								{ md: 2, xs: 12 },
 								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-									__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["c" /* Col */],
-									{ md: 2, xs: 12 },
+									__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["m" /* Thumbnail */],
+									{ src: '/images/gtd_19.jpg', alt: 'gtd-19' },
 									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-										__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["m" /* Thumbnail */],
-										{ src: '/images/gtd_18.jpg', alt: 'gtd-18' },
-										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-											'h3',
-											null,
-											' GTD XVIII Aetheria'
-										)
-									)
-								),
-								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-									__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["c" /* Col */],
-									{ md: 2, xs: 12 },
-									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-										__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["m" /* Thumbnail */],
-										{ src: '/images/gtd_19.jpg', alt: 'gtd-19' },
-										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-											'h3',
-											null,
-											' GTD XIX Exixtance'
-										)
+										'h3',
+										null,
+										' GTD XIX Exixtance'
 									)
 								)
 							)
@@ -88193,68 +88191,64 @@ var Anthem = function (_React$Component) {
 				'section',
 				{ id: 'anthem' },
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-					__WEBPACK_IMPORTED_MODULE_1__index__["PageWrap"],
-					null,
+					'div',
+					{ className: 'row default-bg full-height flex-center' },
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 						'div',
-						{ className: 'row default-bg full-height flex-center' },
+						{ className: 'col-md-12' },
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							'h1',
+							null,
+							'Get Together Day\'s Anthem'
+						),
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 							'div',
-							{ className: 'col-md-12' },
+							{ className: 'anthem-content' },
 							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-								'h1',
+								'h3',
 								null,
-								'Get Together Day\'s Anthem'
+								'Verse'
 							),
 							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-								'div',
-								{ className: 'anthem-content' },
-								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-									'h3',
-									null,
-									'Verse'
-								),
-								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-									'p',
-									null,
-									'From different places, different times ',
-									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
-									'With a common goal in our minds ',
-									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
-									'We want to enjoy this moment while it lasts ',
-									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
-									'Have you ever stopped and wonder why ',
-									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
-									'That now we can share a common sky ',
-									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
-									'So many of us with different childhoods ',
-									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
-									'Different dreams, different lives ',
-									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null)
-								),
-								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-									'h3',
-									null,
-									'Chorus'
-								),
-								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-									'p',
-									null,
-									'I know now what the answer is ',
-									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
-									'I\'m sure I\'m gonna miss ',
-									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
-									'This special day when we get together ',
-									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
-									'As clouds drift and seasons flee ',
-									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
-									'We will porbably not meet ',
-									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
-									'And different lives we\'ll lives ',
-									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
-									'No once we\'ll forget this great day we have ',
-									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null)
-								)
+								'p',
+								null,
+								'From different places, different times ',
+								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+								'With a common goal in our minds ',
+								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+								'We want to enjoy this moment while it lasts ',
+								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+								'Have you ever stopped and wonder why ',
+								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+								'That now we can share a common sky ',
+								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+								'So many of us with different childhoods ',
+								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+								'Different dreams, different lives ',
+								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null)
+							),
+							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+								'h3',
+								null,
+								'Chorus'
+							),
+							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+								'p',
+								null,
+								'I know now what the answer is ',
+								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+								'I\'m sure I\'m gonna miss ',
+								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+								'This special day when we get together ',
+								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+								'As clouds drift and seasons flee ',
+								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+								'We will porbably not meet ',
+								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+								'And different lives we\'ll lives ',
+								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null),
+								'No once we\'ll forget this great day we have ',
+								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('br', null)
 							)
 						)
 					)
@@ -88434,31 +88428,27 @@ var Contact = function (_React$Component) {
 				'section',
 				{ id: 'contact' },
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-					__WEBPACK_IMPORTED_MODULE_2__index__["PageWrap"],
-					null,
+					__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["l" /* Row */],
+					{ className: 'default-bg full-height flex-center' },
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-						__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["l" /* Row */],
-						{ className: 'default-bg full-height flex-center' },
+						__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["c" /* Col */],
+						{ md: 8, xs: 12 },
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-							__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["c" /* Col */],
-							{ md: 8, xs: 12 },
-							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-								'h1',
-								{ className: 'section-title' },
-								'Contact Us'
-							),
-							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-								'div',
-								{ className: 'form-container' },
-								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__components_Form__["a" /* ContactForm */], {
-									actionHandler: '/send',
-									onError: this.updateError,
-									onSuccess: this.updateSuccess
-								})
-							),
-							AlertError,
-							AlertSuccess
-						)
+							'h1',
+							{ className: 'section-title' },
+							'Contact Us'
+						),
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							'div',
+							{ className: 'form-container' },
+							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__components_Form__["a" /* ContactForm */], {
+								actionHandler: '/send',
+								onError: this.updateError,
+								onSuccess: this.updateSuccess
+							})
+						),
+						AlertError,
+						AlertSuccess
 					)
 				)
 			);

@@ -16,6 +16,7 @@ import { About } from "../sections/about";
 import { History } from "../sections/History";
 import { Anthem } from "../sections/Anthem";
 import { Contact } from "../sections/Contact";
+import { PageWrap } from "..";
 
 
 class App extends React.Component {
@@ -74,11 +75,13 @@ class App extends React.Component {
 				<div id="outer-container" className="app">
 					<Sidebar />
 					<Grid fluid>
-						<Home />
-						<About />
-						<History />
-						<Anthem />
-						<Contact />
+						<PageWrap>
+							<Home />
+							<About />
+							<History />
+							<Anthem />
+							<Contact />
+						</PageWrap>
 					</Grid>
 				</div>
 			);
