@@ -5,7 +5,7 @@
         }
     }
 
-    @if device == desktop {
+    @if $device == desktop {
         @media (min-width: 768px) {
             @content;
         }

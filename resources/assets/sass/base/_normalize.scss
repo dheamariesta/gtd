@@ -5,11 +5,13 @@ html {
 }
 
 body {
-  margin: 0;
-  padding-top: 50px;
-  position: relative;
-  height: 100%;
-  font-family: 'Roboto';
+	margin: 0;
+	position: relative;
+	height: 100%;
+	font-family: 'Roboto';
+	@include general-query(desktop){
+		padding-top: 50px;
+	}
 }
 
 #root {
