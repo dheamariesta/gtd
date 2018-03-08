@@ -6,10 +6,13 @@
 
 @section('script')
 <script>
+	// SCROLL SPY
 	$('body').scrollspy({
 		target: '#navbar-scrollspy',
 		offset: 100
 	});
+
+	// ANIMATION SCROLLING
 	// Select all links with hashes
 	$('a[href*="#"]')
 	// Remove links that don't actually link to anything
@@ -40,6 +43,25 @@
 			}
 		}
 	});
+	// FOR BACK TO TOP BUTTON
+	var offset = 900; // the scroll point where the button will appear
+	var duration = 500; // the animation of fade-in and fade-out
+	var animationDuration = 1500;
+	$(window).scroll(function() {
+		if ($(this).scrollTop() > offset) {
+			$('.back-to-top').fadeIn(duration);
+		} 
+		else {
+			$('.back-to-top').fadeOut(duration);
+		}
+	});
+
+	$('.back-to-top').click(function(event) {
+		event.preventDefault();
+		$('html, body').animate({scrollTop: 0}, animationDuration);
+		return false;
+	});
+
 </script>
 
 @endsection

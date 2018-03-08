@@ -88752,6 +88752,11 @@ var Footer = function (_React$Component) {
                         { href: "https://pintusingapura.org", target: "_blank" },
                         "PINTU"
                     )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    "a",
+                    { href: "#", className: "back-to-top" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span", { className: "glyphicon glyphicon-chevron-up" })
                 )
             );
         }

@@ -27,6 +27,9 @@ render() {
 						<NavItem eventKey={3} href="#anthem">Anthem</NavItem>
 						<NavItem eventKey={4} href="#contact">Contact Us</NavItem>
 					</Nav> */}
+			<a href="#" className="back-to-top">
+				<span className="glyphicon glyphicon-chevron-up"></span>
+			</a>
             </Navbar>
         );
     }
