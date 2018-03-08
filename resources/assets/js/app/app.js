@@ -5,6 +5,7 @@ import {
 	Route,
 	Switch,
 } from 'react-router-dom';
+import $ from "jquery";
 
 import { Grid } from "react-bootstrap";
 import { Topbar } from "../components/Topbar";
@@ -29,9 +30,71 @@ class App extends React.Component {
 		this.updateView = this.updateView.bind(this);
 	};
 
+	scrollSpy(){
+		$('body').scrollspy({
+			target: '#navbar-scrollspy',
+			offset: 100
+		});
+	}
+
+	animate(){
+		$('a[href*="#"]')
+		// Remove links that don't actually link to anything
+		.not('[href="#"]')
+		.not('[href="#0"]')
+		.click(function(event) {
+			// On-page links
+			if (
+				location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+				&& 
+				location.hostname == this.hostname
+			) {
+				// Figure out element to scroll to
+				var target = $(this.hash);
+				target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+				// Does a scroll target exist?
+				if (target.length) {
+				// Only prevent default if animation is actually gonna happen
+				// event.preventDefault();
+				$('html, body').animate(
+					{
+						scrollTop: target.offset().top
+					}, 
+					{
+						duration: 1500
+					}
+				) 
+				}
+			}
+		});
+	}
+
+	backToTop(){
+		var offset = 900; // the scroll point where the button will appear
+		var duration = 500; // the animation of fade-in and fade-out
+		var animationDuration = 1500;
+		$(window).scroll(function() {
+			if ($(this).scrollTop() > offset) {
+				$('.back-to-top').fadeIn(duration);
+			} 
+			else {
+				$('.back-to-top').fadeOut(duration);
+			}
+		});
+
+		$('.back-to-top').click(function(event) {
+			event.preventDefault();
+			$('html, body').animate({scrollTop: 0}, animationDuration);
+			return false;
+		});
+	}
+
 	componentDidMount(){
 		this.updateView();
 		window.addEventListener('resize', this.updateView);
+		this.scrollSpy();
+		this.animate();
+		this.backToTop();
 	}
 
 	componentWillUnmount(){
@@ -78,7 +141,7 @@ class App extends React.Component {
 					<Sidebar />
 					<Grid fluid>
 						<PageWrap>
-							<Home />
+							<Banner />
 							<About />
 							<History />
 							<Anthem />
