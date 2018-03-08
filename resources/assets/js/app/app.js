@@ -6,19 +6,14 @@ import {
 	Switch,
 } from 'react-router-dom';
 import $ from "jquery";
-
 import { Grid } from "react-bootstrap";
 import { Topbar } from "../components/Topbar";
 import { Sidebar } from "../components/Sidebar";
-
-// sections
-import { Banner } from "../sections/banner";
-import { About } from "../sections/about";
-import { History } from "../sections/history";
-import { Anthem } from "../sections/anthem";
-import { Contact } from "../sections/contact";
+import { Footer } from "../components/footer";
 import { PageWrap } from "..";
-import { Footer } from "../sections/footer";
+
+// pages
+import { Home } from "../pages/Home";
 
 
 class App extends React.Component {
@@ -95,22 +90,17 @@ class App extends React.Component {
                 <div className="app">
                     <Topbar />
                     <Grid fluid>
-						<Banner />
-						<About />
-						<History />
-						<Anthem />
-						<Contact />
+						<Router>
+							<Switch>
+								<Route exact path="/" component={Home} />
+								{/* <Route path="/about" component={About} />
+								<Route path="/history" component={History} />
+								<Route path="/anthem" component={Anthem} />
+								<Route path="/contact" component={Contact} /> */}
+							</Switch>
+						</Router>
                     </Grid>
 					<Footer />
-					{/* <Router>
-						<Switch>
-							<Route exact path="/" component={Home} />
-							<Route path="/about" component={About} />
-							<Route path="/history" component={History} />
-							<Route path="/anthem" component={Anthem} />
-							<Route path="/contact" component={Contact} />
-						</Switch>
-                	</Router> */}
                 </div>
             );
 		}
@@ -121,14 +111,18 @@ class App extends React.Component {
 					<Sidebar />
 					<Grid fluid>
 						<PageWrap>
-							<Banner />
-							<About />
-							<History />
-							<Anthem />
-							<Contact />
-							<Footer />
+							<Router>
+								<Switch>
+									<Route exact path="/" component={Home} />
+									{/* <Route path="/about" component={About} />
+									<Route path="/history" component={History} />
+									<Route path="/anthem" component={Anthem} />
+									<Route path="/contact" component={Contact} /> */}
+								</Switch>
+							</Router>
 						</PageWrap>
 					</Grid>
+					<Footer />
 				</div>
 			);
 		}
