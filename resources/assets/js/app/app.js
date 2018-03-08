@@ -11,11 +11,11 @@ import { Topbar } from "../components/Topbar";
 import { Sidebar } from "../components/Sidebar";
 
 // sections
-import { Home } from "../sections/Home";
+import { Banner } from "../sections/banner";
 import { About } from "../sections/about";
-import { History } from "../sections/History";
-import { Anthem } from "../sections/Anthem";
-import { Contact } from "../sections/Contact";
+import { History } from "../sections/history";
+import { Anthem } from "../sections/anthem";
+import { Contact } from "../sections/contact";
 import { PageWrap } from "..";
 
 
@@ -51,7 +51,7 @@ class App extends React.Component {
                 <div className="app">
                     <Topbar />
                     <Grid fluid>
-						<Home />
+						<Banner />
 						<About />
 						<History />
 						<Anthem />

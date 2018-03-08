@@ -3,7 +3,7 @@ import { Row, Col } from "react-bootstrap";
 import { DefaultPanel } from "../components/Panel";
 
 
-export class Home extends React.Component {
+export class Banner extends React.Component {
     render() {
         return (
             <Row className="full-height flex-center">
