@@ -1,0 +1,13 @@
+@mixin general-query ($device) {
+    @if $device == mobile {
+        @media (max-width: 767px) {
+            @content;
+        }
+    }
+
+    @if device == desktop {
+        @media (min-width: 768px) {
+            @content;
+        }
+    }
+}
