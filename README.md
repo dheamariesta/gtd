@@ -22,9 +22,9 @@ composer global require "laravel/installer"
 > The executable `laravel` should now be available in your local machine.
 
 ## Cloning Repository
-1. Clone this branch (laravel) from the main repository
+1. Clone this branch
 ```sh
-git clone -b laravel https://github.com/dheamariesta/gtd.git
+git clone -b <BRANCHNAME> https://github.com/dheamariesta/gtd.git
 ```
 
 2. Move to the **gtd** directory and install the necessary dependencies using Composer
