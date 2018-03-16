@@ -19,10 +19,10 @@ export class Sidebar extends React.Component {
 					customCrossIcon={ <img src="/images/cross.svg" alt="cross" /> }
 				>
 					<a href="/" className="menu-item">Home</a>
-					<a href="/about" className="menu-item">About</a>
-					<a href="/history" className="menu-item">History</a>
-					<a href="/anthem" className="menu-item">Anthem</a>
-					<a href="/contact" className="menu-item">Contact Us</a>
+					<a href="#about" className="menu-item">About</a>
+					<a href="#history" className="menu-item">History</a>
+					<a href="#anthem" className="menu-item">Anthem</a>
+					<a href="#contact" className="menu-item">Contact Us</a>
 				</Menu>
 				<img src="images/logo.png" alt="logo" className="img-responsive" style={logoSyles}/>
 
