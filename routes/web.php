@@ -12,9 +12,4 @@
 */
 
 Route::get('/', 'PagesController@home');
-Route::get('/about', 'PagesController@about');
-Route::get('/history', 'PagesController@history');
-Route::get('/anthem', 'PagesController@anthem');
-Route::get('/contact', 'PagesController@contact');
-
 Route::post('/send', 'ContactsController@send');
