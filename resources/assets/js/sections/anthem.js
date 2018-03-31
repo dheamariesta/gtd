@@ -14,7 +14,7 @@ export class Anthem extends React.Component {
 			<section id="anthem">
 				<div className="row default-bg full-height flex-center">
 					<div className="col-md-12">
-						<h1>Get Together Day's Anthem</h1>
+						<h1>Anthem</h1>
 
 						<div className="anthem-content">
 							<h3>Verse</h3>
