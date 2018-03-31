@@ -8405,6 +8405,12 @@ a:hover {
   color: gray;
 }
 
+@media (min-width: 768px) {
+  .section-title {
+    padding-top: 50px;
+  }
+}
+
 .title {
   display: inline-block;
   padding-bottom: 20px;
@@ -8485,8 +8491,28 @@ a:hover {
   font-family: Courgette;
 }
 
+.banner-container {
+  padding: 0;
+}
+
 label {
   color: white;
+}
+
+#history-tabs li.active a {
+  background: none;
+  color: black;
+  border: 1px solid white;
+}
+
+#history-tabs li a:hover {
+  background: none;
+  color: black;
+  border: 1px solid white;
+}
+
+#history-tabs .history-content-container {
+  margin-top: 40px;
 }
 
 .navbar-brand {
@@ -8557,12 +8583,6 @@ p {
   color: white;
 }
 
-@media (min-width: 768px) {
-  .section-title {
-    padding-top: 50px;
-  }
-}
-
 .thumbnail .caption h3 {
   color: #be1e2d;
 }
@@ -8593,21 +8613,5 @@ p {
 
 .back-to-top span.glyphicon {
   font-size: 60px;
-}
-
-#history-tabs li.active a {
-  background: none;
-  color: black;
-  border: 1px solid white;
-}
-
-#history-tabs li a:hover {
-  background: none;
-  color: black;
-  border: 1px solid white;
-}
-
-#history-tabs .history-content-container {
-  margin-top: 40px;
 }
 

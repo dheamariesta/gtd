@@ -13,16 +13,10 @@
 @import "/base/normalize";
 
 // pages
-@import "/pages/home";
-@import "/pages/about";
-@import "/pages/history";
-@import "/pages/anthem";
-@import "/pages/contact";
+@import "/pages/home/home";
 
 // components
 @import "components/topbar";
 @import "components/typography";
-@import "components/section";
 @import "components/thumbnail";
 @import "components/footer";
-@import "components/tab";
