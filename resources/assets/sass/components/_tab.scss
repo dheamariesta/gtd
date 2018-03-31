@@ -1,0 +1,20 @@
+#history-tabs {
+	li {
+		&.active {
+			a { 
+				background: none;
+				color: black; 
+				border: 1px solid white; 
+			}
+		}
+		a:hover {
+			background: none;
+			color: black;
+			border: 1px solid white; 
+		}
+
+	}
+	.history-content-container {
+		margin-top: 40px;
+	}
+}

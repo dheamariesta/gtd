@@ -78325,17 +78325,25 @@ var HistoryTabs = function (_React$Component) {
 								__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["m" /* Tab */].Pane,
 								{ eventKey: 1 },
 								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-									__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["c" /* Col */],
-									{ md: 4, xs: 12 },
-									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "/images/gtd_15.jpg", alt: "gtd-15", className: "img-responsive" })
-								),
-								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-									__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["c" /* Col */],
-									{ md: 6, xs: 12 },
+									"div",
+									{ className: "history-content-container" },
 									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-										"h3",
-										null,
-										" GTD XV Exvoria "
+										__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["c" /* Col */],
+										{ md: 4, xs: 12 },
+										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+											"div",
+											{ className: "history-image-container" },
+											__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "/images/gtd_15.jpg", alt: "gtd-15", className: "img-responsive" })
+										)
+									),
+									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+										__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["c" /* Col */],
+										{ md: 6, xs: 12 },
+										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+											"h3",
+											null,
+											" GTD XV Exvoria "
+										)
 									)
 								)
 							),
@@ -78343,17 +78351,25 @@ var HistoryTabs = function (_React$Component) {
 								__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["m" /* Tab */].Pane,
 								{ eventKey: 2 },
 								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-									__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["c" /* Col */],
-									{ md: 4, xs: 12 },
-									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "/images/gtd_16.jpg", alt: "gtd-16", className: "img-responsive" })
-								),
-								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-									__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["c" /* Col */],
-									{ md: 6, xs: 12 },
+									"div",
+									{ className: "history-content-container" },
 									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-										"h3",
-										null,
-										" GTD XVI Olympians "
+										__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["c" /* Col */],
+										{ md: 4, xs: 12 },
+										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+											"div",
+											{ className: "history-image-container" },
+											__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "/images/gtd_16.jpg", alt: "gtd-16", className: "img-responsive" })
+										)
+									),
+									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+										__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["c" /* Col */],
+										{ md: 6, xs: 12 },
+										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+											"h3",
+											null,
+											" GTD XVI Olympians "
+										)
 									)
 								)
 							),
@@ -78361,17 +78377,25 @@ var HistoryTabs = function (_React$Component) {
 								__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["m" /* Tab */].Pane,
 								{ eventKey: 3 },
 								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-									__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["c" /* Col */],
-									{ md: 4, xs: 12 },
-									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "/images/gtd_17.jpg", alt: "gtd-17", className: "img-responsive" })
-								),
-								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-									__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["c" /* Col */],
-									{ md: 6, xs: 12 },
+									"div",
+									{ className: "history-content-container" },
 									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-										"h3",
-										null,
-										" GTD XVII Enigma "
+										__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["c" /* Col */],
+										{ md: 4, xs: 12 },
+										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+											"div",
+											{ className: "history-image-container" },
+											__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "/images/gtd_17.jpg", alt: "gtd-17", className: "img-responsive" })
+										)
+									),
+									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+										__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["c" /* Col */],
+										{ md: 6, xs: 12 },
+										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+											"h3",
+											null,
+											" GTD XVII Enigma "
+										)
 									)
 								)
 							),
@@ -78379,17 +78403,25 @@ var HistoryTabs = function (_React$Component) {
 								__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["m" /* Tab */].Pane,
 								{ eventKey: 4 },
 								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-									__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["c" /* Col */],
-									{ md: 4, xs: 12 },
-									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "/images/gtd_18.jpg", alt: "gtd-18", className: "img-responsive" })
-								),
-								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-									__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["c" /* Col */],
-									{ md: 6, xs: 12 },
+									"div",
+									{ className: "history-content-container" },
 									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-										"h3",
-										null,
-										" GTD XVIII Aetheria"
+										__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["c" /* Col */],
+										{ md: 4, xs: 12 },
+										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+											"div",
+											{ className: "history-image-container" },
+											__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "/images/gtd_18.jpg", alt: "gtd-18", className: "img-responsive" })
+										)
+									),
+									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+										__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["c" /* Col */],
+										{ md: 6, xs: 12 },
+										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+											"h3",
+											null,
+											" GTD XVIII Aetheria"
+										)
 									)
 								)
 							),
@@ -78397,17 +78429,25 @@ var HistoryTabs = function (_React$Component) {
 								__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["m" /* Tab */].Pane,
 								{ eventKey: 5 },
 								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-									__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["c" /* Col */],
-									{ md: 4, xs: 12 },
-									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "/images/gtd_19.jpg", alt: "gtd-19", className: "img-responsive" })
-								),
-								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-									__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["c" /* Col */],
-									{ md: 6, xs: 12 },
+									"div",
+									{ className: "history-content-container" },
 									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-										"h3",
-										null,
-										" GTD XIX Exixtance"
+										__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["c" /* Col */],
+										{ md: 4, xs: 12 },
+										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+											"div",
+											{ className: "history-image-container" },
+											__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "/images/gtd_19.jpg", alt: "gtd-19", className: "img-responsive" })
+										)
+									),
+									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+										__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["c" /* Col */],
+										{ md: 6, xs: 12 },
+										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+											"h3",
+											null,
+											" GTD XIX Exixtance"
+										)
 									)
 								)
 							)

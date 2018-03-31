@@ -38,44 +38,64 @@ export class HistoryTabs extends React.Component
 					<Col md={12}>
 						<Tab.Content animation>
 							<Tab.Pane eventKey={1}>
-								<Col md={4} xs={12}>	
-									<img src="/images/gtd_15.jpg" alt="gtd-15" className="img-responsive"/>
-								</Col> 
-								<Col md={6} xs={12}>
-									<h3> GTD XV Exvoria </h3>
-								</Col>
+								<div className="history-content-container">
+									<Col md={4} xs={12}>	
+										<div className="history-image-container">
+											<img src="/images/gtd_15.jpg" alt="gtd-15" className="img-responsive"/>
+										</div>
+									</Col> 
+									<Col md={6} xs={12}>
+										<h3> GTD XV Exvoria </h3>
+									</Col>
+								</div>
 							</Tab.Pane>
 							<Tab.Pane eventKey={2}>
-								<Col md={4} xs={12}>
-									<img src="/images/gtd_16.jpg" alt="gtd-16" className="img-responsive"/>
-								</Col>
-								<Col md={6} xs={12}>
-									<h3> GTD XVI Olympians </h3>
-								</Col>
+								<div className="history-content-container">
+									<Col md={4} xs={12}>
+										<div className="history-image-container">
+											<img src="/images/gtd_16.jpg" alt="gtd-16" className="img-responsive"/>
+										</div>
+									</Col>
+									<Col md={6} xs={12}>
+										<h3> GTD XVI Olympians </h3>
+									</Col>
+								</div>
 							</Tab.Pane>
 							<Tab.Pane eventKey={3}>
-								<Col md={4} xs={12}>
-									<img src="/images/gtd_17.jpg" alt="gtd-17" className="img-responsive"/>
-								</Col>
-								<Col md={6} xs={12}>
-									<h3> GTD XVII Enigma </h3>
-								</Col>
+								<div className="history-content-container">
+									<Col md={4} xs={12}>
+										<div className="history-image-container">
+											<img src="/images/gtd_17.jpg" alt="gtd-17" className="img-responsive"/>
+										</div>
+									</Col>
+									<Col md={6} xs={12}>
+										<h3> GTD XVII Enigma </h3>
+									</Col>
+								</div>
 							</Tab.Pane>
 							<Tab.Pane eventKey={4}>
-								<Col md={4} xs={12}>
-									<img src="/images/gtd_18.jpg" alt="gtd-18" className="img-responsive"/>
-								</Col>
-								<Col md={6} xs={12}>
-									<h3> GTD XVIII Aetheria</h3>
-								</Col>
+								<div className="history-content-container">
+									<Col md={4} xs={12}>
+										<div className="history-image-container">
+											<img src="/images/gtd_18.jpg" alt="gtd-18" className="img-responsive"/>
+										</div>
+									</Col>
+									<Col md={6} xs={12}>
+										<h3> GTD XVIII Aetheria</h3>
+									</Col>
+								</div>
 							</Tab.Pane>
 							<Tab.Pane eventKey={5}>
-								<Col md={4} xs={12}>
-									<img src="/images/gtd_19.jpg" alt="gtd-19" className="img-responsive"/>
-								</Col>
-								<Col md={6} xs={12}>
-									<h3> GTD XIX Exixtance</h3>
-								</Col>
+								<div className="history-content-container">
+									<Col md={4} xs={12}>
+										<div className="history-image-container">
+											<img src="/images/gtd_19.jpg" alt="gtd-19" className="img-responsive"/>
+										</div>
+									</Col>
+									<Col md={6} xs={12}>
+										<h3> GTD XIX Exixtance</h3>
+									</Col>
+								</div>
 							</Tab.Pane>
 						</Tab.Content>
 					</Col>

@@ -8586,3 +8586,19 @@ p {
   font-size: 60px;
 }
 
+#history-tabs li.active a {
+  background: none;
+  color: black;
+  border: 1px solid white;
+}
+
+#history-tabs li a:hover {
+  background: none;
+  color: black;
+  border: 1px solid white;
+}
+
+#history-tabs .history-content-container {
+  margin-top: 40px;
+}
+
