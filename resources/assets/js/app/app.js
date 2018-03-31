@@ -47,13 +47,14 @@ class App extends React.Component {
     }
     
     render(){
+		const isDesktop = this.state.isDesktop;
 		return(
 			<div className="app">
-				<Topbar isDesktop={this.state.isDesktop} />
+				<Topbar isDesktop={isDesktop} />
 				<Grid fluid>
 					<Router>
 						<Switch>
-							<Route exact path="/" component={Home} />
+							<Route exact path="/" render = {() => (<Home isDesktop={isDesktop} /> )}/>
 							{/* <Route path="/about" component={About} />
 							<Route path="/history" component={History} />
 							<Route path="/anthem" component={Anthem} />

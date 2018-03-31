@@ -16,7 +16,7 @@ export class Home extends React.Component {
 		return (
 			<div>
 				<Banner />
-				<About />
+				<About isDesktop={this.props.isDesktop} />
 				<History />
 				<Anthem />
 				<Contact />

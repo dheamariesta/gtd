@@ -62969,10 +62969,11 @@ var App = function (_React$Component) {
 	}, {
 		key: "render",
 		value: function render() {
+			var isDesktop = this.state.isDesktop;
 			return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 				"div",
 				{ className: "app" },
-				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__components_Topbar__["a" /* Topbar */], { isDesktop: this.state.isDesktop }),
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__components_Topbar__["a" /* Topbar */], { isDesktop: isDesktop }),
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 					__WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["g" /* Grid */],
 					{ fluid: true },
@@ -62982,7 +62983,9 @@ var App = function (_React$Component) {
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 							__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["c" /* Switch */],
 							null,
-							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Route */], { exact: true, path: "/", component: __WEBPACK_IMPORTED_MODULE_6__pages_Home__["a" /* Home */] })
+							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Route */], { exact: true, path: "/", render: function render() {
+									return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__pages_Home__["a" /* Home */], { isDesktop: isDesktop });
+								} })
 						)
 					)
 				),
@@ -77820,7 +77823,7 @@ var Home = function (_React$Component) {
 				"div",
 				null,
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__sections_banner__["a" /* Banner */], null),
-				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__sections_about__["a" /* About */], null),
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__sections_about__["a" /* About */], { isDesktop: this.props.isDesktop }),
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__sections_history__["a" /* History */], null),
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__sections_anthem__["a" /* Anthem */], null),
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__sections_contact__["a" /* Contact */], null)
@@ -77963,9 +77966,8 @@ DefaultPanel.defaultProps = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__index__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__partials_Mission__ = __webpack_require__(538);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__partials_Vision__ = __webpack_require__(539);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__partials_Mission__ = __webpack_require__(538);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__partials_Vision__ = __webpack_require__(539);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -77975,7 +77977,6 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 // Components
-
 
 
 
@@ -77996,16 +77997,32 @@ var About = function (_React$Component) {
 			return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 				'section',
 				{ id: 'about' },
-				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__partials_Vision__["a" /* Vision */], null),
-				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__partials_Mission__["a" /* Mission */], null)
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["l" /* Row */],
+					{ className: 'flex-center' },
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["c" /* Col */],
+						{ sm: 12, className: 'about-container' },
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('img', { src: '/images/vision.jpg', alt: 'vision', className: 'img-responsive' }),
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							'div',
+							{ className: 'about-box' },
+							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__partials_Vision__["a" /* Vision */], null),
+							this.props.isDesktop ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__partials_Mission__["a" /* Mission */], null) : null
+						)
+					)
+				),
+				!this.props.isDesktop ? __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["l" /* Row */],
+					{ className: 'flex-center full-height default-bg' },
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__partials_Mission__["a" /* Mission */], null)
+				) : null
 			);
 		}
 	}]);
 
 	return About;
 }(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
-
-About.propTypes = {};
 
 /***/ }),
 /* 538 */
@@ -78028,82 +78045,74 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 var Mission = function (_React$Component) {
-    _inherits(Mission, _React$Component);
+	_inherits(Mission, _React$Component);
 
-    function Mission() {
-        _classCallCheck(this, Mission);
+	function Mission() {
+		_classCallCheck(this, Mission);
 
-        return _possibleConstructorReturn(this, (Mission.__proto__ || Object.getPrototypeOf(Mission)).apply(this, arguments));
-    }
+		return _possibleConstructorReturn(this, (Mission.__proto__ || Object.getPrototypeOf(Mission)).apply(this, arguments));
+	}
 
-    _createClass(Mission, [{
-        key: "render",
-        value: function render() {
-            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "div",
-                { className: "row default-bg full-height flex-center" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "div",
-                    { className: "col-md-12" },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        "div",
-                        { className: "about-box" },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            "h1",
-                            { className: "title" },
-                            "Misi Kami"
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            "div",
-                            { className: "mission-container clearfix" },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                "div",
-                                { className: "col-md-3 col-xs-12 mission-item" },
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "/images/ball.svg", alt: "ball", className: "img-responsive logo" }),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    "p",
-                                    null,
-                                    "Menjadikan GTD yang menyenangkan dan kokoh dan terorganisir"
-                                )
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                "div",
-                                { className: "col-md-3 col-xs-12 mission-item" },
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "/images/relationship.svg", alt: "ball", className: "img-responsive logo" }),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    "p",
-                                    null,
-                                    "Mempersatukan hubungan antara freshie dan freshie, senior dan senior, freshie dan senior melalui GTD."
-                                )
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                "div",
-                                { className: "col-md-3 col-xs-12 mission-item" },
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "/images/improve.png", alt: "ball", className: "img-responsive logo" }),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    "p",
-                                    null,
-                                    "Menjadikan sarana pengembangan diri bagi seluruh komite dan peserta GTD"
-                                )
-                            ),
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                "div",
-                                { className: "col-md-3 col-xs-12 mission-item" },
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "/images/merlion.svg", alt: "ball", className: "img-responsive logo" }),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    "p",
-                                    null,
-                                    "Mengenalkan freshie kepada kehidupan dan budaya di Singapura"
-                                )
-                            )
-                        )
-                    )
-                )
-            );
-        }
-    }]);
+	_createClass(Mission, [{
+		key: "render",
+		value: function render() {
+			return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+				"div",
+				null,
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					"h1",
+					{ className: "title" },
+					"Misi Kami"
+				),
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					"div",
+					{ className: "mission-container clearfix" },
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						"div",
+						{ className: "col-md-3 col-xs-12 mission-item" },
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "/images/ball.svg", alt: "ball", className: "img-responsive logo" }),
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							"p",
+							null,
+							"Menjadikan GTD yang menyenangkan dan kokoh dan terorganisir"
+						)
+					),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						"div",
+						{ className: "col-md-3 col-xs-12 mission-item" },
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "/images/relationship.svg", alt: "ball", className: "img-responsive logo" }),
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							"p",
+							null,
+							"Mempersatukan hubungan antara freshie dan freshie, senior dan senior, freshie dan senior melalui GTD."
+						)
+					),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						"div",
+						{ className: "col-md-3 col-xs-12 mission-item" },
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "/images/improve.png", alt: "ball", className: "img-responsive logo" }),
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							"p",
+							null,
+							"Menjadikan sarana pengembangan diri bagi seluruh komite dan peserta GTD"
+						)
+					),
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						"div",
+						{ className: "col-md-3 col-xs-12 mission-item" },
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "/images/merlion.svg", alt: "ball", className: "img-responsive logo" }),
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							"p",
+							null,
+							"Mengenalkan freshie kepada kehidupan dan budaya di Singapura"
+						)
+					)
+				)
+			);
+		}
+	}]);
 
-    return Mission;
+	return Mission;
 }(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
 
 /***/ }),
@@ -78125,44 +78134,39 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 var Vision = function (_React$Component) {
-    _inherits(Vision, _React$Component);
+	_inherits(Vision, _React$Component);
 
-    function Vision() {
-        _classCallCheck(this, Vision);
+	function Vision() {
+		_classCallCheck(this, Vision);
 
-        return _possibleConstructorReturn(this, (Vision.__proto__ || Object.getPrototypeOf(Vision)).apply(this, arguments));
-    }
+		return _possibleConstructorReturn(this, (Vision.__proto__ || Object.getPrototypeOf(Vision)).apply(this, arguments));
+	}
 
-    _createClass(Vision, [{
-        key: "render",
-        value: function render() {
-            return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                "div",
-                { className: "row flex-center" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    "div",
-                    { className: "col-md-12 vision-container" },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "/images/vision.jpg", alt: "vision", className: "img-responsive" }),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        "div",
-                        { className: "vision-box" },
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            "h1",
-                            { className: "title" },
-                            "Visi Kami"
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            "p",
-                            { className: "vision" },
-                            "\"Sebagai gerbang penyambutan pelajar Indonesia baru di NTU\""
-                        )
-                    )
-                )
-            );
-        }
-    }]);
+	_createClass(Vision, [{
+		key: "render",
+		value: function render() {
+			return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+				"div",
+				null,
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					"h1",
+					{ className: "title" },
+					"Visi Kami"
+				),
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					"div",
+					{ className: "vision-container" },
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						"p",
+						{ className: "vision" },
+						"\"Sebagai gerbang penyambutan pelajar Indonesia baru di NTU\""
+					)
+				)
+			);
+		}
+	}]);
 
-    return Vision;
+	return Vision;
 }(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
 
 /***/ }),
