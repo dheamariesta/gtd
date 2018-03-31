@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@import url(https://fonts.googleapis.com/css?family=Roboto);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);@import url(https://fonts.googleapis.com/css?family=Roboto);@import url(https://fonts.googleapis.com/css?family=Courgette);@charset "UTF-8";
 
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
@@ -8367,24 +8367,6 @@ body {
   }
 }
 
-#root {
-  height: 100%;
-}
-
-#outer-container {
-  height: 100%;
-}
-
-main {
-  height: 100%;
-}
-
-@media (max-width: 767px) {
-  main {
-    font-size: small;
-  }
-}
-
 .full-height {
   min-height: 100vh;
 }
@@ -8487,7 +8469,7 @@ a:hover {
 }
 
 .anthem-content {
-  font-size: large;
+  font-family: Courgette;
 }
 
 label {
@@ -8528,60 +8510,28 @@ label {
           box-shadow: none;
 }
 
-/* Position and sizing of burger button */
-
-.bm-burger-button {
-  position: fixed;
-  width: 36px;
-  height: 30px;
-  left: 24px;
-  top: 24px;
+body {
+  font-size: 16px;
 }
 
-/* Color/shape of burger icon bars */
-
-.bm-burger-bars {
-  background: #373a47;
+body p {
+  font-size: 100%;
 }
 
-/* Position and sizing of clickable cross button */
-
-.bm-cross-button {
-  height: 24px;
-  width: 24px;
+body h1 {
+  font-size: 250%;
 }
 
-/* Color/shape of close button cross */
-
-.bm-cross {
-  background: #bdc3c7;
+body h2 {
+  font-size: 200%;
 }
 
-/* General sidebar styles */
-
-.bm-menu {
-  background: #373a47;
-  padding: 2.5em 1.5em 0;
-  font-size: 1.15em;
+body h3 {
+  font-size: 150%;
 }
 
-/* Morph shape necessary with bubble or elastic */
-
-.bm-morph-shape {
-  fill: #373a47;
-}
-
-/* Wrapper for item list */
-
-.bm-item-list {
-  color: #b8b7ad;
-  padding: 0.8em;
-}
-
-/* Styling of overlay */
-
-.bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
+body h4 {
+  font-size: 100%;
 }
 
 h1,
@@ -8589,10 +8539,7 @@ h2,
 h3,
 h4,
 h5,
-h6 {
-  color: white;
-}
-
+h6,
 p {
   color: white;
 }
