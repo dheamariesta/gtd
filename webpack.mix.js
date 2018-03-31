@@ -12,4 +12,11 @@ let mix = require('laravel-mix');
  */
 
 mix.react('resources/assets/js/main.js', 'public/js')
-   .sass('resources/assets/sass/main.scss', 'public/css');
+   .sass('resources/assets/sass/main.scss', 'public/css'); 
+
+mix.browserSync({
+	proxy : {
+		target : "http://gtd_laravel.test"
+	},
+	port : 8001
+});
