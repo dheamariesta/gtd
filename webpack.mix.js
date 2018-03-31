@@ -18,5 +18,6 @@ mix.browserSync({
 	proxy : {
 		target : "http://gtd_laravel.test"
 	},
-	port : 8001
+	port : 8000,
+	ghostMode: false
 });
