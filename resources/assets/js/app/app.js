@@ -17,6 +17,10 @@ import { Home } from "../pages/Home";
 class App extends React.Component {
     constructor(props){
 		super(props);
+		this.state = {
+			isDesktop : true,
+		};
+		this.updateView = this.updateView.bind(this);
 	};
 
 	scrollSpy(){
@@ -25,11 +29,27 @@ class App extends React.Component {
 			offset: 100
 		});
 	}
+	componentDidMount(){
+		this.updateView();
+		window.addEventListener('resize', this.updateView);
+		this.scrollSpy();
+	}
+
+	componentWillUnmount(){
+		this.updateView();
+		window.removeEventListener('resize', this.updateView);
+	}
+
+	updateView(){
+		this.setState({
+			isDesktop : window.innerWidth > 1200
+		});
+    }
     
     render(){
 		return(
 			<div className="app">
-				<Topbar />
+				<Topbar isDesktop={this.state.isDesktop} />
 				<Grid fluid>
 					<Router>
 						<Switch>
