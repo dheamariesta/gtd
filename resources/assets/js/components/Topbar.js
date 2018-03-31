@@ -33,10 +33,10 @@ export class Topbar extends React.Component {
 		this.scrollToSection();
 	}
 
-
 	render() {
+		const isDesktop = this.props.isDesktop;
 		return (
-			<Navbar fixedTop id="navbar-scrollspy">
+			<Navbar fixedTop={isDesktop} id="navbar-scrollspy">
 				<Navbar.Header>
 					<Navbar.Brand>
 						<a href="/">

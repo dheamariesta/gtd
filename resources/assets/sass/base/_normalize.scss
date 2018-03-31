@@ -14,12 +14,12 @@ body {
 	}
 }
 
-
-
 .full-height {
-  min-height: 100vh;
+	min-height: 100vh;
+	&.banner {
+		min-height: 90vh;
+	}
 }
-
 
 .flex-center {
 	align-items: center;

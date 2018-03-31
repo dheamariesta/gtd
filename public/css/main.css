@@ -8371,6 +8371,10 @@ body {
   min-height: 100vh;
 }
 
+.full-height.banner {
+  min-height: 90vh;
+}
+
 .flex-center {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -8544,8 +8548,10 @@ p {
   color: white;
 }
 
-.section-title {
-  padding-top: 50px;
+@media (min-width: 768px) {
+  .section-title {
+    padding-top: 50px;
+  }
 }
 
 .thumbnail .caption h3 {
