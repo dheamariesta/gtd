@@ -7,10 +7,13 @@
 		<meta name="csrf-token" content="{{ csrf_token() }}">
         <title>GTD Laravel - React</title>
 
+		{{-- favicon --}}
+		<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+
         <link rel="stylesheet" href="{{ asset('css/main.css') }}">
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+		<link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
         
     </head>
