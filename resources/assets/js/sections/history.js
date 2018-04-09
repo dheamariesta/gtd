@@ -11,7 +11,7 @@ export class History extends React.Component {
 	render() {
 		return (
 		<section id="history">
-			<Row className="default-bg full-height flex-center">
+			<Row className="default-bg full-height">
 				<Col md={12}>
 					<h1 className="section-title">History</h1>
 					<HistoryTabs />

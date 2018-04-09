@@ -8515,6 +8515,10 @@ label {
   margin-top: 40px;
 }
 
+#history-tabs .history-content-container .history-content {
+  text-align: left;
+}
+
 .navbar-brand {
   width: 200px;
   padding: 0;

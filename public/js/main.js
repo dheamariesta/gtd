@@ -78210,7 +78210,7 @@ var History = function (_React$Component) {
 				{ id: 'history' },
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 					__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["l" /* Row */],
-					{ className: 'default-bg full-height flex-center' },
+					{ className: 'default-bg full-height' },
 					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 						__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["c" /* Col */],
 						{ md: 12 },
@@ -78295,26 +78295,16 @@ var HistoryTabs = function (_React$Component) {
 							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 								__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["i" /* NavItem */],
 								{ eventKey: 1 },
-								"2015"
-							),
-							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-								__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["i" /* NavItem */],
-								{ eventKey: 2 },
-								"2016"
-							),
-							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-								__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["i" /* NavItem */],
-								{ eventKey: 3 },
 								"2017"
 							),
 							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 								__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["i" /* NavItem */],
-								{ eventKey: 4 },
+								{ eventKey: 2 },
 								"2018"
 							),
 							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 								__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["i" /* NavItem */],
-								{ eventKey: 5 },
+								{ eventKey: 3 },
 								"2019"
 							)
 						)
@@ -78337,58 +78327,6 @@ var HistoryTabs = function (_React$Component) {
 										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 											"div",
 											{ className: "history-image-container" },
-											__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "/images/gtd_15.jpg", alt: "gtd-15", className: "img-responsive" })
-										)
-									),
-									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-										__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["c" /* Col */],
-										{ md: 6, xs: 12 },
-										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-											"h3",
-											null,
-											" GTD XV Exvoria "
-										)
-									)
-								)
-							),
-							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-								__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["m" /* Tab */].Pane,
-								{ eventKey: 2 },
-								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-									"div",
-									{ className: "history-content-container" },
-									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-										__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["c" /* Col */],
-										{ md: 4, xs: 12 },
-										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-											"div",
-											{ className: "history-image-container" },
-											__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "/images/gtd_16.jpg", alt: "gtd-16", className: "img-responsive" })
-										)
-									),
-									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-										__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["c" /* Col */],
-										{ md: 6, xs: 12 },
-										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-											"h3",
-											null,
-											" GTD XVI Olympians "
-										)
-									)
-								)
-							),
-							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-								__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["m" /* Tab */].Pane,
-								{ eventKey: 3 },
-								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-									"div",
-									{ className: "history-content-container" },
-									__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-										__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["c" /* Col */],
-										{ md: 4, xs: 12 },
-										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-											"div",
-											{ className: "history-image-container" },
 											__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "/images/gtd_17.jpg", alt: "gtd-17", className: "img-responsive" })
 										)
 									),
@@ -78399,13 +78337,48 @@ var HistoryTabs = function (_React$Component) {
 											"h3",
 											null,
 											" GTD XVII Enigma "
+										),
+										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+											"div",
+											{ className: "history-content" },
+											__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+												"p",
+												null,
+												"Greetings, Agents! Welcome to Enigma, the School of Agents! ",
+												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+												"First, I would like to congratulate all of you on retrieving this mission brief from the three-headed Cerberus. That hologram had kept the school safe for millennia, which ancient people believed and understood to be the \u201CGreek Mythologies\u201D. That is how advanced we are, and you have only scraped through the surface."
+											),
+											__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+												"p",
+												null,
+												"Successful entrance to this School had been no small feat and I am truly proud to have you here. You have submitted your applications and your results from the previous institutions that you have pursured your studies in, through which we have been able to trace down your childhood background. And boy, you have potentials! Your tenacity, resilience and a dash of strong will have been well reflected!"
+											),
+											__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+												"p",
+												null,
+												"In Enigma, you will be within the care of our 4 Squads, codenamed Falcon, Rhino, Mantis and Beaver. You will develop certain skillsets we deem fit within each squad and undoubtedly you will be able to thrive within the Agency. After successful graduation, you will be deployed to the \u2018life\u2019 outside which you will interact with on a constant basis."
+											),
+											__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+												"p",
+												null,
+												"We shall commence on our trainings ASAP Agents. There is no time to lose as the world always hands on a balance, ready to tip off anytime, especially with the Guerrilla Response Union (GRU) minions roaming free on out hinterlands."
+											),
+											__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+												"p",
+												null,
+												"You better get ready! ",
+												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+												"Oh, I forgot to introduce myself. Call me, M. ",
+												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+												"Come on, the secret awaits!"
+											)
 										)
 									)
 								)
 							),
 							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 								__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["m" /* Tab */].Pane,
-								{ eventKey: 4 },
+								{ eventKey: 2 },
 								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 									"div",
 									{ className: "history-content-container" },
@@ -78425,13 +78398,22 @@ var HistoryTabs = function (_React$Component) {
 											"h3",
 											null,
 											" GTD XVIII Aetheria"
+										),
+										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+											"div",
+											{ className: "history-content" },
+											__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+												"p",
+												null,
+												"Ignis. Aqua. Terra. Ventus. Long ago, the four tribes lived together in harmony. Under the leadership of Avatar Lauw, master of four elements, the balance was kept between the tribes. Then, everything changed when a great prophecy was foretold, a prophecy that revealed an imminent great war. Upon hearing this prophecy, the four tribes prepared themselves for the war. Diplomatic relationships were cut off, trades were stopped, and gates were closed. But when the world needed the Avatar most, he vanished. After the disappearance of Avatar Lauw, a war broke out amidst the tense situation. People call it... The Great War. Decades have passed since The Great War, and the so much has changed in the four tribes, from their identities to their ways of life. Things may have stabilised, but there is no peace between the four tribes. One day, a mysterious man appeared. He claimed to be the next Avatar. He called himself, Avatar Mist."
+											)
 										)
 									)
 								)
 							),
 							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 								__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["m" /* Tab */].Pane,
-								{ eventKey: 5 },
+								{ eventKey: 3 },
 								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 									"div",
 									{ className: "history-content-container" },
@@ -78451,6 +78433,33 @@ var HistoryTabs = function (_React$Component) {
 											"h3",
 											null,
 											" GTD XIX Exixtance"
+										),
+										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+											"div",
+											{ className: "history-content" },
+											__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+												"p",
+												null,
+												"In the world of EXIXTANCE, four factions; Fortis the brave, Scitus the intelligent, Probus the honest and Pascalis the peaceful coexist in harmony. Each of these factions consists of people who best represents the characteristics of the faction itself. It is believed that each of the traits are necessary for the prosperity and continuation of the land. To commandeer those four factions to an even greater heights, May, a wise and a smart leader was chosen. As a leader, May is a true Divergent who can demonstrate all four traits actively."
+											),
+											__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+												"p",
+												null,
+												"Meanwhile, beneath the abyss of the land, hidden from the surface, a rebellion is brewing. The outcasts, thrown away from the selection and unfit of being part of the factions, have joined forces and led an intractable group called Factionless. Full of hatred and anger, they have been preparing to topple the faction system and conquer the world. A war is approaching. A clash is on the horizon. Unity will be tested."
+											),
+											__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+												"p",
+												{ className: "text-center" },
+												"\u201COne choice decides your path ",
+												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+												"One choice defines your beliefs ",
+												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+												"One choice determines your loyalties ",
+												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+												"One choice can transform you\u201D ",
+												__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br", null),
+												"- forever-"
+											)
 										)
 									)
 								)
