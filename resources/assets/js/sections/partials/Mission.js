@@ -5,7 +5,7 @@ export class Mission extends React.Component {
     render(){
         return(
 			<div>
-				<h1 className="title">Misi Kami</h1>
+				<h1 className="title">Our Missions</h1>
 				<div className="mission-container clearfix">
 					<div className="col-md-3 col-xs-12 mission-item">
 						<img src="/images/ball.svg" alt="ball" className="img-responsive logo"/>

@@ -78062,7 +78062,7 @@ var Mission = function (_React$Component) {
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 					"h1",
 					{ className: "title" },
-					"Misi Kami"
+					"Our Missions"
 				),
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 					"div",
@@ -78151,7 +78151,7 @@ var Vision = function (_React$Component) {
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 					"h1",
 					{ className: "title" },
-					"Visi Kami"
+					"Our Vision"
 				),
 				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 					"div",
