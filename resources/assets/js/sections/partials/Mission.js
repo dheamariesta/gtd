@@ -10,25 +10,25 @@ export class Mission extends React.Component {
 					<div className="col-md-3 col-xs-12 mission-item">
 						<img src="/images/ball.svg" alt="ball" className="img-responsive logo"/>
 						<p>
-							Menjadikan GTD yang menyenangkan dan kokoh dan terorganisir
+							To be an enjoyable, bonded and organised freshmen orientation
 						</p>
 					</div>
 					<div className="col-md-3 col-xs-12 mission-item">
 						<img src="/images/relationship.svg" alt="ball" className="img-responsive logo"/>
 						<p>
-							Mempersatukan hubungan antara freshie dan freshie, senior dan senior, freshie dan senior melalui GTD.
+							To improve the relation among freshmen and seniors
 						</p>
 					</div>
 					<div className="col-md-3 col-xs-12 mission-item">
 						<img src="/images/improve.png" alt="ball" className="img-responsive logo"/>
 						<p>
-							Menjadikan sarana pengembangan diri bagi seluruh komite dan peserta GTD
+							To provide an opportunity for self-improvement for every committee members and participants of GTD
 						</p>
 					</div>
 					<div className="col-md-3 col-xs-12 mission-item">
 						<img src="/images/merlion.svg" alt="ball" className="img-responsive logo"/>
 						<p>
-							Mengenalkan freshie kepada kehidupan dan budaya di Singapura
+							To familiarize the freshmen to the life and culture in Singapore
 						</p>
 					</div>
 				</div>
