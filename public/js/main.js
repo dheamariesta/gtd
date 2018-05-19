@@ -77874,7 +77874,7 @@ var Banner = function (_React$Component) {
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["c" /* Col */],
                     { md: 12, className: "banner-container" },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "/images/coming_soon.jpg", alt: "coming-soon", className: "img-responsive" })
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img", { src: "/images/coming_soon.jpg", alt: "coming-soon", className: "banner-responsive dhea" })
                 )
             );
         }

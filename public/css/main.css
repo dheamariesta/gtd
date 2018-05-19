@@ -8408,6 +8408,7 @@ a:hover {
 @media (min-width: 768px) {
   .section-title {
     padding-top: 50px;
+    border-bottom: 5px solid white;
   }
 }
 
@@ -8617,5 +8618,9 @@ p {
 
 .back-to-top span.glyphicon {
   font-size: 60px;
+}
+
+.dhea {
+  width: 100vw;
 }
 

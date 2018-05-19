@@ -1,5 +1,6 @@
 .section-title {
 	@include general-query(desktop){
 		padding-top: 50px;
+		border-bottom: 5px solid white;
 	}
 }
