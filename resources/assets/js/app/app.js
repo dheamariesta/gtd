@@ -8,7 +8,7 @@ import {
 import $ from "jquery";
 import { Grid } from "react-bootstrap";
 import { Topbar } from "../components/Topbar";
-import { Footer } from "../components/footer";
+import { Footer } from "../components/Footer";
 
 // pages
 import { Home } from "../pages/Home";
