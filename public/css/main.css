@@ -8399,7 +8399,7 @@ a:hover {
 
 .section-title {
   padding-top: 50px;
-  padding-bottom: 5px;
+  line-height: 2;
   text-decoration: underline;
 }
 

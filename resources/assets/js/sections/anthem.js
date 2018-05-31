@@ -14,7 +14,7 @@ export class Anthem extends React.Component {
 			<section id="anthem">
 				<div className="row default-bg full-height flex-center">
 					<div className="col-md-12">
-						<h1>Anthem</h1>
+						<h1 className="section-title">Anthem</h1>
 
 						<div className="anthem-content">
 							<h3>Verse</h3>
@@ -27,7 +27,7 @@ export class Anthem extends React.Component {
 								So many of us with different childhoods <br/>
 								Different dreams, different lives <br/>
 							</p>
-							
+
 							<h3>Chorus</h3>
 							<p>
 								I know now what the answer is <br/>
