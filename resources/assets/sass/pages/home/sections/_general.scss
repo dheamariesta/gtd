@@ -1,6 +1,8 @@
 .section-title {
-	@include general-query(desktop){
-		padding-top: 50px;
-		border-bottom: 5px solid white;
-	}
+
+	padding-top: 50px;
+	padding-bottom: 5px;
+	text-decoration: underline;
+	// border-bottom: 5px solid white;
+
 }
