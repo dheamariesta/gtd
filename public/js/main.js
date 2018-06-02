@@ -61019,7 +61019,7 @@ var History = function (_React$Component) {
 						{ md: 12 },
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 							'h1',
-							{ className: 'section-title' },
+							{ className: 'section-title title' },
 							'History'
 						),
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__components_Tabs__["a" /* HistoryTabs */], null)
@@ -61321,7 +61321,7 @@ var Anthem = function (_React$Component) {
 						{ className: 'col-md-12' },
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 							'h1',
-							{ className: 'section-title' },
+							{ className: 'section-title title' },
 							'Anthem'
 						),
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -61558,7 +61558,7 @@ var Contact = function (_React$Component) {
 						{ md: 8, xs: 12 },
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 							'h1',
-							{ className: 'section-title' },
+							{ className: 'section-title title' },
 							'Contact Us'
 						),
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(

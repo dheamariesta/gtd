@@ -129,7 +129,7 @@ export class Contact extends React.Component {
 			<section id="contact">
 				<Row className="default-bg full-height flex-center">
 					<Col md={8} xs={12}>
-						<h1 className="section-title">Contact Us</h1>
+						<h1 className="section-title title">Contact Us</h1>
 						<div className="form-container">
 							<ContactForm 
 								actionHandler="/send" 

@@ -8367,6 +8367,10 @@ body {
   }
 }
 
+.full-height {
+  min-height: 100vh;
+}
+
 .flex-center {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -8399,8 +8403,6 @@ a:hover {
 
 .section-title {
   padding-top: 50px;
-  line-height: 2;
-  text-decoration: underline;
 }
 
 .title {

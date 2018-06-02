@@ -13,7 +13,7 @@ export class History extends React.Component {
 		<section id="history">
 			<Row className="default-bg full-height">
 				<Col md={12}>
-					<h1 className="section-title">History</h1>
+					<h1 className="section-title title">History</h1>
 					<HistoryTabs />
 				</Col>
 			</Row>
