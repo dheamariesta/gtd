@@ -6,6 +6,7 @@ import { About } from "../sections/about";
 import { History } from "../sections/history";
 import { Anthem } from "../sections/anthem";
 import { Contact } from "../sections/contact";
+import { QScore } from "../sections/Qscore";
 
 export class Home extends React.Component {
 	constructor(props){
