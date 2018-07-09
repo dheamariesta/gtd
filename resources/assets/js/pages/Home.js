@@ -21,6 +21,7 @@ export class Home extends React.Component {
 				<History />
 				<Anthem />
 				<Contact />
+				<Qscore />
 			</div>
 		)
 	}

@@ -49,6 +49,11 @@ composer install
 ```sh
 cp .env.example .env
 ```
+Note: For Windows, use `copy`: 
+```bash
+copy .env.example .env
+```
+
 > You should have a brand new `.env` file right now
 
 4. Generate application key
@@ -157,6 +162,10 @@ public function boot()
 }
 ```
 
+- If you encounter any errors during npm run, probably you have not installed the npm. Just run the command below: 
+```bash
+npm install
+```
 
 License
 ----
