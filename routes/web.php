@@ -13,3 +13,4 @@
 
 Route::get('/', 'PagesController@home');
 Route::post('/send', 'ContactsController@send');
+Route::get('/score', 'PagesController@score');
