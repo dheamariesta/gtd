@@ -23,13 +23,31 @@ export class Qscore extends React.Component {
   
     render() {
 		return (
-			<form onSubmit={this.handleSubmit}>
-			<label>
-				Enter password for OG: 
-				<input type="text" value={this.state.value} onChange={this.handleChange} />
-			</label>
-			<input type="submit" value="Show me the score!" />
-			</form>
+			<section id="qscore">
+				<Row className="default-bg full-height flex-center">
+					<Col md={8} xs={12}>
+					<h1 className="section-title title">Exodia Scores</h1>
+					</Col>
+				</Row>
+				<Row className="default-bg full-height flex-center">
+					<Col md={8} xs={12}>
+					<label>
+						Enter password for OG:  
+					</label>
+					</Col>
+				</Row>
+				<Row className="default-bg full-height flex-center">
+					<Col md={8} xs={12}>
+					<div className="form-container">
+						<form onSubmit={this.handleSubmit}>
+							<input type="text" value={this.state.value} onChange={this.handleChange} /> 
+							<input type="submit" value="Show me the score!" />
+						</form>
+					</div>
+					</Col>
+					
+				</Row>
+			</section>
 			);
     }
 }

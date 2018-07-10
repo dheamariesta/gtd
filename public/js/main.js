@@ -61860,47 +61860,84 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 
 var Qscore = function (_React$Component) {
-		_inherits(Qscore, _React$Component);
+	_inherits(Qscore, _React$Component);
 
-		function Qscore(props) {
-				_classCallCheck(this, Qscore);
+	function Qscore(props) {
+		_classCallCheck(this, Qscore);
 
-				var _this = _possibleConstructorReturn(this, (Qscore.__proto__ || Object.getPrototypeOf(Qscore)).call(this, props));
+		var _this = _possibleConstructorReturn(this, (Qscore.__proto__ || Object.getPrototypeOf(Qscore)).call(this, props));
 
-				_this.state = { value: '' };
+		_this.state = { value: '' };
 
-				_this.handleChange = _this.handleChange.bind(_this);
-				_this.handleSubmit = _this.handleSubmit.bind(_this);
-				return _this;
+		_this.handleChange = _this.handleChange.bind(_this);
+		_this.handleSubmit = _this.handleSubmit.bind(_this);
+		return _this;
+	}
+
+	_createClass(Qscore, [{
+		key: "handleChange",
+		value: function handleChange(event) {}
+	}, {
+		key: "handleSubmit",
+		value: function handleSubmit(event) {
+			alert('The following password has been submitted: ' + this.state.value);
+			event.preventDefault();
 		}
-
-		_createClass(Qscore, [{
-				key: "handleChange",
-				value: function handleChange(event) {}
-		}, {
-				key: "handleSubmit",
-				value: function handleSubmit(event) {
-						alert('The following password has been submitted: ' + this.state.value);
-						event.preventDefault();
-				}
-		}, {
-				key: "render",
-				value: function render() {
-						return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+	}, {
+		key: "render",
+		value: function render() {
+			return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+				"section",
+				{ id: "qscore" },
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["l" /* Row */],
+					{ className: "default-bg full-height flex-center" },
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["c" /* Col */],
+						{ md: 8, xs: 12 },
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							"h1",
+							{ className: "section-title title" },
+							"Exodia Scores"
+						)
+					)
+				),
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["l" /* Row */],
+					{ className: "default-bg full-height flex-center" },
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["c" /* Col */],
+						{ md: 8, xs: 12 },
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							"label",
+							null,
+							"Enter password for OG:"
+						)
+					)
+				),
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["l" /* Row */],
+					{ className: "default-bg full-height flex-center" },
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+						__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["c" /* Col */],
+						{ md: 8, xs: 12 },
+						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+							"div",
+							{ className: "form-container" },
+							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 								"form",
 								{ onSubmit: this.handleSubmit },
-								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-										"label",
-										null,
-										"Enter password for OG:",
-										__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "text", value: this.state.value, onChange: this.handleChange })
-								),
+								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "text", value: this.state.value, onChange: this.handleChange }),
 								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "submit", value: "Show me the score!" })
-						);
-				}
-		}]);
+							)
+						)
+					)
+				)
+			);
+		}
+	}]);
 
-		return Qscore;
+	return Qscore;
 }(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
 
 /***/ })
