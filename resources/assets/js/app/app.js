@@ -12,6 +12,7 @@ import { Footer } from "../components/Footer";
 
 // pages
 import { Home } from "../pages/Home";
+import { Score } from "../pages/score";
 
 
 class App extends React.Component {
@@ -59,6 +60,11 @@ class App extends React.Component {
 							<Route path="/history" component={History} />
 							<Route path="/anthem" component={Anthem} />
 							<Route path="/contact" component={Contact} /> */}
+						</Switch>
+					</Router>
+					<Router>
+						<Switch>
+							<Route exact path="/score" render = {() => (<Score /> )}/>
 						</Switch>
 					</Router>
 				</Grid>
