@@ -61872,7 +61872,9 @@ var Qscore = function (_React$Component) {
 
 	_createClass(Qscore, [{
 		key: "handleChange",
-		value: function handleChange(event) {}
+		value: function handleChange(event) {
+			this.setState({ value: event.target.value });
+		}
 	}, {
 		key: "handleSubmit",
 		value: function handleSubmit(event) {
@@ -61922,7 +61924,7 @@ var Qscore = function (_React$Component) {
 							{ className: "form-container" },
 							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 								"form",
-								{ onSubmit: this.handleSubmit },
+								{ action: "{{route('score.pass_send')}}", method: "POST" },
 								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "text", value: this.state.value, onChange: this.handleChange }),
 								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "submit", value: "Show me the score!" })
 							)
