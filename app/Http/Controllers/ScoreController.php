@@ -11,9 +11,15 @@ class ScoreController extends Controller
         //dd(request()->all()); 
         $Response = Request()->only(["pass_send"]);
         if($Response["pass_send"]=="asdf")
-            $myJSON = json_encode("Correct password");
+            $myJSON = "{
+                \"result\":\"Correct password\",
+                \"OG_name\":\"Exodia\"
+             }";
         else
-            $myJSON = json_encode("Wrong password");
+            $myJSON = "{
+                \"result\":\"Wrong password\",
+                \"OG_name\":\"Exodia\"
+             }";
         //$Response = Request();
         //console.log($Response);
         echo $myJSON;
