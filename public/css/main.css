@@ -8520,6 +8520,10 @@ label {
   font-size: 20px;
 }
 
+.margin-bottom {
+  padding-bottom: 50px;
+}
+
 .navbar-brand {
   width: 200px;
   padding: 0;

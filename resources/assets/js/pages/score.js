@@ -15,7 +15,7 @@ export class Score extends React.Component {
 
 	render(){
 		return (
-			<div>
+			<div className="Day_Tables">
 				<Banner />
                 <section id="Day 1">
                     <Row className="default-bg full-height">
@@ -51,6 +51,10 @@ export class Score extends React.Component {
                         </Col>
                     </Row>
                 </section>
+                <Row className="default-bg full-height">
+					<div className= "margin-bottom">
+					</div>
+				</Row>
 			</div>
 		)
 	}

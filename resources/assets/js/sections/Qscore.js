@@ -13,7 +13,7 @@ export class Qscore extends React.Component {
     }
   
     handleChange(event) {
-      	
+		this.setState({value: event.target.value});
     }
   
     handleSubmit(event) {
@@ -40,12 +40,15 @@ export class Qscore extends React.Component {
 					<Col md={8} xs={12}>
 					<div className="form-container">
 						<form onSubmit={this.handleSubmit}>
-							<input type="text" value={this.state.value} onChange={this.handleChange} /> 
+							<input type="password" value={this.state.value} onChange={this.handleChange} /> 
 							<input type="submit" value="Show me the score!" />
 						</form>
 					</div>
 					</Col>
-					
+				</Row>
+				<Row className="default-bg full-height flex-center">
+					<div className= "margin-bottom">
+					</div>
 				</Row>
 			</section>
 			);

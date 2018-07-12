@@ -61872,7 +61872,9 @@ var Qscore = function (_React$Component) {
 
 	_createClass(Qscore, [{
 		key: "handleChange",
-		value: function handleChange(event) {}
+		value: function handleChange(event) {
+			this.setState({ value: event.target.value });
+		}
 	}, {
 		key: "handleSubmit",
 		value: function handleSubmit(event) {
@@ -61923,11 +61925,16 @@ var Qscore = function (_React$Component) {
 							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 								"form",
 								{ onSubmit: this.handleSubmit },
-								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "text", value: this.state.value, onChange: this.handleChange }),
+								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "password", value: this.state.value, onChange: this.handleChange }),
 								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "submit", value: "Show me the score!" })
 							)
 						)
 					)
+				),
+				__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+					__WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["l" /* Row */],
+					{ className: "default-bg full-height flex-center" },
+					__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "margin-bottom" })
 				)
 			);
 		}
@@ -61982,7 +61989,7 @@ var Score = function (_React$Component) {
         value: function render() {
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "div",
-                null,
+                { className: "Day_Tables" },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__sections_banner__["a" /* Banner */], null),
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     "section",
@@ -62059,6 +62066,11 @@ var Score = function (_React$Component) {
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__sections_partials_Day4__["a" /* Day4_table */], null)
                         )
                     )
+                ),
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["l" /* Row */],
+                    { className: "default-bg full-height" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "margin-bottom" })
                 )
             );
         }
