@@ -10,15 +10,18 @@ class ScoreController extends Controller
         //testing
         //dd(request()->all()); 
         $Response = Request()->only(["pass_send"]);
-        $myJSON = json_encode($Response);
+        if($Response["pass_send"]=="asdf")
+            $myJSON = json_encode("Correct password");
+        else
+            $myJSON = json_encode("Wrong password");
         //$Response = Request();
         //console.log($Response);
         echo $myJSON;
-        \Response::JSON("{
+        /*\Response::JSON("{
             status:success,
             code: 200,
             payload: {
               }
-            }");
+            }");*/
     }
 }

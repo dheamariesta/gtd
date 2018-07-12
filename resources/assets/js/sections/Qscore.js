@@ -18,20 +18,36 @@ export class Qscore extends React.Component {
     }
   
     handleSubmit(event) {
-		alert('The following password has been submitted: ' + this.state.value);
+		//alert('The following password has been submitted: ' + this.state.value);
+		console.log("password has been submitted!");
 		event.preventDefault();
-		fetch('/score', {
-		method: 'POST',
-		headers: {
-			'Accept': 'application/json',
-			'Content-Type': 'application/json',
-		},
-		body: JSON.stringify({
-			pass_send: this.state.value,
+		fetch('/score', 
+		{
+			method: 'POST',
+			headers: 
+			{
+				'Accept': 'application/json',
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(
+			{
+				pass_send: this.state.value,
+			})
 		})
+		.then(function(response) {
+			return response.json();
 		})
-		
-		console.log("test")
+		.then(function(myJson) {
+			console.log(myJson);
+			if(myJson=="Correct password")
+			{
+				window.location.assign("/score");
+			}
+			else
+			{
+				alert('Wrong password submitted!');
+			}
+		});
     }
   
     render() {
