@@ -64,7 +64,7 @@ class App extends React.Component {
 					</Router>
 					<Router>
 						<Switch>
-							<Route exact path="/score" render = {() => (<Score /> )}/>
+							<Route exact path="/score" component = {Score} />
 						</Switch>
 					</Router>
 				</Grid>

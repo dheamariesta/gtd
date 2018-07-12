@@ -1,6 +1,7 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
 import { DefaultPanel } from "../components/Panel";
+import axios from "axios";
 
 
 export class Qscore extends React.Component {
@@ -17,8 +18,36 @@ export class Qscore extends React.Component {
     }
   
     handleSubmit(event) {
-		alert('The following password has been submitted: ' + this.state.value);
+		//alert('The following password has been submitted: ' + this.state.value);
+		console.log("password has been submitted!");
 		event.preventDefault();
+		fetch('/score', 
+		{
+			method: 'POST',
+			headers: 
+			{
+				'Accept': 'application/json',
+				'Content-Type': 'application/json',
+			},
+			body: JSON.stringify(
+			{
+				pass_send: this.state.value,
+			})
+		})
+		.then(function(response) {
+			return response.json();
+		})
+		.then(function(myJson) {
+			console.log(myJson);
+			if(myJson=="Correct password")
+			{
+				window.location.assign("/score");
+			}
+			else
+			{
+				alert('Wrong password submitted!');
+			}
+		});
     }
   
     render() {
@@ -39,8 +68,8 @@ export class Qscore extends React.Component {
 				<Row className="default-bg full-height flex-center">
 					<Col md={8} xs={12}>
 					<div className="form-container">
-						<form onSubmit={this.handleSubmit}>
-							<input type="password" value={this.state.value} onChange={this.handleChange} /> 
+						<form name = "pass" onSubmit= {this.handleSubmit}>
+							<input type="text" value={this.state.value} onChange={this.handleChange} /> 
 							<input type="submit" value="Show me the score!" />
 						</form>
 					</div>
@@ -54,3 +83,4 @@ export class Qscore extends React.Component {
 			);
     }
 }
+// Hi Jason :)
