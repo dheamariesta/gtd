@@ -11,7 +11,11 @@ import { Day4_table } from "../sections/partials/Day4"
 export class Score extends React.Component {
 	constructor(props){
 		super(props);
-	}
+    }
+    
+    handleSubmit(data) {
+        console.log('form submission data', data);
+    }
 
 	render(){
 		return (

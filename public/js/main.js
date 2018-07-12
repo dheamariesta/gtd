@@ -45035,9 +45035,7 @@ var App = function (_React$Component) {
 						__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 							__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["c" /* Switch */],
 							null,
-							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Route */], { exact: true, path: "/score", render: function render() {
-									return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__pages_score__["a" /* Score */], null);
-								} })
+							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* Route */], { exact: true, path: "/score", component: __WEBPACK_IMPORTED_MODULE_7__pages_score__["a" /* Score */] })
 						)
 					)
 				),
@@ -61843,6 +61841,8 @@ AlertDismissable.defaultProps = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__ = __webpack_require__(16);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Panel__ = __webpack_require__(228);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_axios__ = __webpack_require__(229);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_axios__);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -61850,6 +61850,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
 
 
 
@@ -61880,6 +61881,18 @@ var Qscore = function (_React$Component) {
 		value: function handleSubmit(event) {
 			alert('The following password has been submitted: ' + this.state.value);
 			event.preventDefault();
+			fetch('/score', {
+				method: 'POST',
+				headers: {
+					'Accept': 'application/json',
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify({
+					pass_send: this.state.value
+				})
+			});
+
+			console.log("test");
 		}
 	}, {
 		key: "render",
@@ -61924,7 +61937,7 @@ var Qscore = function (_React$Component) {
 							{ className: "form-container" },
 							__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
 								"form",
-								{ action: "{{route('score.pass_send')}}", method: "POST" },
+								{ name: "pass", onSubmit: this.handleSubmit },
 								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "text", value: this.state.value, onChange: this.handleChange }),
 								__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "submit", value: "Show me the score!" })
 							)
@@ -61937,6 +61950,7 @@ var Qscore = function (_React$Component) {
 
 	return Qscore;
 }(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
+// Hi Jason :)
 
 /***/ }),
 /* 544 */
@@ -61980,6 +61994,11 @@ var Score = function (_React$Component) {
     }
 
     _createClass(Score, [{
+        key: "handleSubmit",
+        value: function handleSubmit(data) {
+            console.log('form submission data', data);
+        }
+    }, {
         key: "render",
         value: function render() {
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
@@ -62103,7 +62122,7 @@ var Day1_table = function (_React$Component) {
         value: function render() {
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "div",
-                { classname: "Day1_table" },
+                { className: "Day1_table" },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["l" /* Row */],
                     { className: "default-bg full-height" },
@@ -62159,7 +62178,7 @@ var Day2_table = function (_React$Component) {
         value: function render() {
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "div",
-                { classname: "Day2_table" },
+                { className: "Day2_table" },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["l" /* Row */],
                     { className: "default-bg full-height" },
@@ -62215,7 +62234,7 @@ var Day3_table = function (_React$Component) {
         value: function render() {
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "div",
-                { classname: "Day3_table" },
+                { className: "Day3_table" },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["l" /* Row */],
                     { className: "default-bg full-height" },
@@ -62271,7 +62290,7 @@ var Day4_table = function (_React$Component) {
         value: function render() {
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "div",
-                { classname: "Day4_table" },
+                { className: "Day4_table" },
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__["l" /* Row */],
                     { className: "default-bg full-height" },

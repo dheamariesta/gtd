@@ -1,6 +1,7 @@
 import React from "react";
 import { Row, Col } from "react-bootstrap";
 import { DefaultPanel } from "../components/Panel";
+import axios from "axios";
 
 
 export class Qscore extends React.Component {
@@ -19,6 +20,18 @@ export class Qscore extends React.Component {
     handleSubmit(event) {
 		alert('The following password has been submitted: ' + this.state.value);
 		event.preventDefault();
+		fetch('/score', {
+		method: 'POST',
+		headers: {
+			'Accept': 'application/json',
+			'Content-Type': 'application/json',
+		},
+		body: JSON.stringify({
+			pass_send: this.state.value,
+		})
+		})
+		
+		console.log("test")
     }
   
     render() {
@@ -39,7 +52,7 @@ export class Qscore extends React.Component {
 				<Row className="default-bg full-height flex-center">
 					<Col md={8} xs={12}>
 					<div className="form-container">
-						<form action="{{route('score.pass_send')}}" method ="POST">
+						<form name = "pass" onSubmit= {this.handleSubmit}>
 							<input type="text" value={this.state.value} onChange={this.handleChange} /> 
 							<input type="submit" value="Show me the score!" />
 						</form>
@@ -51,3 +64,4 @@ export class Qscore extends React.Component {
 			);
     }
 }
+// Hi Jason :)
