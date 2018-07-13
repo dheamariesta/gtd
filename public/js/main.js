@@ -61975,12 +61975,14 @@ var Qscore = function (_React$Component) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Score; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__sections_banner__ = __webpack_require__(228);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__sections_partials_Day1__ = __webpack_require__(545);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__sections_partials_Day2__ = __webpack_require__(546);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__sections_partials_Day3__ = __webpack_require__(547);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__sections_partials_Day4__ = __webpack_require__(548);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_axios__ = __webpack_require__(141);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_axios___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_axios__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sections_banner__ = __webpack_require__(228);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_react_bootstrap__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__sections_partials_Day1__ = __webpack_require__(545);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__sections_partials_Day2__ = __webpack_require__(546);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__sections_partials_Day3__ = __webpack_require__(547);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__sections_partials_Day4__ = __webpack_require__(548);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -61988,6 +61990,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
 
 
 
@@ -62009,7 +62012,7 @@ var Score = function (_React$Component) {
 
         _this.state = {
             value: '',
-            group_name: '' };
+            OG_NAME: '' };
         _this.handleChange = _this.handleChange.bind(_this);
         _this.handleSubmit = _this.handleSubmit.bind(_this);
         _this.newMethod = _this.newMethod.bind(_this);
@@ -62023,14 +62026,6 @@ var Score = function (_React$Component) {
             this.setState({ value: event.target.value });
         }
     }, {
-        key: "componentDidUpdate",
-        value: function componentDidUpdate(prevProps) {
-            // Typical usage (don't forget to compare props):
-            if (this.props.state !== prevProps.state) {
-                this.newMethod(this.props.state);
-            }
-        }
-    }, {
         key: "handleSubmit",
         value: function handleSubmit(event) {
             //alert('The following password has been submitted: ' + this.state.value);
@@ -62041,45 +62036,65 @@ var Score = function (_React$Component) {
     }, {
         key: "newMethod",
         value: function newMethod() {
-            fetch('/score', {
-                method: 'POST',
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    pass_send: this.state.value
-                })
+            var _this2 = this;
+
+            __WEBPACK_IMPORTED_MODULE_1_axios___default.a.post('/score', {
+                pass_send: this.state.value
             }).then(function (response) {
-                return response.json();
-            }).then(function (myJson) {
-                //console.log(myJson);
-                if (myJson["result"] == "Correct password") {
-                    this.setState({
-                        group_name: myJson["OG_name"]
-                    });
-                    // this.state.group_name = myJson["OG_name"];
-                    //console.log(myJson);
-                    alert('Correct password submitted!' + 'Your OG is:' + myJson["OG_name"]);
-                    //window.location.assign("/score");
-                } else {
-                    alert('Wrong password submitted!');
-                }
+                console.log(response.data);
+                alert("Password is correct");
+                var OG_NAME = response.data.result.OG_NAME;
+
+                _this2.setState({ OG_NAME: OG_NAME });
+            }).catch(function (err) {
+                console.log(err);
+                alert("Unauthorized");
             });
+            //     fetch('/score', 
+            // {
+            // 	method: 'POST',
+            // 	headers: 
+            // 	{
+            // 		'Accept': 'application/json',
+            // 		'Content-Type': 'application/json',
+            // 	},
+            // 	body: JSON.stringify(
+            // 	{
+            //         pass_send: this.state.value,
+            // 	})
+            // })
+            // .then(function(response) {
+            // 	return response.json();
+            // })
+            //     .then(function (myJson) {
+            //         //console.log(myJson);
+            //         if (myJson["result"] == "Correct password") {
+            //             this.setState({
+            // 							OG_NAME: myJson["OG_name"]
+            // 						});
+            //             // this.state.OG_NAME = myJson["OG_name"];
+            //             //console.log(myJson);
+            //             alert('Correct password submitted!' + 'Your OG is:'+myJson["OG_name"]);
+            //             //window.location.assign("/score");
+            //         }
+            //         else {
+            //             alert('Wrong password submitted!');
+            //         }
+            //     });
         }
     }, {
         key: "render",
         value: function render() {
-            if (this.state.group_name == '') {
+            if (this.state.OG_NAME == '') {
                 return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     "section",
                     { id: "qscore" },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__sections_banner__["a" /* Banner */], null),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__sections_banner__["a" /* Banner */], null),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["l" /* Row */],
+                        __WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["l" /* Row */],
                         { className: "default-bg full-height flex-center" },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["c" /* Col */],
+                            __WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["c" /* Col */],
                             { md: 8, xs: 12 },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 "h1",
@@ -62089,10 +62104,10 @@ var Score = function (_React$Component) {
                         )
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["l" /* Row */],
+                        __WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["l" /* Row */],
                         { className: "default-bg full-height flex-center" },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["c" /* Col */],
+                            __WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["c" /* Col */],
                             { md: 8, xs: 12 },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 "label",
@@ -62102,10 +62117,10 @@ var Score = function (_React$Component) {
                         )
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["l" /* Row */],
+                        __WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["l" /* Row */],
                         { className: "default-bg full-height flex-center" },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["c" /* Col */],
+                            __WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["c" /* Col */],
                             { md: 8, xs: 12 },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 "div",
@@ -62120,7 +62135,7 @@ var Score = function (_React$Component) {
                         )
                     ),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["l" /* Row */],
+                        __WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["l" /* Row */],
                         { className: "default-bg full-height" },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "margin-bottom" })
                     )
@@ -62129,12 +62144,12 @@ var Score = function (_React$Component) {
                 return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     "section",
                     { id: "score" },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1__sections_banner__["a" /* Banner */], null),
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__sections_banner__["a" /* Banner */], null),
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["l" /* Row */],
+                        __WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["l" /* Row */],
                         { className: "default-bg full-height flex-center" },
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["c" /* Col */],
+                            __WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["c" /* Col */],
                             { md: 8, xs: 12 },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                 "h1",
@@ -62150,10 +62165,10 @@ var Score = function (_React$Component) {
                             "section",
                             { id: "Day 1" },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["l" /* Row */],
+                                __WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["l" /* Row */],
                                 { className: "default-bg full-height" },
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["c" /* Col */],
+                                    __WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["c" /* Col */],
                                     { md: 12 },
                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                         "h1",
@@ -62162,9 +62177,9 @@ var Score = function (_React$Component) {
                                     )
                                 ),
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["c" /* Col */],
+                                    __WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["c" /* Col */],
                                     { md: 12 },
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__sections_partials_Day1__["a" /* Day1_table */], null)
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__sections_partials_Day1__["a" /* Day1_table */], null)
                                 )
                             )
                         ),
@@ -62172,17 +62187,17 @@ var Score = function (_React$Component) {
                             "section",
                             { id: "Day 2" },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["l" /* Row */],
+                                __WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["l" /* Row */],
                                 { className: "default-bg full-height" },
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["c" /* Col */],
+                                    __WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["c" /* Col */],
                                     { md: 12 },
                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                         "h1",
                                         { className: "section-title title" },
                                         "Day 2 Score"
                                     ),
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__sections_partials_Day2__["a" /* Day2_table */], null)
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__sections_partials_Day2__["a" /* Day2_table */], null)
                                 )
                             )
                         ),
@@ -62190,17 +62205,17 @@ var Score = function (_React$Component) {
                             "section",
                             { id: "Day 3" },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["l" /* Row */],
+                                __WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["l" /* Row */],
                                 { className: "default-bg full-height" },
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["c" /* Col */],
+                                    __WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["c" /* Col */],
                                     { md: 12 },
                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                         "h1",
                                         { className: "section-title title" },
                                         "Day 3 Score"
                                     ),
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__sections_partials_Day3__["a" /* Day3_table */], null)
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__sections_partials_Day3__["a" /* Day3_table */], null)
                                 )
                             )
                         ),
@@ -62208,22 +62223,22 @@ var Score = function (_React$Component) {
                             "section",
                             { id: "Day 4" },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["l" /* Row */],
+                                __WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["l" /* Row */],
                                 { className: "default-bg full-height" },
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["c" /* Col */],
+                                    __WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["c" /* Col */],
                                     { md: 12 },
                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                         "h1",
                                         { className: "section-title title" },
                                         "Day 4 Score"
                                     ),
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__sections_partials_Day4__["a" /* Day4_table */], null)
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__sections_partials_Day4__["a" /* Day4_table */], null)
                                 )
                             )
                         ),
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["l" /* Row */],
+                            __WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["l" /* Row */],
                             { className: "default-bg full-height" },
                             __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "margin-bottom" })
                         )

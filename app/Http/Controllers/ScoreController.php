@@ -3,30 +3,33 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Redirect;
 
 class ScoreController extends Controller
 {
     public function pass_send(Request $request) {
         $rules = [
             'pass_send' => 'required'
-        ];
+		];
         $this->validate($request, $rules);
-        if($request["pass_send"]=="asdf")
+        if($request->pass_send =="asdf") {
             $mydata = [
                 "result" => "Correct password",
-                "OG_name" => "Exodia"
-            ];
-        else
+                "OG_NAME" => "Exodia"
+			];
+			$status = 200;
+		}
+        else {
             $mydata = [
                 "result" => "Wrong password",
-                "OG_name" => "Exodia"
-            ];
-        return $mydata;
-        //redirect('/score')->with('test','hello');
-        //return \Redirect::route('score')->with('global', 'Your message');
-        //return redirect()->route('score');
-        //return redirect()->action('PagesController@score');
+                "OG_NAME" => "Exodia"
+			];
+			$status = 403;
+		}
+        return response()->json($mydata, $status);
+        // redirect('/score')->with('test','hello');
+        // return \Redirect::route('score')->with('global', 'Your message');
+        // return redirect()->route('score');
+        // return redirect()->action('PagesController@score');
     }
     /* //old code
     public function pass_send(){

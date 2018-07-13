@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 
 // Sections
 import { Banner } from "../sections/banner";
@@ -13,7 +14,7 @@ export class Score extends React.Component {
 		super(props);
 		this.state = {
             value: '',
-            group_name: ''};
+            OG_NAME: ''};
 		this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.newMethod = this.newMethod.bind(this);
@@ -22,13 +23,6 @@ export class Score extends React.Component {
   
     handleChange(event) {
         this.setState({value: event.target.value});
-    }
-
-    componentDidUpdate(prevProps) {
-        // Typical usage (don't forget to compare props):
-        if (this.props.state !== prevProps.state) {
-            this.newMethod(this.props.state);
-        }
     }
   
 
@@ -40,41 +34,52 @@ export class Score extends React.Component {
     }
 
     newMethod() {
-        fetch('/score', 
-		{
-			method: 'POST',
-			headers: 
-			{
-				'Accept': 'application/json',
-				'Content-Type': 'application/json',
-			},
-			body: JSON.stringify(
-			{
-            pass_send: this.state.value,
+			axios.post('/score', {
+					pass_send: this.state.value,
+			}).then(response => {
+				console.log(response.data);
+				alert("Password is correct");
+				const { OG_NAME } = response.data.result;
+				this.setState({ OG_NAME });
+			}).catch(err => {
+				console.log(err);
+				alert("Unauthorized");
 			})
-		})
-		.then(function(response) {
-			return response.json();
-		})
-        .then(function (myJson) {
-            //console.log(myJson);
-            if (myJson["result"] == "Correct password") {
-                this.setState({
-									group_name: myJson["OG_name"]
-								});
-                // this.state.group_name = myJson["OG_name"];
-                //console.log(myJson);
-                alert('Correct password submitted!' + 'Your OG is:'+myJson["OG_name"]);
-                //window.location.assign("/score");
-            }
-            else {
-                alert('Wrong password submitted!');
-            }
-        });
+    //     fetch('/score', 
+		// {
+		// 	method: 'POST',
+		// 	headers: 
+		// 	{
+		// 		'Accept': 'application/json',
+		// 		'Content-Type': 'application/json',
+		// 	},
+		// 	body: JSON.stringify(
+		// 	{
+    //         pass_send: this.state.value,
+		// 	})
+		// })
+		// .then(function(response) {
+		// 	return response.json();
+		// })
+    //     .then(function (myJson) {
+    //         //console.log(myJson);
+    //         if (myJson["result"] == "Correct password") {
+    //             this.setState({
+		// 							OG_NAME: myJson["OG_name"]
+		// 						});
+    //             // this.state.OG_NAME = myJson["OG_name"];
+    //             //console.log(myJson);
+    //             alert('Correct password submitted!' + 'Your OG is:'+myJson["OG_name"]);
+    //             //window.location.assign("/score");
+    //         }
+    //         else {
+    //             alert('Wrong password submitted!');
+    //         }
+    //     });
     }
 
 	render(){
-        if(this.state.group_name=='')
+        if(this.state.OG_NAME=='')
         {
 		    return (
                 <section id="qscore">

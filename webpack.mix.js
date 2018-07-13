@@ -16,7 +16,7 @@ mix.react('resources/assets/js/main.js', 'public/js')
 
 mix.browserSync({
 	proxy : {
-		target : "http://gtd_laravel.test"
+		target : "localhost:8000"
 	},
 	ghostMode: false
 });
