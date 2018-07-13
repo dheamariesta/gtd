@@ -15,18 +15,32 @@ export class Score extends React.Component {
             value: '',
             group_name: ''};
 		this.handleChange = this.handleChange.bind(this);
-		this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.newMethod = this.newMethod.bind(this);
+        this.componentDidUpdate = this.componentDidUpdate.bind(this);
     }
   
     handleChange(event) {
         this.setState({value: event.target.value});
     }
+
+    componentDidUpdate(prevProps) {
+        // Typical usage (don't forget to compare props):
+        if (this.props.state !== prevProps.state) {
+            this.newMethod(this.props.state);
+        }
+    }
   
+
     handleSubmit(event) {
 		//alert('The following password has been submitted: ' + this.state.value);
 		console.log("password has been submitted!");
 		event.preventDefault();
-		fetch('/score', 
+		this.newMethod();
+    }
+
+    newMethod() {
+        fetch('/score', 
 		{
 			method: 'POST',
 			headers: 
@@ -36,27 +50,27 @@ export class Score extends React.Component {
 			},
 			body: JSON.stringify(
 			{
-				pass_send: this.state.value,
+            pass_send: this.state.value,
 			})
 		})
 		.then(function(response) {
 			return response.json();
 		})
-		.then(function(myJson) {
-			//console.log(myJson);
-			if(myJson["result"]=="Correct password")
-			{
-                //this.setState({group_name: myJson["result"]});
+        .then(function (myJson) {
+            //console.log(myJson);
+            if (myJson["result"] == "Correct password") {
+                this.setState({
+									group_name: myJson["OG_name"]
+								});
+                // this.state.group_name = myJson["OG_name"];
                 //console.log(myJson);
-                alert('Correct password submitted!'+'Your OG is:');
-                this.forceUpdate()
-				//window.location.assign("/score");
-			}
-			else
-			{
-				alert('Wrong password submitted!');
-			}
-		});
+                alert('Correct password submitted!' + 'Your OG is:'+myJson["OG_name"]);
+                //window.location.assign("/score");
+            }
+            else {
+                alert('Wrong password submitted!');
+            }
+        });
     }
 
 	render(){

@@ -57,7 +57,7 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = 235);
@@ -62012,6 +62012,8 @@ var Score = function (_React$Component) {
             group_name: '' };
         _this.handleChange = _this.handleChange.bind(_this);
         _this.handleSubmit = _this.handleSubmit.bind(_this);
+        _this.newMethod = _this.newMethod.bind(_this);
+        _this.componentDidUpdate = _this.componentDidUpdate.bind(_this);
         return _this;
     }
 
@@ -62021,11 +62023,24 @@ var Score = function (_React$Component) {
             this.setState({ value: event.target.value });
         }
     }, {
+        key: "componentDidUpdate",
+        value: function componentDidUpdate(prevProps) {
+            // Typical usage (don't forget to compare props):
+            if (this.props.state !== prevProps.state) {
+                this.newMethod(this.props.state);
+            }
+        }
+    }, {
         key: "handleSubmit",
         value: function handleSubmit(event) {
             //alert('The following password has been submitted: ' + this.state.value);
             console.log("password has been submitted!");
             event.preventDefault();
+            this.newMethod();
+        }
+    }, {
+        key: "newMethod",
+        value: function newMethod() {
             fetch('/score', {
                 method: 'POST',
                 headers: {
@@ -62040,10 +62055,12 @@ var Score = function (_React$Component) {
             }).then(function (myJson) {
                 //console.log(myJson);
                 if (myJson["result"] == "Correct password") {
-                    //this.setState({group_name: myJson["result"]});
+                    this.setState({
+                        group_name: myJson["OG_name"]
+                    });
+                    // this.state.group_name = myJson["OG_name"];
                     //console.log(myJson);
-                    alert('Correct password submitted!' + 'Your OG is:');
-                    this.forceUpdate();
+                    alert('Correct password submitted!' + 'Your OG is:' + myJson["OG_name"]);
                     //window.location.assign("/score");
                 } else {
                     alert('Wrong password submitted!');
