@@ -1,5 +1,4 @@
 import React from "react";
-import { withCookies, Cookies } from 'react-cookie';
 
 // Sections
 import { Banner } from "../sections/banner";
@@ -12,8 +11,9 @@ import { Day4_table } from "../sections/partials/Day4"
 export class Score extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = {value: ''};
-		this.group_name = {value: ''};
+		this.state = {
+            value: '',
+            group_name: ''};
 		this.handleChange = this.handleChange.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -43,10 +43,13 @@ export class Score extends React.Component {
 			return response.json();
 		})
 		.then(function(myJson) {
-			console.log(myJson);
+			//console.log(myJson);
 			if(myJson["result"]=="Correct password")
 			{
-                alert('Correct password submitted!'+'Your OG is:'+myJson["OG_name"]);
+                //this.setState({group_name: myJson["result"]});
+                //console.log(myJson);
+                alert('Correct password submitted!'+'Your OG is:');
+                this.forceUpdate()
 				//window.location.assign("/score");
 			}
 			else
@@ -57,16 +60,16 @@ export class Score extends React.Component {
     }
 
 	render(){
-        if(this.group_name.value=='')
+        if(this.state.group_name=='')
         {
 		    return (
                 <section id="qscore">
+                    <Banner />
                     <Row className="default-bg full-height flex-center">
                         <Col md={8} xs={12}>
                         <h1 className="section-title title">Exodia Scores</h1>
                         </Col>
                     </Row>
-                    <Banner />
                     <Row className="default-bg full-height flex-center">
                         <Col md={8} xs={12}>
                         <label>
@@ -94,14 +97,14 @@ export class Score extends React.Component {
         else
         {
             return (
-                <section id="qscore">
+                <section id="score">
+                    <Banner />
                     <Row className="default-bg full-height flex-center">
                         <Col md={8} xs={12}>
                         <h1 className="section-title title">Exodia Scores</h1>
                         </Col>
                     </Row>
                     <div>
-                        <Banner />
                         <section id="Day 1">
                             <Row className="default-bg full-height">
                                 <Col md={12}>
