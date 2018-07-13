@@ -44,8 +44,9 @@ export class Score extends React.Component {
 		})
 		.then(function(myJson) {
 			console.log(myJson);
-			if(myJson=="Correct password")
+			if(myJson["result"]=="Correct password")
 			{
+                alert('Correct password submitted!'+'Your OG is:'+myJson["OG_name"]);
 				//window.location.assign("/score");
 			}
 			else

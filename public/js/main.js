@@ -62045,7 +62045,8 @@ var Score = function (_React$Component) {
                 return response.json();
             }).then(function (myJson) {
                 console.log(myJson);
-                if (myJson == "Correct password") {
+                if (myJson["result"] == "Correct password") {
+                    alert('Correct password submitted!');
                     //window.location.assign("/score");
                 } else {
                     alert('Wrong password submitted!');

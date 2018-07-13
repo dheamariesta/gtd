@@ -15,7 +15,7 @@ import { Home } from "../pages/Home";
 import { Score } from "../pages/score";
 
 // cookies
-import { CookiesProvider } from 'react-cookie';
+//import { CookiesProvider } from 'react-cookie';
 
 class App extends React.Component {
     constructor(props){
@@ -52,7 +52,6 @@ class App extends React.Component {
     render(){
 		const isDesktop = this.state.isDesktop;
 		return(
-			<CookiesProvider>
 			<div className="app">
 				<Topbar isDesktop={isDesktop} />
 				<Grid fluid>
@@ -73,7 +72,6 @@ class App extends React.Component {
 				</Grid>
 				<Footer />
 			</div>
-			</CookiesProvider>
 		);
     }
 }
