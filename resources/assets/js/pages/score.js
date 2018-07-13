@@ -45,7 +45,7 @@ export class Score extends React.Component {
 			console.log(myJson);
 			if(myJson=="Correct password")
 			{
-				window.location.assign("/score");
+				//window.location.assign("/score");
 			}
 			else
 			{
@@ -55,15 +55,16 @@ export class Score extends React.Component {
     }
 
 	render(){
-        if(this.state.value=='')
+        if(this.group_name.value=='')
         {
-            return (
+		    return (
                 <section id="qscore">
                     <Row className="default-bg full-height flex-center">
                         <Col md={8} xs={12}>
                         <h1 className="section-title title">Exodia Scores</h1>
                         </Col>
                     </Row>
+                    <Banner />
                     <Row className="default-bg full-height flex-center">
                         <Col md={8} xs={12}>
                         <label>
@@ -80,7 +81,10 @@ export class Score extends React.Component {
                             </form>
                         </div>
                         </Col>
-                        
+                    </Row>
+                    <Row className="default-bg full-height">
+                            <div className= "margin-bottom">
+                            </div>
                     </Row>
                 </section>
                 );
@@ -88,45 +92,56 @@ export class Score extends React.Component {
         else
         {
             return (
-                <div>
-                    <Banner />
-                    <section id="Day 1">
+                <section id="qscore">
+                    <Row className="default-bg full-height flex-center">
+                        <Col md={8} xs={12}>
+                        <h1 className="section-title title">Exodia Scores</h1>
+                        </Col>
+                    </Row>
+                    <div>
+                        <Banner />
+                        <section id="Day 1">
+                            <Row className="default-bg full-height">
+                                <Col md={12}>
+        
+                                    <h1 className="section-title title">Day 1 Score</h1>
+                                </Col>
+                                <Col md={12}>
+                                    <Day1_table />
+                                </Col>
+                            </Row>
+                        </section>
+                        <section id="Day 2">
+                            <Row className="default-bg full-height">
+                                <Col md={12}>
+                                    <h1 className="section-title title">Day 2 Score</h1>
+                                    <Day2_table />
+                                </Col>
+                            </Row>
+                        </section>
+                        <section id="Day 3">
+                            <Row className="default-bg full-height">
+                                <Col md={12}>
+                                    <h1 className="section-title title">Day 3 Score</h1>
+                                    <Day3_table />
+                                </Col>
+                            </Row>
+                        </section>
+                        <section id="Day 4">
+                            <Row className="default-bg full-height">
+                                <Col md={12}>
+                                    <h1 className="section-title title">Day 4 Score</h1>
+                                    <Day4_table />
+                                </Col>
+                            </Row>
+                        </section>
                         <Row className="default-bg full-height">
-                            <Col md={12}>cwd = os.path.abspath(os.path.dirname(sys.argv[0]))
-    
-                                <h1 className="section-title title">Day 1 Score</h1>
-                            </Col>
-                            <Col md={12}>
-                                <Day1_table />
-                            </Col>
+                            <div className= "margin-bottom">
+                            </div>
                         </Row>
-                    </section>
-                    <section id="Day 2">
-                        <Row className="default-bg full-height">
-                            <Col md={12}>
-                                <h1 className="section-title title">Day 2 Score</h1>
-                                <Day2_table />
-                            </Col>
-                        </Row>
-                    </section>
-                    <section id="Day 3">
-                        <Row className="default-bg full-height">
-                            <Col md={12}>
-                                <h1 className="section-title title">Day 3 Score</h1>
-                                <Day3_table />
-                            </Col>
-                        </Row>
-                    </section>
-                    <section id="Day 4">
-                        <Row className="default-bg full-height">
-                            <Col md={12}>
-                                <h1 className="section-title title">Day 4 Score</h1>
-                                <Day4_table />
-                            </Col>
-                        </Row>
-                    </section>
-                </div>
-            )
+                    </div>
+                </section>
+            );   
         }
-	}
+    }
 } 
