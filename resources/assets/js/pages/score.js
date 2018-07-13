@@ -1,4 +1,5 @@
 import React from "react";
+import { withCookies, Cookies } from 'react-cookie';
 
 // Sections
 import { Banner } from "../sections/banner";

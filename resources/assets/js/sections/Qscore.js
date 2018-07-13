@@ -39,7 +39,7 @@ export class Qscore extends React.Component {
 		})
 		.then(function(myJson) {
 			console.log(myJson);
-			if(myJson=="Correct password")
+			if(myJson["result"]=="Correct password")
 			{
 				window.location.assign("/score");
 			}
