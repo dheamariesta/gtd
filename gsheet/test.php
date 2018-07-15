@@ -1,5 +1,5 @@
 <?php
-require __DIR__ . '/vendor/autoload.php';
+require __DIR__ . '/../vendor/autoload.php';
 
 /**
  * Returns an authorized API client.
@@ -69,6 +69,12 @@ $range = 'Class Data!A2:E';
 $response = $service->spreadsheets_values->get($spreadsheetId, $range);
 $values = $response->getValues();
 
+$_new_sheet_Id = '1vp3Fo-UiZW2MB3BgCetL3M5gMNbJzckdg60hG81QZMM';
+$_new_range = 'Sheet1!A1:H10';
+$_max_column = 0;
+$_new_response = $service->spreadsheets_values->get($_new_sheet_Id, $_new_range);
+$_new_values = $_new_response->getValues();
+/*
 if (empty($values)) {
     print "No data found.\n";
 } else {
@@ -78,3 +84,80 @@ if (empty($values)) {
         printf("%s, %s\n", $row[0], $row[4]);
     }
 }
+*/
+if(empty($_new_values))
+{
+    print "No data found.\n";
+}
+else {
+    printf("<table border=1>");
+    foreach ($_new_values as $row) {
+        printf("<tr>");
+        $_max_column=max($_max_column,sizeof($row));
+        foreach($row as $column)
+        {
+            printf("<td>");
+            printf("%s", $column);
+            # printf(":%s %s ",gettype($row),gettype($column));
+            printf("</td>");
+        }
+        printf("</tr>\n");
+    }
+    printf("</table>");
+
+    printf("After formatting: <br>");
+    printf("<table border=2 >");
+    foreach ($_new_values as $row) {
+        printf("<tr>");
+        for($column=0;$column<$_max_column;$column++)
+        {
+            printf("<td width =100>");
+            if($column<sizeof($row))
+            printf("%s", $row[$column]);
+            # printf(":%s %s ",gettype($row),gettype($column));
+            printf("</td>");
+        }
+        printf("</tr>\n");
+    }
+    printf("</table>");
+
+    /*$values = [[3,2,1]];
+    $body = new Google_Service_Sheets_ValueRange(['values' => $values  ]);
+    $params = ['valueInputOption' => $valueInputOption];
+    $_range_update = 'Sheet1!A3:C3';
+    $result = $service->spreadsheets_values->update($_new_sheet_Id, $_range_update, $body, $params);
+    printf("<br> %d cells updated. <br>", $result->getUpdatedCells());
+
+    printf("<br>After value update:<br>");
+    printf("<table border=2 >");
+    foreach ($_new_values as $row) {
+        printf("<tr>");
+        for($column=0;$column<$_max_column;$column++)
+        {
+            printf("<td width =100>");
+            if($column<sizeof($row))
+            printf("%s", $row[$column]);
+            # printf(":%s %s ",gettype($row),gettype($column));
+            printf("</td>");
+        }
+        printf("</tr>\n");
+    }
+    printf("</table>");*/
+    $values = [
+        [
+            // Cell values ...
+        ],
+        // Additional rows ...
+    ];
+    $body = new Google_Service_Sheets_ValueRange([
+      'values' => $values
+    ]);
+    $params = [
+      'valueInputOption' => $valueInputOption
+    ];
+    $result = $service->spreadsheets_values->append($spreadsheetId, $range,
+        $body, $params);
+    printf("%d cells appended.", $result->getUpdates()->getUpdatedCells());
+    
+}
+

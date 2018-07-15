@@ -14,4 +14,5 @@
 Route::get('/', 'PagesController@home');
 Route::post('/send', 'ContactsController@send');
 Route::post('/score','ScoreController@pass_send')->name('score.pass_send');
-Route::get('/score', 'PagesController@score')->name('score');;
+Route::post('/score','ScoreController@Day1')->name('score.Day1');
+Route::get('/score', 'PagesController@score')->name('score');
