@@ -17,8 +17,7 @@ export class Score extends React.Component {
             OG_NAME: ''};
 		this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.newMethod = this.newMethod.bind(this);
-        this.componentDidUpdate = this.componentDidUpdate.bind(this);
+        this.check_pass = this.check_pass.bind(this);
     }
   
     handleChange(event) {
@@ -30,21 +29,25 @@ export class Score extends React.Component {
 		//alert('The following password has been submitted: ' + this.state.value);
 		console.log("password has been submitted!");
 		event.preventDefault();
-		this.newMethod();
+		this.check_pass();
     }
 
-    newMethod() {
-			axios.post('/score', {
-					pass_send: this.state.value,
-			}).then(response => {
-				console.log(response.data);
-				alert("Password is correct");
-				const { OG_NAME } = response.data.result;
-				this.setState({ OG_NAME });
-			}).catch(err => {
-				console.log(err);
-				alert("Unauthorized");
-			})
+    check_pass() {
+        axios.post('/score', {
+                pass_send: this.state.value,
+        }).then(response => {
+            console.log(response.data);
+            alert("Password is correct");
+            const temp = response.data.OG_NAME;
+            this.setState({
+                OG_NAME : temp
+            });
+            //console.log(temp);
+            console.log(this.state.OG_NAME);
+        }).catch(err => {
+            console.log(err);
+            alert("Unauthorized");
+        })
     //     fetch('/score', 
 		// {
 		// 	method: 'POST',
@@ -131,7 +134,7 @@ export class Score extends React.Component {
                                     <h1 className="section-title title">Day 1 Score</h1>
                                 </Col>
                                 <Col md={12}>
-                                    <Day1_table />
+                                    <Day1_table component OG_NAME={this.state.OG_NAME}/>
                                 </Col>
                             </Row>
                         </section>
