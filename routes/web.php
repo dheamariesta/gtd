@@ -16,3 +16,5 @@ Route::post('/send', 'ContactsController@send');
 Route::post('/score','ScoreController@pass_send')->name('score.pass_send');
 Route::post('/day1','GSheetController@day1')->name('gsheet.day1');
 Route::get('/score', 'PagesController@score')->name('score');
+Route::get('login/google', 'Auth\LoginController@redirectToProvider');
+Route::get('login/google/callback', 'Auth\LoginController@handleProviderCallback');
