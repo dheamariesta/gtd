@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 require __DIR__ . '/../../../vendor/autoload.php';
+use Google_Client;
+use Google_Service_Sheets;
 
 use Illuminate\Http\Request;
 
-        
-/**
+ /**
  * Returns an authorized API client.
  * @return Google_Client the authorized client object
  */
@@ -16,30 +17,12 @@ function getClient()
     $client = new Google_Client();
     $client->setApplicationName('Google Sheets API PHP Quickstart');
     $client->setScopes(Google_Service_Sheets::SPREADSHEETS_READONLY);
-    $client->setAuthConfig('client_secret.json');
+    $client->setAuthConfig(json_decode(getenv("GOOGLE_API_JSON"),true));
+    //$client->setAuthConfig('client_secret.json');
     $client->setAccessType('offline');
-
     // Load previously authorized credentials from a file.
-    $credentialsPath = expandHomeDirectory('credentials.json');
-    if (file_exists($credentialsPath)) {
-        $accessToken = json_decode(file_get_contents($credentialsPath), true);
-    } else {
-        // Request authorization from the user.
-        $authUrl = $client->createAuthUrl();
-        printf("Open the following link in your browser:\n%s\n", $authUrl);
-        print 'Enter verification code: ';
-        $authCode = trim(fgets(STDIN));
-
-        // Exchange authorization code for an access token.
-        $accessToken = $client->fetchAccessTokenWithAuthCode($authCode);
-
-        // Store the credentials to disk.
-        if (!file_exists(dirname($credentialsPath))) {
-            mkdir(dirname($credentialsPath), 0700, true);
-        }
-        file_put_contents($credentialsPath, json_encode($accessToken));
-        printf("Credentials saved to %s\n", $credentialsPath);
-    }
+    //$accessToken = json_decode(file_get_contents($credentialsPath), true);
+    $accessToken = json_decode(getenv("GOOGLE_API_CREDENTIALS"), true);
     $client->setAccessToken($accessToken);
 
     // Refresh the token if it's expired.
@@ -62,7 +45,7 @@ function expandHomeDirectory($path)
         $homeDirectory = getenv('HOMEDRIVE') . getenv('HOMEPATH');
     }
     return str_replace('~', realpath($homeDirectory), $path);
-}
+}   
 
 class GSheetController extends Controller
 {
@@ -76,9 +59,9 @@ class GSheetController extends Controller
             $client = getClient();
             $service = new Google_Service_Sheets($client);
             $day1sheetID = '1KMuYbgablwJwOTZNhS-GM4abwYN86k2RXr8AxASpoXg';
-            $outdoor_desc_range = 'Outdoor!A1:A6';
-            $gsheet_outdoor_desc_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_desc_range);
-            $outdoor_desc_values = $gsheet_outdoor_response->getValues();
+            $outdoor_desc_range = 'Outdoor!A2:A6';
+            $gsheet_outdoor_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_desc_range);
+            $outdoor_values = $gsheet_outdoor_response->getValues();
             $mydata = [
                 "Values" => $outdoor_values
             ];

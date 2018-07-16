@@ -12,6 +12,7 @@ function getClient()
     $client->setScopes(Google_Service_Sheets::SPREADSHEETS_READONLY);
     $client->setAuthConfig('client_secret.json');
     $client->setAccessType('offline');
+    //$client->setRedirectUri('http://' . $_SERVER['HTTP_HOST'] . '/oauth2callback.php');
 
     // Load previously authorized credentials from a file.
     $credentialsPath = expandHomeDirectory('credentials.json');

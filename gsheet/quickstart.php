@@ -7,12 +7,15 @@ require __DIR__ . '/../vendor/autoload.php';
  */
 function getClient()
 {
+    //echo("test\n");
+    //echo(json_decode(getenv("GOOGLE_API_JSON")));
+    //echo("\n");
     $client = new Google_Client();
     $client->setApplicationName('Google Sheets API PHP Quickstart');
     $client->setScopes(Google_Service_Sheets::SPREADSHEETS_READONLY);
-    $client->setAuthConfig('client_secret.json');
+    $client->setAuthConfig("client_secret.json");
+    //$client->setAuthConfig(getenv("GOOGLE_API_JSON"));
     $client->setAccessType('offline');
-
     // Load previously authorized credentials from a file.
     $credentialsPath = expandHomeDirectory('credentials.json');
     if (file_exists($credentialsPath)) {
