@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 import { Row, Col } from "react-bootstrap";
 
 export class Day1_table extends React.Component {
@@ -13,7 +14,16 @@ export class Day1_table extends React.Component {
     }
 
     fetch_table(){
-        
+        axios.post('/day1', {
+            OG_NAME: this.props.OG_NAME,
+    }).then(response => {
+        console.log(response.data);
+        console.log("Day1 fetched!");
+
+    }).catch(err => {
+        console.log(err);
+        alert("Error!");
+    })
     }
 
     render(){

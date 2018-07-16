@@ -14,6 +14,7 @@
 ## Requirements:
 * PHP >= 7.0.0
 * composer
+* Google Sheet API
 
 # Development
 ## Installing Laravel
@@ -31,6 +32,8 @@ composer global require "laravel/installer"
 	* macOS: `$HOME`/.composer/vendor/bin
 	* Windows: C:\Users\USERNAME\AppData\Roaming\Composer\vendor\bin
 > The executable `laravel` should now be available in your local machine.
+
+4. Follow the instructions from [Official Google Sheet Guide](https://developers.google.com/sheets/api/quickstart/php) to et up the API.
 
 ## Cloning Repository
 1. Clone this branch
