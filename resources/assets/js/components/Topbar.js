@@ -8,7 +8,7 @@ export class HomeTopbar extends React.Component {
 		super(props);
 	}
 
-	scrollToSection() {
+	static scrollToSection() {
 		$("a").on('click', function (event) {
 			// Make sure this.hash has a value before overriding default behavior
 			if (this.hash !== "") {
@@ -29,7 +29,7 @@ export class HomeTopbar extends React.Component {
 		});
 	}
 	componentDidMount() {
-		this.scrollToSection();
+		HomeTopbar.scrollToSection();
 	}
 
 	render() {
