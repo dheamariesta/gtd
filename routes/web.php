@@ -11,5 +11,8 @@
 |
 */
 
-Route::get('/', 'PagesController@home');
 Route::post('/send', 'ContactsController@send');
+
+// Pages
+Route::get('/exodia', 'PagesController@exodia');
+Route::get('/', 'PagesController@home');

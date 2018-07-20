@@ -1,10 +1,9 @@
 // Components
 import React from "react";
 import { Navbar, Nav, NavItem } from "react-bootstrap";
-import $ from "jquery";
 
 
-export class Topbar extends React.Component {
+export class HomeTopbar extends React.Component {
 	constructor(props) {
 		super(props);
 	}
@@ -17,7 +16,7 @@ export class Topbar extends React.Component {
 				event.preventDefault();
 
 				// Store hash
-				var hash = this.hash;
+				let hash = this.hash;
 
 				$('html, body').animate({
 					scrollTop: $(hash).offset().top
@@ -34,7 +33,7 @@ export class Topbar extends React.Component {
 	}
 
 	render() {
-		const isDesktop = this.props.isDesktop;
+		const { isDesktop } = this.props;
 		return (
 			<Navbar fixedTop={isDesktop} id="navbar-scrollspy">
 				<Navbar.Header>
