@@ -8,7 +8,9 @@ export class Banner extends React.Component {
         return (
             <Row className="full-height banner flex-center">
                 <Col md={12} className="banner-container">
+                  <a href="/exodia">
                     <img src="/images/coming_soon.jpg" alt="coming-soon" className="banner-responsive dhea" />
+                  </a>
                 </Col>
             </Row>
         )
