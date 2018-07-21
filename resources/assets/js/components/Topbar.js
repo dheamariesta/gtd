@@ -1,6 +1,6 @@
 // Components
 import React from "react";
-import { Navbar, Nav, NavItem } from "react-bootstrap";
+import { Navbar, Nav, NavItem, Image } from "react-bootstrap";
 
 
 export class HomeTopbar extends React.Component {
@@ -56,3 +56,15 @@ export class HomeTopbar extends React.Component {
 		);
 	}
 }
+
+export const ExodiaTopBar = () => {
+  return (
+    <Navbar className={"no-bg"}>
+      <Navbar.Header>
+        <Navbar.Brand>
+          <Image src={"/images/logo-white.png"} responsive/>
+        </Navbar.Brand>
+      </Navbar.Header>
+    </Navbar>
+  );
+};
