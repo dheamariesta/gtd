@@ -7,10 +7,15 @@
 		cursor: pointer;
 	}
 }
-.slick-center {
-	transition: transform .5s ease-in-out;
-	transform: scale(1.05);
+.slick-slide {
 	h1 {
-		color: $exodia-orange;
+		display: none;
+	}
+	&.slick-center {
+		transition: transform .5s ease-in-out;
+		transform: scale(1.05);
+		h1 {
+			display: block;
+		}
 	}
 }
