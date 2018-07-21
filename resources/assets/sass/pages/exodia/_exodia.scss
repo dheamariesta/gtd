@@ -1,0 +1,35 @@
+.bg-batik {
+	background-size: cover;
+	background: url("/images/batik-maroon.jpg") no-repeat fixed center;
+	min-height: 100vh;
+
+	.navbar-default {
+		border: none;
+	}
+}
+
+.exodia-section-title {
+	font-family: got, serif;
+	color: $exodia-orange;
+	letter-spacing: 10px;
+	font-size: 24px;
+}
+
+section.banner-exodia {
+	.exodia-title {
+		font-size: 5em;
+		font-family: blackoninaut, serif;
+		letter-spacing: 15px;
+		color: $exodia-orange;
+	}
+
+	p {
+		font-family: got, serif;
+		color: $exodia-orange;
+		letter-spacing: 10px;
+	}
+}
+
+section.foreword {
+	text-align: left;
+}
