@@ -1,5 +1,5 @@
 .bg-batik {
-	background-size: cover;
+	background-size: contain;
 	background: url("/images/batik-maroon.jpg") no-repeat fixed center;
 	min-height: 100vh;
 
@@ -32,4 +32,24 @@ section.banner-exodia {
 
 section.foreword {
 	text-align: left;
+}
+
+section.committee {
+	.ppit-container {
+		position: relative;
+		.ppit-image {
+			opacity: 0.5;
+		}
+		.ppit-title {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		.other-portfol {
+			position: absolute;
+			bottom: 8px;
+			left: 16px;
+		}
+	}
 }

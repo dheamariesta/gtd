@@ -2,7 +2,7 @@ import React from "react";
 import { Row, Col, Image } from "react-bootstrap";
 
 import { ExodiaTopBar } from "../components/Topbar";
-import { LeaderSlider } from "../containers/Slider";
+import { LeaderSlider, PortFolioSlider } from "../containers/Slider";
 
 
 const Exodia = () => (
@@ -59,14 +59,25 @@ const Exodia = () => (
       </section>
       <section className="leaders">
         <Col xs={12} className={"full-height"}>
-          <Row>
+          <Row className={"row-center"}>
             <h1 className="exodia-section-title">Meet Your Leaders</h1>
-            <Col xs={12} md={10} mdPush={1}>
+            <Col xs={12} md={10} className={"col-center"}>
               <LeaderSlider/>
             </Col>
           </Row>
         </Col>
       </section>
+      <section className="committee">
+        <Col xs={12} className={"full-height"}>
+          <h1 className={"exodia-section-title"}>Our Committee</h1>
+          <Row className={"row-center"}>
+            <Col xs={12} md={10} className={"col-center"}>
+             <PortFolioSlider/>
+            </Col>
+          </Row>
+        </Col>
+      </section>
+
       <section className="footer">
         <Col xs={12} className={"full-height"}>
 
