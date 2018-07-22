@@ -30,6 +30,27 @@ section {
 	min-height: 90vh;
 }
 
+.height-85vh {
+	min-height: 85vh;
+}
+
+.height-80vh {
+	min-height: 80vh;
+}
+
+.height-75vh {
+	min-height: 75vh;
+}
+.height-70vh {
+	min-height: 70vh;
+}
+.height-65vh {
+	min-height: 65vh;
+}
+.height-60vh {
+	min-height: 60vh;
+}
+
 
 .flex-center {
 	align-items: center;
@@ -72,8 +93,8 @@ a {
 	margin: 0;
 }
 
-div:focus {
-	outline: none;
+*:focus {
+	outline: none !important;
 }
 
 .row-center {
