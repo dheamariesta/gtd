@@ -75,3 +75,15 @@ a {
 div:focus {
 	outline: none;
 }
+
+.row-center {
+	text-align: center;
+	.col-center {
+		float: none;
+		margin: auto;
+		display: inline-block;
+	}
+	img {
+		display: inline-block !important;
+	}
+}
