@@ -36,7 +36,7 @@ return [
     ],
 
     'google' => [
-        'client_id' => env('GOOGLE_CLIENT_ID'),         // Your GitHub Client ID
+        'client_id' => env('GOOGLE_CLIENT_ID'),         // Your Google Client ID
         'client_secret' => env('GOOGLE_APP_SECRET'), 
         'redirect' => env('GOOGLE_REDIRECT'),
     ],

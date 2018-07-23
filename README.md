@@ -15,6 +15,7 @@
 * PHP >= 7.0.0
 * composer
 * Google Sheet API
+* laravel/socialite
 
 # Development
 ## Installing Laravel
@@ -33,12 +34,18 @@ composer global require "laravel/installer"
 	* Windows: C:\Users\USERNAME\AppData\Roaming\Composer\vendor\bin
 > The executable `laravel` should now be available in your local machine.
 
-4. Follow the instructions from [Official Google Sheet Guide](https://developers.google.com/sheets/api/quickstart/php) to et up the API.
-Put the details on the .env file with the following: 
+4. Follow the instructions from [Official Google Sheet Guide](https://developers.google.com/sheets/api/quickstart/php) to set up the API.
+Install laravel socialite as well, by typing:
+
+```bash
+composer require laravel/socialite
+```
+
+Put the details on the .env file with the following:
 GOOGLE_SERVER_KEY = (Create API Key, then put it here)
 GOOGLE_CLIENT_ID= (create Oauth2 , put ClientID here)
 GOOGLE_APP_SECRET= (create Oauth2, put Clientsecret here)
-GOOGLE_REDIRECT=http://localhost
+GOOGLE_REDIRECT=http://localhost:8000/login/google/callback
 
 ## Cloning Repository
 1. Clone this branch

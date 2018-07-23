@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
 
 use Socialite;
 use Google_Client;
@@ -48,21 +49,30 @@ class LoginController extends Controller
         ->redirect();
     }
 
-    public function handleProviderCallback()
+    public function handleProviderCallback(Request $request)
     {
+        return print_r($request,true);
+        //print_r("testCallback\n");
         $user = Socialite::driver('google')->user();
-
+        //print_r($user);
         // Set token for the Google API PHP Client
+        //return json_encode($user);
         $google_client_token = [
             'access_token' => $user->token,
             'refresh_token' => $user->refreshToken,
             'expires_in' => $user->expiresIn
         ];
-
+        $client_secret = [
+            'client_id' => env('GOOGLE_CLIENT_ID'),         // Your Google Client ID
+            'client_secret' => env('GOOGLE_APP_SECRET'),
+        ];
+        //return $google_client_token;
         $client = new Google_Client();
+        //return print_r($client,true);
         $client->setApplicationName("Google Sheets API PHP Quickstart");
         $client->setDeveloperKey(env('GOOGLE_SERVER_KEY'));
-        $client->setAccessToken(json_encode($google_client_token));
+        $client->setAccessToken($google_client_token);
+        $client->setAuthConfig($client_secret);
         $service = new Google_Service_Sheets($client);
         $day1sheetID = '1KMuYbgablwJwOTZNhS-GM4abwYN86k2RXr8AxASpoXg';
         $outdoor_desc_range = 'Outdoor!A2:A6';

@@ -70,8 +70,8 @@ $range = 'Class Data!A2:E';
 $response = $service->spreadsheets_values->get($spreadsheetId, $range);
 $values = $response->getValues();
 
-$_new_sheet_Id = '1vp3Fo-UiZW2MB3BgCetL3M5gMNbJzckdg60hG81QZMM';
-$_new_range = 'Sheet1!A1:H10';
+$_new_sheet_Id = '1KMuYbgablwJwOTZNhS-GM4abwYN86k2RXr8AxASpoXg';
+$_new_range = 'Outdoor!A2:A6';
 $_max_column = 0;
 $_new_response = $service->spreadsheets_values->get($_new_sheet_Id, $_new_range);
 $_new_values = $_new_response->getValues();
@@ -91,20 +91,20 @@ if(empty($_new_values))
     print "No data found.\n";
 }
 else {
-    printf("<table border=1>");
+    //printf("<table border=1>");
     foreach ($_new_values as $row) {
-        printf("<tr>");
+        //printf("<tr>");
         $_max_column=max($_max_column,sizeof($row));
         foreach($row as $column)
         {
-            printf("<td>");
-            printf("%s", $column);
+            //printf("<td>");
+            printf("%s\n", $column);
             # printf(":%s %s ",gettype($row),gettype($column));
-            printf("</td>");
+            //printf("</td>");
         }
-        printf("</tr>\n");
+        //printf("</tr>\n");
     }
-    printf("</table>");
+    //printf("</table>");
 
     printf("After formatting: <br>");
     printf("<table border=2 >");
@@ -144,7 +144,7 @@ else {
         printf("</tr>\n");
     }
     printf("</table>");*/
-    $values = [
+    /*$values = [
         [
             // Cell values ...
         ],
@@ -158,7 +158,7 @@ else {
     ];
     $result = $service->spreadsheets_values->append($spreadsheetId, $range,
         $body, $params);
-    printf("%d cells appended.", $result->getUpdates()->getUpdatedCells());
+    printf("%d cells appended.", $result->getUpdates()->getUpdatedCells());*/
     
 }
 
