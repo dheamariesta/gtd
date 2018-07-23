@@ -68,16 +68,25 @@ const Exodia = () => (
         <h1 className={"exodia-section-title"}>Our Committee</h1>
         <Row className={"row-center"}>
           <Col xs={12} md={10} className={"col-center"}>
-           <PortFolioSlider/>
+            <PortFolioSlider/>
+          </Col>
+        </Row>
+      </Section>
+
+      <Section name={"sponsor"} className={"full-height"}>
+        <h1 className={"exodia-section-title"}>Sponsored by: </h1>
+        <Row className={"flex-center row-center height-80vh"}>
+          <Col xs={12} md={10} className={"col-center"}>
+            <Image src={"/images/sponsor.jpg"} responsive/>
           </Col>
         </Row>
       </Section>
 
       <Section name={"handbook"} className={"height-65vh"}>
-        <FontAwesome name={"heart-o"} size={"5x"} style={{ color: "white", borderRadius: "50%",}} border />
-        <h1>Freshie, Get Your Handbook Here!</h1>
+        <FontAwesome name={"heart-o"} size={"5x"} style={{ color: "white", borderRadius: "50%", }} border/>
+        <h1 className={"exodia-section-title"}>Freshie, Get Your Handbook Here!</h1>
         <Button bsSize={"large"} className={"download-button"}>
-         Download
+          Download
         </Button>
       </Section>
     </Row>
