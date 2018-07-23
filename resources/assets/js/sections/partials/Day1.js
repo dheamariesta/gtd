@@ -7,6 +7,10 @@ export class Day1_table extends React.Component {
     {
         super(props);
         this.componentDidMount =this.componentDidMount.bind(this);
+        this.state = {
+            game_titles: '',
+            game_scores: ''
+        };
     }
 
     componentDidMount(){
@@ -17,7 +21,13 @@ export class Day1_table extends React.Component {
         axios.post('/day1', {
             OG_NAME: this.props.OG_NAME,
     }).then(response => {
-        console.log(response.data);
+        //console.log(response.data);
+        const titles = response.data.game_titles;
+        const scores = response.data.game_scores;
+        this.setState({
+            game_titles : titles,
+            game_scores : scores
+        });
         console.log("Day1 fetched!");
 
     }).catch(err => {
@@ -28,17 +38,12 @@ export class Day1_table extends React.Component {
 
     render(){
         const OG_NAME=this.props.OG_NAME;
-        console.log(OG_NAME);
-        //console.log(this.props);
+        const listItems = this.state.game_titles;
+        console.log(this.state.game_scores);
+        console.log(this.state.game_titles);
         return(
 			<div className= "Day1_table">
                 <Row className="default-bg full-height">
-                        <Col md={6}>
-                            Hi
-                        </Col>
-                        <Col md={6}>
-                            There
-                        </Col>
                 </Row>
             </div>
         )

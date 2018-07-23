@@ -62050,7 +62050,7 @@ var Score = function (_React$Component) {
                 console.log(_this2.state.OG_NAME);
             }).catch(function (err) {
                 console.log(err);
-                alert("Unauthorized");
+                alert("Error!");
             });
             //     fetch('/score', 
             // {
@@ -62164,85 +62164,22 @@ var Score = function (_React$Component) {
                         "div",
                         null,
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            "section",
-                            { id: "Day 1" },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                __WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["l" /* Row */],
-                                { className: "default-bg full-height" },
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    __WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["c" /* Col */],
-                                    { md: 12 },
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                        "h1",
-                                        { className: "section-title title" },
-                                        "Day 1 Score"
-                                    )
-                                ),
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    __WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["c" /* Col */],
-                                    { md: 12 },
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__sections_partials_Day1__["a" /* Day1_table */], { component: true, OG_NAME: this.state.OG_NAME })
-                                )
-                            )
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            "section",
-                            { id: "Day 2" },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                __WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["l" /* Row */],
-                                { className: "default-bg full-height" },
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    __WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["c" /* Col */],
-                                    { md: 12 },
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                        "h1",
-                                        { className: "section-title title" },
-                                        "Day 2 Score"
-                                    ),
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__sections_partials_Day2__["a" /* Day2_table */], null)
-                                )
-                            )
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            "section",
-                            { id: "Day 3" },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                __WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["l" /* Row */],
-                                { className: "default-bg full-height" },
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    __WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["c" /* Col */],
-                                    { md: 12 },
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                        "h1",
-                                        { className: "section-title title" },
-                                        "Day 3 Score"
-                                    ),
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6__sections_partials_Day3__["a" /* Day3_table */], null)
-                                )
-                            )
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            "section",
-                            { id: "Day 4" },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                __WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["l" /* Row */],
-                                { className: "default-bg full-height" },
-                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    __WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["c" /* Col */],
-                                    { md: 12 },
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                        "h1",
-                                        { className: "section-title title" },
-                                        "Day 4 Score"
-                                    ),
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7__sections_partials_Day4__["a" /* Day4_table */], null)
-                                )
-                            )
-                        ),
-                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                             __WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["l" /* Row */],
                             { className: "default-bg full-height" },
-                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div", { className: "margin-bottom" })
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                __WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["c" /* Col */],
+                                { md: 12 },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "h1",
+                                    { className: "section-title title" },
+                                    "Day 1 Score"
+                                )
+                            ),
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                __WEBPACK_IMPORTED_MODULE_3_react_bootstrap__["c" /* Col */],
+                                { md: 12 },
+                                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__sections_partials_Day1__["a" /* Day1_table */], { component: true, OG_NAME: this.state.OG_NAME })
+                            )
                         )
                     )
                 );
@@ -62285,6 +62222,10 @@ var Day1_table = function (_React$Component) {
         var _this = _possibleConstructorReturn(this, (Day1_table.__proto__ || Object.getPrototypeOf(Day1_table)).call(this, props));
 
         _this.componentDidMount = _this.componentDidMount.bind(_this);
+        _this.state = {
+            game_titles: '',
+            game_scores: ''
+        };
         return _this;
     }
 
@@ -62296,10 +62237,18 @@ var Day1_table = function (_React$Component) {
     }, {
         key: "fetch_table",
         value: function fetch_table() {
+            var _this2 = this;
+
             __WEBPACK_IMPORTED_MODULE_1_axios___default.a.post('/day1', {
                 OG_NAME: this.props.OG_NAME
             }).then(function (response) {
-                console.log(response.data);
+                //console.log(response.data);
+                var titles = response.data.game_titles;
+                var scores = response.data.game_scores;
+                _this2.setState({
+                    game_titles: titles,
+                    game_scores: scores
+                });
                 console.log("Day1 fetched!");
             }).catch(function (err) {
                 console.log(err);
@@ -62310,25 +62259,13 @@ var Day1_table = function (_React$Component) {
         key: "render",
         value: function render() {
             var OG_NAME = this.props.OG_NAME;
-            console.log(OG_NAME);
-            //console.log(this.props);
+            var listItems = this.state.game_titles;
+            console.log(this.state.game_scores);
+            console.log(this.state.game_titles);
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "div",
                 { className: "Day1_table" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                    __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["l" /* Row */],
-                    { className: "default-bg full-height" },
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["c" /* Col */],
-                        { md: 6 },
-                        "Hi"
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["c" /* Col */],
-                        { md: 6 },
-                        "There"
-                    )
-                )
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["l" /* Row */], { className: "default-bg full-height" })
             );
         }
     }]);
@@ -62341,7 +62278,7 @@ var Day1_table = function (_React$Component) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Day2_table; });
+/* unused harmony export Day2_table */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__ = __webpack_require__(16);
@@ -62397,7 +62334,7 @@ var Day2_table = function (_React$Component) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Day3_table; });
+/* unused harmony export Day3_table */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__ = __webpack_require__(16);
@@ -62453,7 +62390,7 @@ var Day3_table = function (_React$Component) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Day4_table; });
+/* unused harmony export Day4_table */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_bootstrap__ = __webpack_require__(16);
