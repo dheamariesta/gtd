@@ -62,7 +62,9 @@ export const ExodiaTopBar = () => {
     <Navbar className={"no-bg"}>
       <Navbar.Header>
         <Navbar.Brand>
-          <Image src={"/images/logo-white.png"} responsive/>
+          <a href="/">
+            <Image src={"/images/logo-white.png"} responsive/>
+          </a>
         </Navbar.Brand>
       </Navbar.Header>
     </Navbar>
