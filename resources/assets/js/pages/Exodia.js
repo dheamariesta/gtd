@@ -11,8 +11,8 @@ const Exodia = () => (
     <Row className={"full-height bg-batik exodia"}>
       <ExodiaTopBar/>
       <Section name={"banner-exodia"} className={"full-height flex-center"}>
-        <Row>
-          <Col md={6} mdPush={3} xs={12}>
+        <Row className={"row-center"}>
+          <Col md={6} xs={12} className={"col-center"}>
             <Image src={"images/exodia-logo.png"} responsive/>
             <h1 className={"exodia-title"}>EXODIA</h1>
             <p>United We Stand</p>
