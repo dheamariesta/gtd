@@ -28,9 +28,9 @@ export class HistoryTabs extends React.Component
 				<Row className="clearfix">
 					<Col md={12} xs={12}>
 						<Nav bsStyle="tabs" justified>
-							<NavItem eventKey={1}>2015</NavItem>
-							<NavItem eventKey={2}>2016</NavItem>
-							<NavItem eventKey={3}>2017</NavItem>
+							<NavItem eventKey={1} className="white-year">2015</NavItem>
+							<NavItem eventKey={2} className="white-year">2016</NavItem>
+							<NavItem eventKey={3} className="white-year">2017</NavItem>
 						</Nav>
 					</Col>
 					<Col md={12}>

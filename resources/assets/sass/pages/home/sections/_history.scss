@@ -3,13 +3,13 @@
 		&.active {
 			a {
 				background: none;
-				color: black;
+				color: white;
 				border: 1px solid white;
 			}
 		}
 		a:hover {
 			background: none;
-			color: black;
+			color: white;
 			border: 1px solid white;
 		}
 
@@ -25,4 +25,9 @@
 
 		}
 	}
+
+	.white-year a{
+		color: white;
+	}
+
 }
