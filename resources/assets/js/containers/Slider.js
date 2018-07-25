@@ -13,13 +13,13 @@ const settings = {
 
 const StyledCenteredSlider = css`
   .slick-slide {
-    h1 {
+    h4 {
       display: none;
     }
     &.slick-center {
       transition: transform .5s ease-in-out;
       transform: scale(1.05);
-      h1 {
+      h4 {
         display: block;
       }
     }
@@ -77,6 +77,9 @@ class LeaderSlider extends React.Component {
 
 export const StyledLeaderSlider = styled(LeaderSlider)`
   ${StyledCenteredSlider}
+  h4 {
+    font-size: 2.5em;
+  }
 `;
 
 class PortFolioSlider extends React.Component {
@@ -87,17 +90,17 @@ class PortFolioSlider extends React.Component {
         {
           id: 1,
           src: "/images/portfol_ppit.jpg",
-          details: 'PPIT'
+          details: 'Publicity, Publication, & IT'
         },
         {
           id: 2,
           src: "/images/portfol_gl.jpg",
-          details: 'GL'
+          details: 'Group Leader'
         },
         {
           id: 3,
           src: "/images/portfol_mc.jpg",
-          details: 'MC'
+          details: 'Main Committee'
         },
         {
           id: 4,
@@ -107,17 +110,17 @@ class PortFolioSlider extends React.Component {
         {
           id: 5,
           src: "/images/portfol_logs.jpg",
-          details: 'Logs'
+          details: 'Logistics'
         },
         {
           id: 6,
           src: "/images/portfol_po.jpg",
-          details: 'PO'
+          details: 'Project Officer'
         },
         {
           id: 7,
           src: "/images/portfol_bfm.jpg",
-          details: 'BFM'
+          details: 'Business & Financial Manager'
         },
       ]
     }

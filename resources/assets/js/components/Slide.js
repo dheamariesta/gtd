@@ -7,7 +7,7 @@ const Slide = ({ data, ...rest }) => {
   return (
     <div {...rest}>
       <Image src={src} responsive/>
-      <h1>{details}</h1>
+      <h4>{details}</h4>
     </div>
   );
 };
