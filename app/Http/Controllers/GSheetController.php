@@ -21,20 +21,21 @@ class GSheetController extends Controller
             'OG_NAME' => 'required'
         ];
         $this->validate($request, $rules);
-        if($request->OG_NAME =="Exodia") {
-            $google_client_token = env('GOOGLE_CLIENT_TOKEN');
-            $client_secret = [
-                'client_id' => env('GOOGLE_CLIENT_ID'),         // Your Google Client ID
-                'client_secret' => env('GOOGLE_APP_SECRET'),
-            ];
-            $client = new Google_Client();
-            $client->setApplicationName("Google Sheets API PHP Quickstart");
-            $client->setDeveloperKey(env('GOOGLE_SERVER_KEY'));
-            $client->setAccessToken($google_client_token);
-            $client->setAuthConfig($client_secret);
-            $service = new Google_Service_Sheets($client);
-            $day1sheetID = '1KMuYbgablwJwOTZNhS-GM4abwYN86k2RXr8AxASpoXg';
-            $outdoor_desc_range = 'Outdoor!A2:A8';
+        $google_client_token = env('GOOGLE_CLIENT_TOKEN');
+        $client_secret = [
+            'client_id' => env('GOOGLE_CLIENT_ID'),         // Your Google Client ID
+            'client_secret' => env('GOOGLE_APP_SECRET'),
+        ];
+        $client = new Google_Client();
+        $client->setApplicationName("Google Sheets API PHP Quickstart");
+        $client->setDeveloperKey(env('GOOGLE_SERVER_KEY'));
+        $client->setAccessToken($google_client_token);
+        $client->setAuthConfig($client_secret);
+        $service = new Google_Service_Sheets($client);
+        $day1sheetID = '1KMuYbgablwJwOTZNhS-GM4abwYN86k2RXr8AxASpoXg';
+        $outdoor_desc_range = 'Outdoor!A2:A8';
+        $night_desc_range = 'Night!A3:A10';
+        if($request->OG_NAME =="OG_1") {
             $outdoor_score_range = 'Outdoor!B2:B8';
             $outdoor_desc_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_desc_range);
             $outdoor_score_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_score_range);
@@ -43,6 +44,10 @@ class GSheetController extends Controller
                 'game_scores' => $outdoor_score_response->getValues()
             ];
             $status = 200;
+        }
+        else if($request->OG_NAME =="Exodia")
+        {
+
         }
         else
         {

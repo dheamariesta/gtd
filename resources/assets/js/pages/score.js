@@ -103,7 +103,7 @@ export class Score extends React.Component {
                         <Col md={8} xs={12}>
                         <div className="form-container">
                             <form name = "pass" onSubmit= {this.handleSubmit}>
-                                <input type="text" value={this.state.value} onChange={this.handleChange} /> 
+                                <input type="password" value={this.state.value} onChange={this.handleChange} /> 
                                 <input type="submit" value="Show me the score!" />
                             </form>
                         </div>

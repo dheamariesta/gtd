@@ -14,7 +14,7 @@ class ScoreController extends Controller
         if($request->pass_send =="asdf") {
             $mydata = [
                 "result" => "Correct password",
-                "OG_NAME" => "Exodia"
+                "OG_NAME" => "OG_1"
 			];
 			$status = 200;
 		}

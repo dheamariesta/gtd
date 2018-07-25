@@ -62130,7 +62130,7 @@ var Score = function (_React$Component) {
                                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                     "form",
                                     { name: "pass", onSubmit: this.handleSubmit },
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "text", value: this.state.value, onChange: this.handleChange }),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "password", value: this.state.value, onChange: this.handleChange }),
                                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("input", { type: "submit", value: "Show me the score!" })
                                 )
                             )
@@ -62260,12 +62260,85 @@ var Day1_table = function (_React$Component) {
         value: function render() {
             var OG_NAME = this.props.OG_NAME;
             var listItems = this.state.game_titles;
-            console.log(this.state.game_scores);
-            console.log(this.state.game_titles);
+            var listScores = this.state.game_scores;
+            // console.log(this.state.game_scores);
+            // console.log(listItems);
+            // const numbers = [[1.1, 1.2], [2.1, 2.2], [3.1, 3.2]];
+            // console.log(numbers);
+            // const numberList = numbers.map(num => {
+            //     console.log(num);
+            // });
+            var listElementsName = [];
+            var listElementsScore = [];
+            var objectList = [];
+
+            for (var index = 0; index < listItems.length; index++) {
+                var element = listItems[index];
+                // console.log(element);
+                var name = element[0];
+                listElementsName.push(name);
+            }
+            for (var _index = 0; _index < listScores.length; _index++) {
+                var _element = listScores[_index];
+                // console.log(element);
+                var _name = _element[0];
+                listElementsScore.push(_name);
+            }
+            // console.log(listElementsName);
+
+            for (var _index2 = 0; _index2 < listScores.length; _index2++) {
+                console.log(_index2);
+                objectList.push({
+                    id: _index2,
+                    name: listElementsName[_index2],
+                    score: listElementsScore[_index2]
+                });
+            }
+            console.log(objectList);
+
+            // const pleaseWork = listElementsName.map((item, index) => {
+            //     return (
+            //         <tr key={index}>
+            //             <td>{item}</td>
+            //         </tr>
+            //     );
+            // });
+
+            // console.log(pleaseWork);
+            // const tableRows = listItems.map((item) => {
+            //     console.log(item);
+            // });
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 "div",
                 { className: "Day1_table" },
-                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["l" /* Row */], { className: "default-bg full-height" })
+                __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                    __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["l" /* Row */],
+                    { className: "default-bg full-height" },
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "table",
+                        null,
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "tbody",
+                            null,
+                            objectList.map(function (obj) {
+                                return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "tr",
+                                    { key: obj.id },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        "td",
+                                        null,
+                                        obj.name
+                                    ),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        "td",
+                                        null,
+                                        obj.score
+                                    )
+                                );
+                            })
+                        )
+                    )
+                )
             );
         }
     }]);
