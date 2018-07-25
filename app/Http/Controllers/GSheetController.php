@@ -38,6 +38,25 @@ class GSheetController extends Controller
         if($request->OG_NAME =="OG_1") {
             $outdoor_score_range = 'Outdoor!B2:B8';
             $night_score_range = 'Night!B3:B10';
+            $night_score_range2 = 'Night!C3:C10';
+            $night_score_response2 = $service->spreadsheets_values->get($day1sheetID, $night_score_range2);
+            $outdoor_desc_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_desc_range);
+            $outdoor_score_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_score_range);
+            $night_desc_response = $service->spreadsheets_values->get($day1sheetID, $night_desc_range);
+            $night_score_response = $service->spreadsheets_values->get($day1sheetID, $night_score_range);
+            $mydata = [
+                'game_titles_outdoor'=> $outdoor_desc_response->getValues(),
+                'game_scores_outdoor' => $outdoor_score_response->getValues(),
+                'game_titles_night'=> $night_desc_response->getValues(),
+                'game_scores_night' => $night_score_response->getValues(),
+                'game_scores_night2' => $night_score_response2->getValues()
+            ];
+            $status = 200;
+        }
+        else if($request->OG_NAME =="OG_2")
+        {
+            $outdoor_score_range = 'Outdoor!C2:C8';
+            $night_score_range = 'Night!C3:C10';
             $outdoor_desc_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_desc_range);
             $outdoor_score_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_score_range);
             $night_desc_response = $service->spreadsheets_values->get($day1sheetID, $night_desc_range);
@@ -50,17 +69,7 @@ class GSheetController extends Controller
             ];
             $status = 200;
         }
-        else if($request->OG_NAME =="OG_2")
-        {
-            $outdoor_score_range = 'Outdoor!C2:C8';
-            $outdoor_desc_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_desc_range);
-            $outdoor_score_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_score_range);
-            $mydata = [
-                'game_titles'=> $outdoor_desc_response->getValues(),
-                'game_scores' => $outdoor_score_response->getValues()
-            ];
-            $status = 200;
-        }
+
         else
         {
             $mydata = [

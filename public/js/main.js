@@ -62226,7 +62226,8 @@ var Day1_table = function (_React$Component) {
             game_titles_outdoor: '',
             game_scores_outdoor: '',
             game_titles_night: '',
-            game_scores_night: ''
+            game_scores_night: '',
+            game_scores_night2: ''
         };
         return _this;
     }
@@ -62249,11 +62250,13 @@ var Day1_table = function (_React$Component) {
                 var scores_outdoor = response.data.game_scores_outdoor;
                 var titles_night = response.data.game_titles_night;
                 var scores_night = response.data.game_scores_night;
+                var scores_night2 = response.data.game_scores_night2;
                 _this2.setState({
                     game_titles_outdoor: titles_outdoor,
                     game_scores_outdoor: scores_outdoor,
                     game_titles_night: titles_night,
-                    game_scores_night: scores_night
+                    game_scores_night: scores_night,
+                    game_scores_night2: scores_night2
                 });
                 console.log("Day1 fetched!");
             }).catch(function (err) {
@@ -62269,6 +62272,7 @@ var Day1_table = function (_React$Component) {
             var listScores = this.state.game_scores_outdoor;
             var listItems2 = this.state.game_titles_night;
             var listScores2 = this.state.game_scores_night;
+            var listScores3 = this.state.game_scores_night2;
             // console.log(this.state.game_scores);
             // console.log(listItems);
             // const numbers = [[1.1, 1.2], [2.1, 2.2], [3.1, 3.2]];
@@ -62280,6 +62284,7 @@ var Day1_table = function (_React$Component) {
             var listElementsScore = [];
             var listElementsName2 = [];
             var listElementsScore2 = [];
+            var listElementsScore3 = [];
             var objectList = [];
             var objectList2 = [];
 
@@ -62307,28 +62312,35 @@ var Day1_table = function (_React$Component) {
                 var _name3 = _element3[0];
                 listElementsScore2.push(_name3);
             }
+
+            for (var _index4 = 0; _index4 < listScores3.length; _index4++) {
+                var _element4 = listScores3[_index4];
+                // console.log(element);
+                var _name4 = _element4[0];
+                listElementsScore3.push(_name4);
+            }
             // console.log(listElementsName);
 
-            for (var _index4 = 0; _index4 < listScores.length; _index4++) {
-                console.log(_index4);
+            for (var _index5 = 0; _index5 < listScores.length; _index5++) {
+                //console.log(index);
                 objectList.push({
-                    id: _index4,
-                    name: listElementsName[_index4],
-                    score: listElementsScore[_index4]
-                });
-            }
-
-            for (var _index5 = 0; _index5 < listScores2.length; _index5++) {
-                console.log(_index5);
-                objectList2.push({
                     id: _index5,
-                    name: listElementsName2[_index5],
-                    score: listElementsScore2[_index5]
+                    name: listElementsName[_index5],
+                    score: listElementsScore[_index5]
                 });
             }
 
-            //console.log(objectList);
+            for (var _index6 = 0; _index6 < listScores2.length; _index6++) {
+                //console.log(index);
+                objectList2.push({
+                    id: _index6,
+                    name: listElementsName2[_index6],
+                    score: listElementsScore2[_index6],
+                    score2: listElementsScore3[_index6]
+                });
+            }
 
+            console.log(objectList2);
 
             // const pleaseWork = listElementsName.map((item, index) => {
             //     return (
@@ -62348,54 +62360,63 @@ var Day1_table = function (_React$Component) {
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["l" /* Row */],
                     { className: "default-bg full-height" },
-                    "Outdoor",
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        "table",
-                        null,
+                        "div",
+                        { className: "container" },
+                        "Outdoor",
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            "tbody",
+                            "table",
                             null,
-                            objectList.map(function (obj) {
-                                return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    "tr",
-                                    { key: obj.id },
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                        "td",
-                                        null,
-                                        obj.name
-                                    ),
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                        "td",
-                                        null,
-                                        obj.score
-                                    )
-                                );
-                            })
-                        )
-                    ),
-                    "Night",
-                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                        "table",
-                        null,
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "tbody",
+                                null,
+                                objectList.map(function (obj) {
+                                    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        "tr",
+                                        { key: obj.id },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            "td",
+                                            null,
+                                            obj.name
+                                        ),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            "td",
+                                            null,
+                                            obj.score
+                                        )
+                                    );
+                                })
+                            )
+                        ),
+                        "Night",
                         __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                            "tbody",
+                            "table",
                             null,
-                            objectList2.map(function (obj) {
-                                return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                    "tr",
-                                    { key: obj.id },
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                        "td",
-                                        null,
-                                        obj.name
-                                    ),
-                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
-                                        "td",
-                                        null,
-                                        obj.score
-                                    )
-                                );
-                            })
+                            __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                "tbody",
+                                null,
+                                objectList2.map(function (obj) {
+                                    return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        "tr",
+                                        { key: obj.id },
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            "td",
+                                            null,
+                                            obj.name
+                                        ),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            "td",
+                                            null,
+                                            obj.score
+                                        ),
+                                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                            "td",
+                                            null,
+                                            obj.score2
+                                        )
+                                    );
+                                })
+                            )
                         )
                     )
                 )
