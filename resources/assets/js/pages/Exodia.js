@@ -66,7 +66,7 @@ const Exodia = () => (
 
       <Section name={"committee"} className={"full-height"}>
         <h1 className={"exodia-section-title"}>Our Committee</h1>
-        <Row className={"row-center"}>
+        <Row className={"flex-center row-center height-80vh"}>
           <Col xs={12} md={10} className={"col-center"}>
             <StyledPortfolioSlider/>
           </Col>
