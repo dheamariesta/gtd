@@ -53,10 +53,11 @@ class GSheetController extends Controller
             ];
             $status = 200;
         }
-        else if($request->OG_NAME =="OG_2")
-        {
+        else if($request->OG_NAME =="OG_2") {
             $outdoor_score_range = 'Outdoor!C2:C8';
-            $night_score_range = 'Night!C3:C10';
+            $night_score_range = 'Night!D3:D10';
+            $night_score_range2 = 'Night!E3:E10';
+            $night_score_response2 = $service->spreadsheets_values->get($day1sheetID, $night_score_range2);
             $outdoor_desc_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_desc_range);
             $outdoor_score_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_score_range);
             $night_desc_response = $service->spreadsheets_values->get($day1sheetID, $night_desc_range);
@@ -66,10 +67,136 @@ class GSheetController extends Controller
                 'game_scores_outdoor' => $outdoor_score_response->getValues(),
                 'game_titles_night'=> $night_desc_response->getValues(),
                 'game_scores_night' => $night_score_response->getValues(),
+                'game_scores_night2' => $night_score_response2->getValues()
             ];
             $status = 200;
         }
-
+        else if($request->OG_NAME =="OG_2") {
+            $outdoor_score_range = 'Outdoor!C2:C8';
+            $night_score_range = 'Night!D3:D10';
+            $night_score_range2 = 'Night!E3:E10';
+            $night_score_response2 = $service->spreadsheets_values->get($day1sheetID, $night_score_range2);
+            $outdoor_desc_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_desc_range);
+            $outdoor_score_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_score_range);
+            $night_desc_response = $service->spreadsheets_values->get($day1sheetID, $night_desc_range);
+            $night_score_response = $service->spreadsheets_values->get($day1sheetID, $night_score_range);
+            $mydata = [
+                'game_titles_outdoor'=> $outdoor_desc_response->getValues(),
+                'game_scores_outdoor' => $outdoor_score_response->getValues(),
+                'game_titles_night'=> $night_desc_response->getValues(),
+                'game_scores_night' => $night_score_response->getValues(),
+                'game_scores_night2' => $night_score_response2->getValues()
+            ];
+            $status = 200;
+        }
+        else if($request->OG_NAME =="OG_3") {
+            $outdoor_score_range = 'Outdoor!D2:D8';
+            $night_score_range = 'Night!F3:F10';
+            $night_score_range2 = 'Night!G3:G10';
+            $night_score_response2 = $service->spreadsheets_values->get($day1sheetID, $night_score_range2);
+            $outdoor_desc_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_desc_range);
+            $outdoor_score_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_score_range);
+            $night_desc_response = $service->spreadsheets_values->get($day1sheetID, $night_desc_range);
+            $night_score_response = $service->spreadsheets_values->get($day1sheetID, $night_score_range);
+            $mydata = [
+                'game_titles_outdoor'=> $outdoor_desc_response->getValues(),
+                'game_scores_outdoor' => $outdoor_score_response->getValues(),
+                'game_titles_night'=> $night_desc_response->getValues(),
+                'game_scores_night' => $night_score_response->getValues(),
+                'game_scores_night2' => $night_score_response2->getValues()
+            ];
+            $status = 200;
+        }
+        else if($request->OG_NAME =="OG_4") {
+            $outdoor_score_range = 'Outdoor!E2:E8';
+            $night_score_range = 'Night!H3:H10';
+            $night_score_range2 = 'Night!I3:I10';
+            $night_score_response2 = $service->spreadsheets_values->get($day1sheetID, $night_score_range2);
+            $outdoor_desc_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_desc_range);
+            $outdoor_score_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_score_range);
+            $night_desc_response = $service->spreadsheets_values->get($day1sheetID, $night_desc_range);
+            $night_score_response = $service->spreadsheets_values->get($day1sheetID, $night_score_range);
+            $mydata = [
+                'game_titles_outdoor'=> $outdoor_desc_response->getValues(),
+                'game_scores_outdoor' => $outdoor_score_response->getValues(),
+                'game_titles_night'=> $night_desc_response->getValues(),
+                'game_scores_night' => $night_score_response->getValues(),
+                'game_scores_night2' => $night_score_response2->getValues()
+            ];
+            $status = 200;
+        }
+        else if($request->OG_NAME =="OG_5") {
+            $outdoor_score_range = 'Outdoor!F2:F8';
+            $night_score_range = 'Night!J3:J10';
+            $night_score_range2 = 'Night!K3:K10';
+            $night_score_response2 = $service->spreadsheets_values->get($day1sheetID, $night_score_range2);
+            $outdoor_desc_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_desc_range);
+            $outdoor_score_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_score_range);
+            $night_desc_response = $service->spreadsheets_values->get($day1sheetID, $night_desc_range);
+            $night_score_response = $service->spreadsheets_values->get($day1sheetID, $night_score_range);
+            $mydata = [
+                'game_titles_outdoor'=> $outdoor_desc_response->getValues(),
+                'game_scores_outdoor' => $outdoor_score_response->getValues(),
+                'game_titles_night'=> $night_desc_response->getValues(),
+                'game_scores_night' => $night_score_response->getValues(),
+                'game_scores_night2' => $night_score_response2->getValues()
+            ];
+            $status = 200;
+        }
+        else if($request->OG_NAME =="OG_6") {
+            $outdoor_score_range = 'Outdoor!G2:G8';
+            $night_score_range = 'Night!L3:L10';
+            $night_score_range2 = 'Night!M3:M10';
+            $night_score_response2 = $service->spreadsheets_values->get($day1sheetID, $night_score_range2);
+            $outdoor_desc_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_desc_range);
+            $outdoor_score_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_score_range);
+            $night_desc_response = $service->spreadsheets_values->get($day1sheetID, $night_desc_range);
+            $night_score_response = $service->spreadsheets_values->get($day1sheetID, $night_score_range);
+            $mydata = [
+                'game_titles_outdoor'=> $outdoor_desc_response->getValues(),
+                'game_scores_outdoor' => $outdoor_score_response->getValues(),
+                'game_titles_night'=> $night_desc_response->getValues(),
+                'game_scores_night' => $night_score_response->getValues(),
+                'game_scores_night2' => $night_score_response2->getValues()
+            ];
+            $status = 200;
+        }
+        else if($request->OG_NAME =="OG_7") {
+            $outdoor_score_range = 'Outdoor!H2:H8';
+            $night_score_range = 'Night!N3:N10';
+            $night_score_range2 = 'Night!O3:O10';
+            $night_score_response2 = $service->spreadsheets_values->get($day1sheetID, $night_score_range2);
+            $outdoor_desc_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_desc_range);
+            $outdoor_score_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_score_range);
+            $night_desc_response = $service->spreadsheets_values->get($day1sheetID, $night_desc_range);
+            $night_score_response = $service->spreadsheets_values->get($day1sheetID, $night_score_range);
+            $mydata = [
+                'game_titles_outdoor'=> $outdoor_desc_response->getValues(),
+                'game_scores_outdoor' => $outdoor_score_response->getValues(),
+                'game_titles_night'=> $night_desc_response->getValues(),
+                'game_scores_night' => $night_score_response->getValues(),
+                'game_scores_night2' => $night_score_response2->getValues()
+            ];
+            $status = 200;
+        }
+        else if($request->OG_NAME =="OG_8") {
+            $outdoor_score_range = 'Outdoor!I2:I8';
+            $night_score_range = 'Night!P3:P10';
+            $night_score_range2 = 'Night!Q3:Q10';
+            $night_score_response2 = $service->spreadsheets_values->get($day1sheetID, $night_score_range2);
+            $outdoor_desc_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_desc_range);
+            $outdoor_score_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_score_range);
+            $night_desc_response = $service->spreadsheets_values->get($day1sheetID, $night_desc_range);
+            $night_score_response = $service->spreadsheets_values->get($day1sheetID, $night_score_range);
+            $mydata = [
+                'game_titles_outdoor'=> $outdoor_desc_response->getValues(),
+                'game_scores_outdoor' => $outdoor_score_response->getValues(),
+                'game_titles_night'=> $night_desc_response->getValues(),
+                'game_scores_night' => $night_score_response->getValues(),
+                'game_scores_night2' => $night_score_response2->getValues()
+            ];
+            $status = 200;
+        }
         else
         {
             $mydata = [
