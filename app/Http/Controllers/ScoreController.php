@@ -11,10 +11,59 @@ class ScoreController extends Controller
             'pass_send' => 'required'
 		];
         $this->validate($request, $rules);
-        if($request->pass_send =="asdf") {
+        if($request->pass_send =="AQUAT") {
             $mydata = [
                 "result" => "Correct password",
                 "OG_NAME" => "OG_1"
+			];
+			$status = 200;
+        }
+        else if($request->pass_send =="TEHSOSTRONG") {
+            $mydata = [
+                "result" => "Correct password",
+                "OG_NAME" => "OG_2"
+			];
+			$status = 200;
+        }
+        else if($request->pass_send =="PEPSWIFT") {
+            $mydata = [
+                "result" => "Correct password",
+                "OG_NAME" => "OG_3"
+			];
+			$status = 200;
+        }
+        else if($request->pass_send =="QUICKACOLA") {
+            $mydata = [
+                "result" => "Correct password",
+                "OG_NAME" => "OG_4"
+			];
+			$status = 200;
+        }
+        else if($request->pass_send =="NARUTARGET") {
+            $mydata = [
+                "result" => "Correct password",
+                "OG_NAME" => "OG_5"
+			];
+			$status = 200;
+        }
+        else if($request->pass_send =="SASUKEKER") {
+            $mydata = [
+                "result" => "Correct password",
+                "OG_NAME" => "OG_6"
+			];
+			$status = 200;
+        }
+        else if($request->pass_send =="SCARLETTJOHANSIP") {
+            $mydata = [
+                "result" => "Correct password",
+                "OG_NAME" => "OG_7"
+			];
+			$status = 200;
+        }
+        else if($request->pass_send =="HUGHJAGAMAN") {
+            $mydata = [
+                "result" => "Correct password",
+                "OG_NAME" => "OG_8"
 			];
 			$status = 200;
 		}

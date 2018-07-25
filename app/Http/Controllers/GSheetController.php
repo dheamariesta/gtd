@@ -37,6 +37,22 @@ class GSheetController extends Controller
         $night_desc_range = 'Night!A3:A10';
         if($request->OG_NAME =="OG_1") {
             $outdoor_score_range = 'Outdoor!B2:B8';
+            $night_score_range = 'Night!B3:B10';
+            $outdoor_desc_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_desc_range);
+            $outdoor_score_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_score_range);
+            $night_desc_response = $service->spreadsheets_values->get($day1sheetID, $night_desc_range);
+            $night_score_response = $service->spreadsheets_values->get($day1sheetID, $night_score_range);
+            $mydata = [
+                'game_titles_outdoor'=> $outdoor_desc_response->getValues(),
+                'game_scores_outdoor' => $outdoor_score_response->getValues(),
+                'game_titles_night'=> $night_desc_response->getValues(),
+                'game_scores_night' => $night_score_response->getValues(),
+            ];
+            $status = 200;
+        }
+        else if($request->OG_NAME =="OG_2")
+        {
+            $outdoor_score_range = 'Outdoor!C2:C8';
             $outdoor_desc_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_desc_range);
             $outdoor_score_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_score_range);
             $mydata = [
@@ -44,10 +60,6 @@ class GSheetController extends Controller
                 'game_scores' => $outdoor_score_response->getValues()
             ];
             $status = 200;
-        }
-        else if($request->OG_NAME =="Exodia")
-        {
-
         }
         else
         {

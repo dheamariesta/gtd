@@ -62040,14 +62040,14 @@ var Score = function (_React$Component) {
             __WEBPACK_IMPORTED_MODULE_1_axios___default.a.post('/score', {
                 pass_send: this.state.value
             }).then(function (response) {
-                console.log(response.data);
+                //console.log(response.data);
                 alert("Password is correct");
                 var temp = response.data.OG_NAME;
                 _this2.setState({
                     OG_NAME: temp
                 });
                 //console.log(temp);
-                console.log(_this2.state.OG_NAME);
+                //console.log(this.state.OG_NAME);
             }).catch(function (err) {
                 console.log(err);
                 alert("Error!");
@@ -62223,8 +62223,10 @@ var Day1_table = function (_React$Component) {
 
         _this.componentDidMount = _this.componentDidMount.bind(_this);
         _this.state = {
-            game_titles: '',
-            game_scores: ''
+            game_titles_outdoor: '',
+            game_scores_outdoor: '',
+            game_titles_night: '',
+            game_scores_night: ''
         };
         return _this;
     }
@@ -62243,11 +62245,15 @@ var Day1_table = function (_React$Component) {
                 OG_NAME: this.props.OG_NAME
             }).then(function (response) {
                 //console.log(response.data);
-                var titles = response.data.game_titles;
-                var scores = response.data.game_scores;
+                var titles_outdoor = response.data.game_titles_outdoor;
+                var scores_outdoor = response.data.game_scores_outdoor;
+                var titles_night = response.data.game_titles_night;
+                var scores_night = response.data.game_scores_night;
                 _this2.setState({
-                    game_titles: titles,
-                    game_scores: scores
+                    game_titles_outdoor: titles_outdoor,
+                    game_scores_outdoor: scores_outdoor,
+                    game_titles_night: titles_night,
+                    game_scores_night: scores_night
                 });
                 console.log("Day1 fetched!");
             }).catch(function (err) {
@@ -62259,8 +62265,10 @@ var Day1_table = function (_React$Component) {
         key: "render",
         value: function render() {
             var OG_NAME = this.props.OG_NAME;
-            var listItems = this.state.game_titles;
-            var listScores = this.state.game_scores;
+            var listItems = this.state.game_titles_outdoor;
+            var listScores = this.state.game_scores_outdoor;
+            var listItems2 = this.state.game_titles_night;
+            var listScores2 = this.state.game_scores_night;
             // console.log(this.state.game_scores);
             // console.log(listItems);
             // const numbers = [[1.1, 1.2], [2.1, 2.2], [3.1, 3.2]];
@@ -62270,7 +62278,10 @@ var Day1_table = function (_React$Component) {
             // });
             var listElementsName = [];
             var listElementsScore = [];
+            var listElementsName2 = [];
+            var listElementsScore2 = [];
             var objectList = [];
+            var objectList2 = [];
 
             for (var index = 0; index < listItems.length; index++) {
                 var element = listItems[index];
@@ -62284,17 +62295,40 @@ var Day1_table = function (_React$Component) {
                 var _name = _element[0];
                 listElementsScore.push(_name);
             }
+            for (var _index2 = 0; _index2 < listItems2.length; _index2++) {
+                var _element2 = listItems2[_index2];
+                // console.log(element);
+                var _name2 = _element2[0];
+                listElementsName2.push(_name2);
+            }
+            for (var _index3 = 0; _index3 < listScores2.length; _index3++) {
+                var _element3 = listScores2[_index3];
+                // console.log(element);
+                var _name3 = _element3[0];
+                listElementsScore2.push(_name3);
+            }
             // console.log(listElementsName);
 
-            for (var _index2 = 0; _index2 < listScores.length; _index2++) {
-                console.log(_index2);
+            for (var _index4 = 0; _index4 < listScores.length; _index4++) {
+                console.log(_index4);
                 objectList.push({
-                    id: _index2,
-                    name: listElementsName[_index2],
-                    score: listElementsScore[_index2]
+                    id: _index4,
+                    name: listElementsName[_index4],
+                    score: listElementsScore[_index4]
                 });
             }
-            console.log(objectList);
+
+            for (var _index5 = 0; _index5 < listScores2.length; _index5++) {
+                console.log(_index5);
+                objectList2.push({
+                    id: _index5,
+                    name: listElementsName2[_index5],
+                    score: listElementsScore2[_index5]
+                });
+            }
+
+            //console.log(objectList);
+
 
             // const pleaseWork = listElementsName.map((item, index) => {
             //     return (
@@ -62314,6 +62348,7 @@ var Day1_table = function (_React$Component) {
                 __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                     __WEBPACK_IMPORTED_MODULE_2_react_bootstrap__["l" /* Row */],
                     { className: "default-bg full-height" },
+                    "Outdoor",
                     __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                         "table",
                         null,
@@ -62321,6 +62356,31 @@ var Day1_table = function (_React$Component) {
                             "tbody",
                             null,
                             objectList.map(function (obj) {
+                                return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                    "tr",
+                                    { key: obj.id },
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        "td",
+                                        null,
+                                        obj.name
+                                    ),
+                                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                                        "td",
+                                        null,
+                                        obj.score
+                                    )
+                                );
+                            })
+                        )
+                    ),
+                    "Night",
+                    __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                        "table",
+                        null,
+                        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+                            "tbody",
+                            null,
+                            objectList2.map(function (obj) {
                                 return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                                     "tr",
                                     { key: obj.id },

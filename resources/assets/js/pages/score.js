@@ -36,14 +36,14 @@ export class Score extends React.Component {
         axios.post('/score', {
                 pass_send: this.state.value,
         }).then(response => {
-            console.log(response.data);
+            //console.log(response.data);
             alert("Password is correct");
             const temp = response.data.OG_NAME;
             this.setState({
                 OG_NAME : temp
             });
             //console.log(temp);
-            console.log(this.state.OG_NAME);
+            //console.log(this.state.OG_NAME);
         }).catch(err => {
             console.log(err);
             alert("Error!");
