@@ -8,6 +8,7 @@ import { About } from "../sections/about";
 import { History } from "../sections/history";
 import { Anthem } from "../sections/anthem";
 import { Contact } from "../sections/contact";
+import { FAQ } from "../sections/faq";
 
 const Home = ({ isDesktop }) => {
   return (
@@ -17,6 +18,7 @@ const Home = ({ isDesktop }) => {
       <About isDesktop={isDesktop}/>
       <History/>
       <Anthem/>
+      <FAQ/>
       <Contact/>
     </div>
   );

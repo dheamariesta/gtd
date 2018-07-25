@@ -49,6 +49,7 @@ export class HomeTopbar extends React.Component {
 						<NavItem eventKey={1} href="#about">About</NavItem>
 						<NavItem eventKey={2} href="#history">History</NavItem>
 						<NavItem eventKey={3} href="#anthem">Anthem</NavItem>
+            <NavItem eventKey={4} href="#faq">FAQ</NavItem>
 						<NavItem eventKey={4} href="#contact">Contact Us</NavItem>
 					</Nav>
 				</Navbar.Collapse>

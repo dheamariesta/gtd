@@ -15,6 +15,7 @@
 	font-size: 24px;
 }
 
+
 section.banner-exodia {
 	.exodia-title {
 		font-size: 5em;
@@ -32,6 +33,12 @@ section.banner-exodia {
 
 section.foreword {
 	text-align: left;
+
+	.alfons-image{
+		@include general-query(desktop){
+			width: 70%;
+		}
+	}
 }
 
 section.committee {
