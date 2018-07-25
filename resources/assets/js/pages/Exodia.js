@@ -2,7 +2,7 @@ import React from "react";
 import FontAwesome from "react-fontawesome";
 import { ExodiaTopBar } from "../components/Topbar";
 import { Row, Col, Image, Button } from "react-bootstrap";
-import { LeaderSlider, PortFolioSlider } from "../containers/Slider";
+import { StyledLeaderSlider, StyledPortfolioSlider } from "../containers/Slider";
 import Section from "../components/Section";
 
 
@@ -59,7 +59,7 @@ const Exodia = () => (
         <Row className={"row-center"}>
           <h1 className={"exodia-section-title"}>Meet Your Leaders</h1>
           <Col xs={12} md={10} className={"col-center"}>
-            <LeaderSlider/>
+            <StyledLeaderSlider/>
           </Col>
         </Row>
       </Section>
@@ -68,7 +68,7 @@ const Exodia = () => (
         <h1 className={"exodia-section-title"}>Our Committee</h1>
         <Row className={"row-center"}>
           <Col xs={12} md={10} className={"col-center"}>
-            <PortFolioSlider/>
+            <StyledPortfolioSlider/>
           </Col>
         </Row>
       </Section>

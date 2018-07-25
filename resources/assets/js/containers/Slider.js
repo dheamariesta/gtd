@@ -1,10 +1,32 @@
 import React from "react";
 import Slider from "react-slick";
+import styled, { css } from "styled-components";
+
 import defaultSettings from "../defaults/SliderSetting";
-import Slide from "../components/Slide";
+import StyledSlide from "../components/Slide";
 
 
-export class LeaderSlider extends React.Component {
+const settings = {
+  ...defaultSettings,
+  centerMode: true,
+};
+
+const StyledCenteredSlider = css`
+  .slick-slide {
+    h1 {
+      display: none;
+    }
+    &.slick-center {
+      transition: transform .5s ease-in-out;
+      transform: scale(1.05);
+      h1 {
+        display: block;
+      }
+    }
+  }   
+`;
+
+class LeaderSlider extends React.Component {
   constructor(props) {
     super(props);
 
@@ -36,21 +58,14 @@ export class LeaderSlider extends React.Component {
 
 
   render() {
-    const settings = {
-      ...defaultSettings,
-      centerMode: true,
-    };
     const { leaders } = this.state;
+    const { ...props } = this.props;
     return (
       <React.Fragment>
-        <Slider {...settings}>
+        <Slider {...settings} {...props}>
           {leaders.map(leader => {
             return (
-              <Slide
-                key={leader.id}
-                data={leader}
-                className={"leader-slide"}
-              />
+              <StyledSlide key={leader.id} data={leader} />
             );
           })
           }
@@ -60,61 +75,62 @@ export class LeaderSlider extends React.Component {
   }
 }
 
-export class PortFolioSlider extends React.Component {
+export const StyledLeaderSlider = styled(LeaderSlider)`
+  ${StyledCenteredSlider}
+`;
+
+class PortFolioSlider extends React.Component {
   constructor(props){
     super(props);
     this.state = {
       portfols: [
-          {
-            id: 1,
-            src: "/images/portfol_ppit.jpg",
-            details: 'PPIT'
-          },
-          {
-            id: 2,
-            src: "/images/portfol_gl.jpg",
-            details: 'GL'
-          },
-          {
-            id: 3,
-            src: "/images/portfol_mc.jpg",
-            details: 'MC'
-          },
-          {
-            id: 4,
-            src: "/images/portfol_welf.jpg",
-            details: 'Welfare'
-          },
-          {
-            id: 5,
-            src: "/images/portfol_logs.jpg",
-            details: 'Logs'
-          },
-          {
-            id: 6,
-            src: "/images/portfol_po.jpg",
-            details: 'PO'
-          },
-          {
-            id: 7,
-            src: "/images/portfol_bfm.jpg",
-            details: 'BFM'
-          },
-        ]
+        {
+          id: 1,
+          src: "/images/portfol_ppit.jpg",
+          details: 'PPIT'
+        },
+        {
+          id: 2,
+          src: "/images/portfol_gl.jpg",
+          details: 'GL'
+        },
+        {
+          id: 3,
+          src: "/images/portfol_mc.jpg",
+          details: 'MC'
+        },
+        {
+          id: 4,
+          src: "/images/portfol_welf.jpg",
+          details: 'Welfare'
+        },
+        {
+          id: 5,
+          src: "/images/portfol_logs.jpg",
+          details: 'Logs'
+        },
+        {
+          id: 6,
+          src: "/images/portfol_po.jpg",
+          details: 'PO'
+        },
+        {
+          id: 7,
+          src: "/images/portfol_bfm.jpg",
+          details: 'BFM'
+        },
+      ]
     }
   }
 
   render() {
-    const settings = {
-      ...defaultSettings,
-      centerMode: true,
-    };
     const { portfols } = this.state;
+    const { ...props } = this.props;
     return (
       <React.Fragment>
-        <Slider {...settings}>
+        <Slider {...settings} {...props}>
           {portfols.map(p => {
-            return <Slide key={p.id} data={p} className={"portfol-slide"}/>
+            return <StyledSlide key={p.id} data={p}/>
           })
           }
         </Slider>
@@ -122,3 +138,7 @@ export class PortFolioSlider extends React.Component {
     );
   }
 }
+
+export const StyledPortfolioSlider = styled(PortFolioSlider)`
+  ${StyledCenteredSlider}
+`;
