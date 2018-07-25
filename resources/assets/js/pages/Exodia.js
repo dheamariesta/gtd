@@ -22,7 +22,10 @@ const Exodia = () => (
 
       <Section name={"foreword"} className={"full-height"}>
         <Row>
-          <Col xs={12} md={4} mdPush={1}>
+          <Col xs={12} md={5} mdPush={1}>
+            <Image src={"images/ALFONS.jpg"} className="alfons-image" responsive/>
+          </Col>
+          <Col xs={12} md={5}>
             <h1 className={"exodia-section-title"}>Foreword</h1>
             <p> Greetings to all Exodians, </p>
             <p>Exodia has been a land of dream where we live peacefully and prosper here. People from all around the
@@ -49,9 +52,7 @@ const Exodia = () => (
               Alphonse
             </p>
           </Col>
-          <Col xs={12} md={6} mdPush={2}>
-            <Image src={"images/alfons.png"} responsive/>
-          </Col>
+
         </Row>
       </Section>
 
