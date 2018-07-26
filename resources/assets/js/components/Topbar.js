@@ -1,15 +1,14 @@
 // Components
 import React from "react";
-import { Navbar, Nav, NavItem } from "react-bootstrap";
-import $ from "jquery";
+import { Navbar, Nav, NavItem, Image } from "react-bootstrap";
 
 
-export class Topbar extends React.Component {
+export class HomeTopbar extends React.Component {
 	constructor(props) {
 		super(props);
 	}
 
-	scrollToSection() {
+	static scrollToSection() {
 		$("a").on('click', function (event) {
 			// Make sure this.hash has a value before overriding default behavior
 			if (this.hash !== "") {
@@ -17,7 +16,7 @@ export class Topbar extends React.Component {
 				event.preventDefault();
 
 				// Store hash
-				var hash = this.hash;
+				let hash = this.hash;
 
 				$('html, body').animate({
 					scrollTop: $(hash).offset().top
@@ -30,11 +29,11 @@ export class Topbar extends React.Component {
 		});
 	}
 	componentDidMount() {
-		this.scrollToSection();
+		HomeTopbar.scrollToSection();
 	}
 
 	render() {
-		const isDesktop = this.props.isDesktop;
+		const { isDesktop } = this.props;
 		return (
 			<Navbar fixedTop={isDesktop} id="navbar-scrollspy">
 				<Navbar.Header>
@@ -50,6 +49,7 @@ export class Topbar extends React.Component {
 						<NavItem eventKey={1} href="#about">About</NavItem>
 						<NavItem eventKey={2} href="#history">History</NavItem>
 						<NavItem eventKey={3} href="#anthem">Anthem</NavItem>
+            <NavItem eventKey={4} href="#faq">FAQ</NavItem>
 						<NavItem eventKey={4} href="#contact">Contact Us</NavItem>
 					</Nav>
 				</Navbar.Collapse>
@@ -57,3 +57,17 @@ export class Topbar extends React.Component {
 		);
 	}
 }
+
+export const ExodiaTopBar = () => {
+  return (
+    <Navbar className={"no-bg"}>
+      <Navbar.Header>
+        <Navbar.Brand>
+          <a href="/">
+            <Image src={"/images/logo-white.png"} responsive/>
+          </a>
+        </Navbar.Brand>
+      </Navbar.Header>
+    </Navbar>
+  );
+};

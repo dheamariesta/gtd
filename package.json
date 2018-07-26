@@ -15,14 +15,23 @@
         "bootstrap-sass": "^3.3.7",
         "browser-sync": "^2.24.5",
         "browser-sync-webpack-plugin": "^2.2.2",
-        "cross-env": "^5.1",
-        "jquery": "^3.2",
-        "laravel-mix": "^2.1.11",
+        "cross-env": "^5.2.0",
+        "jquery": "^3.3.1",
+        "laravel-mix": "^1.0",
         "lodash": "^4.17.10",
-        "react": "^15.4.2",
-        "react-dom": "^15.4.2"
+        "react": "^16.3.0",
+        "react-dom": "^16.3.0"
     },
     "dependencies": {
+        "@types/react": "^16.4.6",
+        "font-awesome": "^4.7.0",
+        "react-bootstrap": "^0.32.1",
+        "react-burger-menu": "^2.5.2",
+        "react-fontawesome": "^1.6.1",
+        "react-router-dom": "^4.3.1",
+        "react-slick": "^0.23.1",
+        "slick-carousel": "^1.8.1",
+        "styled-components": "^3.3.3"
         "react-bootstrap": "^0.32.0",
         "react-burger-menu": "^2.2.3",
         "react-cookie": "^2.2.0",

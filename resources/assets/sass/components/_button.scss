@@ -1,0 +1,9 @@
+.download-button {
+	border-radius: 10em;
+	background-color: $exodia-bg;
+	color: white;
+	&:hover, &:active, &:active:hover, &:active:focus, &:focus {
+		background-color: darken($exodia-bg, 5%);
+		color: white;
+	}
+}

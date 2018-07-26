@@ -12,7 +12,8 @@ let mix = require('laravel-mix');
  */
 
 mix.react('resources/assets/js/main.js', 'public/js')
-   .sass('resources/assets/sass/main.scss', 'public/css');
+   .sass('resources/assets/sass/main.scss', 'public/css')
+   .sourceMaps();
 
 // mix.browserSync({
 // 	proxy : {

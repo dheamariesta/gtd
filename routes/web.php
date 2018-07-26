@@ -11,8 +11,12 @@
 |
 */
 
-Route::get('/', 'PagesController@home');
 Route::post('/send', 'ContactsController@send');
+
+// Pages
+Route::get('/exodia', 'PagesController@exodia');
+Route::get('/', 'PagesController@home');
+
 Route::post('/score','ScoreController@pass_send')->name('score.pass_send');
 Route::post('/day1','GSheetController@day1')->name('gsheet.day1');
 Route::get('/score', 'PagesController@score')->name('score');
