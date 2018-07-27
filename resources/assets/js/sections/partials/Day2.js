@@ -63,9 +63,8 @@ export class Day2_table extends React.Component {
         }
         return(
 			<div className="Day2_table">
-                <Row className="default-bg full-height">
+                <Row className="default-bg">
                 <div className="container">
-                    Beach Bet Balance
                     <table>
                         <tbody>
                             {objectList.map(obj => {

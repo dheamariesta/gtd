@@ -317,9 +317,9 @@ class GSheetController extends Controller
         $client->setAuthConfig($client_secret);
         $service = new Google_Service_Sheets($client);
         $day3sheetID = '1rqr8_7orpu6h1JUwm5wSol0arxSu3T8mZnTb8dhl_aE';
-        $field_desc_range = 'Poin field!C11';
+        $field_desc_range = 'Poin field!B11';
         if($request->OG_NAME =="OG_1") {
-            $field_point_range = 'Poin field!B11';
+            $field_point_range = 'Poin field!C11';
             $field_point_response = $service->spreadsheets_values->get($day3sheetID, $field_point_range);
             $field_desc_response = $service->spreadsheets_values->get($day3sheetID, $field_desc_range);
             $mydata = [

@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 import { Row, Col } from "react-bootstrap";
 
 export class Day3_table extends React.Component {
@@ -62,9 +63,8 @@ export class Day3_table extends React.Component {
         }
         return(
 			<div className="Day3_table">
-                <Row className="default-bg full-height">
+                <Row className="default-bg">
                 <div className="container">
-                    Beach Bet Balance
                     <table>
                         <tbody>
                             {objectList.map(obj => {

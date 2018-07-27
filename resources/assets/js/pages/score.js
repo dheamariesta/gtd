@@ -158,6 +158,10 @@ export class Score extends React.Component {
                             </Col>
                         </Row>
                     </div>
+                    <Row className="default-bg">
+                            <div className= "margin-bottom">
+                            </div>
+                    </Row>
                 </section>
             );   
         }
