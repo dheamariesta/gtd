@@ -3,7 +3,7 @@ import axios from "axios";
 
 // Sections
 import { Banner } from "../sections/banner";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Button } from "react-bootstrap";
 import { Day1_table } from "../sections/partials/Day1"
 import { Day2_table } from "../sections/partials/Day2"
 import { Day3_table } from "../sections/partials/Day3"
@@ -87,29 +87,29 @@ export class Score extends React.Component {
 		    return (
                 <section id="qscore">
                     <Banner />
-                    <Row className="default-bg full-height flex-center">
+                    <Row className="default-bg flex-center">
                         <Col md={8} xs={12}>
                         <h1 className="section-title title">Exodia Scores</h1>
                         </Col>
                     </Row>
-                    <Row className="default-bg full-height flex-center">
+                    <Row className="default-bg flex-center">
                         <Col md={8} xs={12}>
                         <label>
                             Enter password for OG:  
                         </label>
                         </Col>
                     </Row>
-                    <Row className="default-bg full-height flex-center">
+                    <Row className="default-bg flex-center">
                         <Col md={8} xs={12}>
                         <div className="form-container">
                             <form name = "pass" onSubmit= {this.handleSubmit}>
-                                <input type="password" value={this.state.value} onChange={this.handleChange} /> 
-                                <input type="submit" value="Show me the score!" />
+                                <input type="password" value={this.state.value} onChange={this.handleChange} style={{color: "black"}} /> 
+                                <Button bsStyle="primary" value="submit">Submit</Button>
                             </form>
                         </div>
                         </Col>
                     </Row>
-                    <Row className="default-bg full-height">
+                    <Row className="default-bg">
                             <div className= "margin-bottom">
                             </div>
                     </Row>
