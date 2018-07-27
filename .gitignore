@@ -3,7 +3,6 @@
 /public/storage
 /storage/*.key
 /vendor
-/.idea
 /.vagrant
 Homestead.json
 Homestead.yaml
@@ -12,6 +11,11 @@ yarn-error.log
 .env
 .eslintrc.json
 _ide_helper.php
-.vscode/*
+.idea
+.vscode
+.vs
 client_secret.json
 credentials.json
+composer.lock
+package-lock.json
+webpack.mix.js
