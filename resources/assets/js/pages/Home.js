@@ -9,6 +9,7 @@ import { History } from "../sections/history";
 import { Anthem } from "../sections/anthem";
 import { Contact } from "../sections/contact";
 import { FAQ } from "../sections/faq";
+import { Qscore } from "../sections/qscore";
 
 const Home = ({ isDesktop }) => {
   return (

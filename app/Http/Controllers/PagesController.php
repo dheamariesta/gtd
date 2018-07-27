@@ -13,4 +13,7 @@ class PagesController extends Controller
     {
         return view('pages.exodia');
     }
+    public function score(){
+        return view('pages.score');
+    }
 }

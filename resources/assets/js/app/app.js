@@ -11,7 +11,10 @@ import { Footer } from "../components/Footer";
 // pages
 import  Home  from "../pages/Home";
 import Exodia from "../pages/Exodia";
+import { Score } from "../pages/score";
 
+// cookies
+//import { CookiesProvider } from 'react-cookie';
 
 class App extends React.Component {
     constructor(props){
@@ -55,6 +58,11 @@ class App extends React.Component {
 						<Switch>
 							<Route exact path="/" render = {() => (<Home isDesktop={isDesktop} /> )}/>
               <Route path="/exodia" render={() => (<Exodia />)} />
+						</Switch>
+					</Router>
+					<Router>
+						<Switch>
+							<Route exact path="/score" component = {Score} />
 						</Switch>
 					</Router>
 				</Grid>

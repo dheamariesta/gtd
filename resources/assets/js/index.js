@@ -6,4 +6,4 @@ const node = document.getElementById('root');
 ReactDOM.render(
     <App />,
     node
-)
+)   
