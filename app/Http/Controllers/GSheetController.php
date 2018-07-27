@@ -204,24 +204,15 @@ class GSheetController extends Controller
         $client->setAccessToken($google_client_token);
         $client->setAuthConfig($client_secret);
         $service = new Google_Service_Sheets($client);
-        $day1sheetID = '1o0FAMck7ASWijUkiCgf69_SSu1ZwZvyb2RGsqU20jO4';
-        $outdoor_desc_range = 'Outdoor!A2:A8';
-        $night_desc_range = 'Night!A3:A10';
+        $day2sheetID = '1o0FAMck7ASWijUkiCgf69_SSu1ZwZvyb2RGsqU20jO4';
+        $beach_desc_range = 'Main!B1';
         if($request->OG_NAME =="OG_1") {
-            $outdoor_score_range = 'Outdoor!B2:B8';
-            $night_score_range = 'Night!B3:B10';
-            $night_score_range2 = 'Night!C3:C10';
-            $night_score_response2 = $service->spreadsheets_values->get($day1sheetID, $night_score_range2);
-            $outdoor_desc_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_desc_range);
-            $outdoor_score_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_score_range);
-            $night_desc_response = $service->spreadsheets_values->get($day1sheetID, $night_desc_range);
-            $night_score_response = $service->spreadsheets_values->get($day1sheetID, $night_score_range);
+            $beach_balance_range = 'Main!B3';
+            $beach_score_response = $service->spreadsheets_values->get($day2sheetID, $beach_balance_range);
+            $beach_desc_response = $service->spreadsheets_values->get($day2sheetID, $beach_desc_range);
             $mydata = [
-                'game_titles_outdoor'=> $outdoor_desc_response->getValues(),
-                'game_scores_outdoor' => $outdoor_score_response->getValues(),
-                'game_titles_night'=> $night_desc_response->getValues(),
-                'game_scores_night' => $night_score_response->getValues(),
-                'game_scores_night2' => $night_score_response2->getValues()
+                'game_titles_beach'=> $beach_desc_response->getValues(),
+                'game_balance_beach' => $beach_score_response->getValues(),
             ];
             $status = 200;
         }

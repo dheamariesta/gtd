@@ -121,19 +121,30 @@ export class Score extends React.Component {
             return (
                 <section id="score">
                     <Banner />
-                    <Row className="default-bg full-height flex-center">
+                    <Row className="default-bg flex-center">
                         <Col md={8} xs={12}>
-                        <h1 className="section-title title">Exodia Scores</h1>
+                        <h1 className="section-title title">GTD XX: Exodia Scores</h1>
                         </Col>
                     </Row>
                     <div>
-                        <Row className="default-bg full-height">
+                        <Row className="default-bg">
                             <Col md={12}>
     
-                                <h1 className="section-title title">Day 1 Score</h1>
+                                <h2 className="section-title title">Outdoor and Night Games</h2>
                             </Col>
                             <Col md={12}>
                                 <Day1_table component OG_NAME={this.state.OG_NAME}/>
+                            </Col>
+                        </Row>
+                    </div>
+                    <div>
+                        <Row className="default-bg">
+                            <Col md={12}>
+    
+                                <h2 className="section-title title">Beach Games</h2>
+                            </Col>
+                            <Col md={12}>
+                                <Day2_table component OG_NAME={this.state.OG_NAME}/>
                             </Col>
                         </Row>
                     </div>
