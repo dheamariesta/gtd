@@ -1,0 +1,62 @@
+.bg-batik {
+	background-size: contain;
+	background: url("/images/batik-maroon.jpg") no-repeat fixed center;
+	min-height: 100vh;
+
+	.navbar-default {
+		border: none;
+	}
+}
+
+.exodia-section-title {
+	font-family: got, serif;
+	color: $exodia-orange;
+	letter-spacing: 10px;
+	font-size: 24px;
+}
+
+
+section.banner-exodia {
+	.exodia-title {
+		font-size: 5em;
+		font-family: blackoninaut, serif;
+		letter-spacing: 15px;
+		color: $exodia-orange;
+	}
+
+	p {
+		font-family: got, serif;
+		color: $exodia-orange;
+		letter-spacing: 10px;
+	}
+}
+
+section.foreword {
+	text-align: left;
+
+	.alfons-image{
+		@include general-query(desktop){
+			width: 70%;
+		}
+	}
+}
+
+section.committee {
+	.ppit-container {
+		position: relative;
+		.ppit-image {
+			opacity: 0.5;
+		}
+		.ppit-title {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		.other-portfol {
+			position: absolute;
+			bottom: 8px;
+			left: 16px;
+		}
+	}
+}

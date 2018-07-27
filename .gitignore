@@ -11,3 +11,7 @@ npm-debug.log
 yarn-error.log
 .env
 .eslintrc.json
+_ide_helper.php
+.vscode/*
+client_secret.json
+credentials.json

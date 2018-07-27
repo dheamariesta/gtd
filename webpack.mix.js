@@ -12,12 +12,12 @@ let mix = require('laravel-mix');
  */
 
 mix.react('resources/assets/js/main.js', 'public/js')
-   .sass('resources/assets/sass/main.scss', 'public/css');
+   .sass('resources/assets/sass/main.scss', 'public/css')
+   .sourceMaps();
 
 // mix.browserSync({
 // 	proxy : {
-// 		target : "http://gtd_laravel.test"
+// 		target : "localhost:8000"
 // 	},
-// 	port : 8000,
 // 	ghostMode: false
 // });
