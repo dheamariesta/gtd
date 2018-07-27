@@ -103,7 +103,7 @@ export class Score extends React.Component {
                         <div className="form-container">
                             <form name = "pass" onSubmit= {this.handleSubmit}>
                                 <input type="password" value={this.state.value} onChange={this.handleChange} style={{color: "black"}} /> 
-                                <Button bsStyle="primary" value="submit" onclick={this.handleSubmit}>Submit</Button>
+                                <Button bsStyle="primary" type="submit">Submit</Button>
                             </form>
                         </div>
                         </Col>
