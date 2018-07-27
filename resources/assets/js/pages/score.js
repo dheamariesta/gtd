@@ -7,7 +7,6 @@ import { Row, Col, Button } from "react-bootstrap";
 import { Day1_table } from "../sections/partials/Day1"
 import { Day2_table } from "../sections/partials/Day2"
 import { Day3_table } from "../sections/partials/Day3"
-import { Day4_table } from "../sections/partials/Day4"
 
 export class Score extends React.Component {
 	constructor(props) {
@@ -145,6 +144,17 @@ export class Score extends React.Component {
                             </Col>
                             <Col md={12}>
                                 <Day2_table component OG_NAME={this.state.OG_NAME}/>
+                            </Col>
+                        </Row>
+                    </div>
+                    <div>
+                        <Row className="default-bg">
+                            <Col md={12}>
+    
+                                <h2 className="section-title title">Field Games</h2>
+                            </Col>
+                            <Col md={12}>
+                                <Day3_table component OG_NAME={this.state.OG_NAME}/>
                             </Col>
                         </Row>
                     </div>

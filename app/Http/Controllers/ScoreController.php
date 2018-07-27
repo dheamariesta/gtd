@@ -70,7 +70,7 @@ class ScoreController extends Controller
         else {
             $mydata = [
                 "result" => "Wrong password",
-                "OG_NAME" => "Exodia"
+                "OG_NAME" => base64_encode("Exodia")
 			];
 			$status = 403;
 		}

@@ -40,7 +40,7 @@ export class Day1_table extends React.Component {
 
         }).catch(err => {
             console.log(err);
-            alert("Error!");
+            alert("Error when fetching day1!");
         })
     }
 

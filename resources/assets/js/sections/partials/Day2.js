@@ -27,11 +27,11 @@ export class Day2_table extends React.Component {
                 game_titles_beach: titles_beach,
                 game_balance_beach: balance_beach
             });
-            console.log("Day1 fetched!");
+            console.log("Day2 fetched!");
 
         }).catch(err => {
             console.log(err);
-            alert("Error!");
+            alert("Error when fetching day2!");
         })
     }
     
@@ -62,7 +62,7 @@ export class Day2_table extends React.Component {
             });
         }
         return(
-			<div className="Day1_table">
+			<div className="Day2_table">
                 <Row className="default-bg full-height">
                 <div className="container">
                     Beach Bet Balance
