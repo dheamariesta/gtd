@@ -14,7 +14,7 @@ class ScoreController extends Controller
         if($request->pass_send =="AQUAT") {
             $mydata = [
                 "result" => "Correct password",
-                "OG_NAME" => "OG_1"
+                "OG_NAME" => base64_encode("OG_1")
 			];
 			$status = 200;
         }
