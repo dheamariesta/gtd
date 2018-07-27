@@ -1,13 +1,11 @@
 import React from "react";
-import { Alert, Button } from "react-bootstrap";
+import { Alert } from "react-bootstrap";
 
 
 export class AlertDismissable extends React.Component {
-	constructor(...args) {
-		super(...args);
-
+	constructor(props) {
+		super(props);
 		this.handleAlertDismiss = this.handleAlertDismiss.bind(this);
-
 	}
 
 	handleAlertDismiss() {
@@ -15,12 +13,11 @@ export class AlertDismissable extends React.Component {
 	}
 
 	render() {
-		if (this.props.show) {
+	  const {show, children, ...rest } = this.props;
+		if (show) {
 			return (
-				<Alert bsStyle={this.props.bsStyle} onDismiss={this.handleAlertDismiss}>
-
-					{this.props.children}
-					
+				<Alert {...rest}>
+					{children}
 				</Alert>
 			);
         }
@@ -30,4 +27,4 @@ export class AlertDismissable extends React.Component {
 
 AlertDismissable.defaultProps = {
 	bsStyle : 'danger'
-}
+};

@@ -10,25 +10,18 @@ export class Contact extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      errors: {},
-      showAlert: {
-        error: false,
-        success: false
-      },
-      message: {
-        error: '',
-        success: ''
-      }
-    }
+      status: '',
+      showAlert: false,
+      message: '',
+    };
 
-    this.updateError = this.updateError.bind(this);
-    this.updateSuccess = this.updateSuccess.bind(this);
-    this.dismissErrorAlert = this.dismissErrorAlert.bind(this);
-    this.dismissSuccessAlert = this.dismissSuccessAlert.bind(this);
+    this.handleError = this.handleError.bind(this);
+    this.handleSuccess = this.handleSuccess.bind(this);
+    this.dismissAlert = this.dismissAlert.bind(this);
   }
 
-  updateError(errors) {
-    var errorMessages = [];
+  handleError(errors) {
+    let errorMessages = [];
     for (const key in errors) {
       if (errors.hasOwnProperty(key)) {
         const value = errors[key];
@@ -39,88 +32,28 @@ export class Contact extends React.Component {
       }
     }
     this.setState({
-      errors: errors,
-      showAlert: {
-        error: true
-      },
-      message: {
-        error: errorMessages
-      }
+      showAlert:  true,
+      status: 'error',
+      message: errorMessages
     });
   }
 
-  updateSuccess(success_msg) {
+  handleSuccess(message) {
     this.setState({
-      showAlert: {
-        success: true
-      },
-      message: {
-        success: success_msg
-      }
+      showAlert: true,
+      status: 'success',
+      message,
     });
   }
 
-  dismissErrorAlert() {
+  dismissAlert() {
     this.setState({
-      showAlert: {
-        error: false
-      }
+      showAlert: false
     });
-  }
-
-  dismissSuccessAlert() {
-    this.setState({
-      showAlert: {
-        success: false
-      }
-    })
-  }
-
-  isEmpty(obj) {
-    for (var key in obj) {
-      if (obj.hasOwnProperty(key))
-        return false;
-    }
-    return true;
   }
 
   render() {
-    var AlertError = null;
-    var AlertSuccess = null;
-    const errors = this.state.errors;
-    const isError = !this.isEmpty(errors);
-
-    if (isError) {
-      const listStyle = {
-        'textAlign': 'left'
-      }
-      AlertError = (
-        <AlertDismissable show={this.state.showAlert.error} onHide={this.dismissErrorAlert}>
-          <ul style={listStyle}>
-            {this.state.message.error.map(function (message) {
-              return (
-                <li>{message}</li>
-              )
-            })}
-          </ul>
-
-        </AlertDismissable>
-      );
-
-    }
-    else {
-      const paraStyle = {
-        'color': 'black'
-      }
-      AlertSuccess = (
-        <AlertDismissable bsStyle="success" show={this.state.showAlert.success} onHide={this.dismissSuccessAlert}>
-
-          <p style={paraStyle}>{this.state.message.success}</p>
-
-        </AlertDismissable>
-      );
-    }
-
+    const { message, showAlert, status } = this.state;
     return (
       <section id="contact">
         <Row className="default-bg full-height flex-center">
@@ -129,17 +62,29 @@ export class Contact extends React.Component {
             <div className="form-container">
               <ContactForm
                 actionHandler="/send"
-                onError={this.updateError}
-                onSuccess={this.updateSuccess}
+                onError={this.handleError}
+                onSuccess={this.handleSuccess}
               />
             </div>
-            {AlertError}
-            {AlertSuccess}
+            {status === 'error' ? (
+              <AlertDismissable show={showAlert} onDismiss={this.dismissAlert}>
+                <ul style={{ textAlign: 'left' }}>
+                  {message.map((m, index) => {
+                    return (
+                      <li key={index}>{m}</li>
+                    )
+                  })}
+                </ul>
+              </AlertDismissable>
+            ) : (
+              <AlertDismissable bsStyle="success" show={showAlert} onDismiss={this.dismissAlert}>
+                <p style={{ color: 'black' }}>{message}</p>
+              </AlertDismissable>
+            )}
           </Col>
         </Row>
       </section>
     );
-
   }
 }
 

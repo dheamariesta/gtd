@@ -10,13 +10,11 @@ use App\Mail\VisitorContact;
 class ContactsController extends Controller
 {
     public function send(Request $request) {
-        $rules = [
+        $request->validate([
             'name' => 'required',
             'email' => 'required|email',
             'message' => 'required'
-        ];
-
-        $this->validate($request, $rules);
+        ]);
 
         $contact = new Contact([
             'name' => $request->name,
@@ -26,6 +24,10 @@ class ContactsController extends Controller
 
         Mail::to('abc@example.com')->send(new VisitorContact($contact));
 
-        return response('Thank you for emailing us! We will get back to you soon!', 200);
+        $response = [
+            'message' => 'Thank you for emailing us! We will get back to you soon!'
+        ];
+
+        return response()->json($response);
     }
 }

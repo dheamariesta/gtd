@@ -1,15 +1,17 @@
 import React from "react"
 import { FormGroup, FormControl, ControlLabel, Button } from "react-bootstrap";
 import axios from "axios";
+import Loading from "./Loading";
 
-function FieldGroup({ id, label, help, ...props }) {
+
+const FieldGroup = ({ id, label, help, ...props }) => {
   return (
     <FormGroup controlId={id}>
       <ControlLabel>{label}</ControlLabel>
       <FormControl {...props} />
     </FormGroup>
   );
-}
+};
 
 export class ContactForm extends React.Component {
   constructor(props) {
@@ -18,7 +20,8 @@ export class ContactForm extends React.Component {
       name: '',
       email: '',
       message: '',
-    }
+      loading: false,
+    };
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.onChangeName = this.onChangeName.bind(this);
@@ -28,31 +31,30 @@ export class ContactForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    axios.post('/send', {
-      name: this.state.name,
-      email: this.state.email,
-      message: this.state.message
+    this.setState({ loading: true }, () => {
+      const { name, email, message } = this.state;
+      axios
+        .post('/send', { name, email, message })
+        .then(response => {
+          const { message } = response.data;
+          this.props.onSuccess(message);
+          this.setState({
+            name: '',
+            email: '',
+            message: '',
+          });
+        })
+        .catch(error => {
+          const { errors } = error.response.data;
+          this.props.onError(errors);
+        })
+        .then(() => {
+          this.setState({
+            loading: false,
+          });
+        })
+      ;
     })
-    .then(function (response) {
-      const success_msg = response.data;
-      this.props.onSuccess(success_msg);
-    }.bind(this))
-
-    .catch(function (error) {
-      if (error.response) {
-        // The request was made and the server responded with a status code
-        // that falls out of the range of 2xx
-        const errors = error.response.data.errors;
-        this.props.onError(errors);
-        console.log(error.response.data);
-        console.log(error.response.headers);
-      }
-      else {
-        // Something happened in setting up the request that triggered an Error
-        console.log('Error', error.message);
-      }
-      console.log(error.config);
-    }.bind(this));
   }
 
   onChangeName(e) {
@@ -77,42 +79,46 @@ export class ContactForm extends React.Component {
   }
 
   render() {
+    const { actionHandler } = this.props;
+    const { loading, name, email, message } = this.state;
     return (
-      <form action={this.props.actionHandler} method="POST" onSubmit={this.handleSubmit}>
+      <form action={actionHandler} method="POST" onSubmit={this.handleSubmit}>
         <FieldGroup
           id="formControlsName"
           type="text"
-          label="Name"
+          label="name"
           placeholder="Enter Name"
           name="name"
+          value={name}
           onChange={this.onChangeName}
+
 
         />
         <FieldGroup
           id="formControlsEmail"
           type="text"
-          label="Email address"
+          label="email"
           placeholder="Enter email"
           name="email"
+          value={email}
           onChange={this.onChangeEmail}
 
         />
-        <FormGroup controlId="formControlsTextarea">
-          <ControlLabel>Message</ControlLabel>
-          <FormControl
-            componentClass="textarea"
-            placeholder="Message"
-            name="message"
-            cols="30"
-            rows="10"
-            onChange={this.onChangeMessage}
-
-          />
-        </FormGroup>
+        <FieldGroup
+          id="formControlsTextarea"
+          componentClass="textarea"
+          label="message"
+          placeholder="Enter message"
+          name="message"
+          value={message}
+          cols="30"
+          rows="10"
+          onChange={this.onChangeMessage}
+        />
 
         <FormGroup>
-          <Button type="submit" bsStyle="primary" bsSize="large" block>
-            Submit
+          <Button type="submit" bsStyle="primary" bsSize="large" block disabled={loading}>
+            {loading ? (<Loading text={"Submitting..."}/>) : 'Submit'}
           </Button>
         </FormGroup>
       </form>
