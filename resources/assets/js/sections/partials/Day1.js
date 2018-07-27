@@ -40,7 +40,7 @@ export class Day1_table extends React.Component {
 
         }).catch(err => {
             console.log(err);
-            alert("Error!");
+            alert("Error when fetching day1!");
         })
     }
 
@@ -136,9 +136,9 @@ export class Day1_table extends React.Component {
         // });
         return (
             <div className="Day1_table">
-                <Row className="default-bg full-height">
+                <Row className="default-bg">
                 <div className="container">
-                    Outdoor
+                <h3 className="section-title title"> Outdoor</h3>
                     <table>
                         <tbody>
                             {objectList.map(obj => {
@@ -152,7 +152,7 @@ export class Day1_table extends React.Component {
                             })}
                         </tbody>
                     </table>
-                    Night
+                    <h3 className="section-title title">Night</h3>
                     <table>
                         <tbody>
                             {objectList2.map(obj => {

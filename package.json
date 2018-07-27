@@ -25,6 +25,7 @@
     "dependencies": {
         "@types/react": "^16.4.6",
         "font-awesome": "^4.7.0",
+        "node-sass": "^4.9.2",
         "react-bootstrap": "^0.32.0",
         "react-burger-menu": "^2.2.3",
         "react-fontawesome": "^1.6.1",

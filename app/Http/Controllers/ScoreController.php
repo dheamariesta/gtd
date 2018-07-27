@@ -14,63 +14,63 @@ class ScoreController extends Controller
         if($request->pass_send =="AQUAT") {
             $mydata = [
                 "result" => "Correct password",
-                "OG_NAME" => "OG_1"
+                "OG_NAME" => base64_encode("OG_1")
 			];
 			$status = 200;
         }
         else if($request->pass_send =="TEHSOSTRONG") {
             $mydata = [
                 "result" => "Correct password",
-                "OG_NAME" => "OG_2"
+                "OG_NAME" => base64_encode("OG_2")
 			];
 			$status = 200;
         }
         else if($request->pass_send =="PEPSWIFT") {
             $mydata = [
                 "result" => "Correct password",
-                "OG_NAME" => "OG_3"
+                "OG_NAME" => base64_encode("OG_3")
 			];
 			$status = 200;
         }
         else if($request->pass_send =="QUICKACOLA") {
             $mydata = [
                 "result" => "Correct password",
-                "OG_NAME" => "OG_4"
+                "OG_NAME" => base64_encode("OG_4")
 			];
 			$status = 200;
         }
         else if($request->pass_send =="NARUTARGET") {
             $mydata = [
                 "result" => "Correct password",
-                "OG_NAME" => "OG_5"
+                "OG_NAME" => base64_encode("OG_5")
 			];
 			$status = 200;
         }
         else if($request->pass_send =="SASUKEKER") {
             $mydata = [
                 "result" => "Correct password",
-                "OG_NAME" => "OG_6"
+                "OG_NAME" => base64_encode("OG_6")
 			];
 			$status = 200;
         }
         else if($request->pass_send =="SCARLETTJOHANSIP") {
             $mydata = [
                 "result" => "Correct password",
-                "OG_NAME" => "OG_7"
+                "OG_NAME" => base64_encode("OG_7")
 			];
 			$status = 200;
         }
         else if($request->pass_send =="HUGHJAGAMAN") {
             $mydata = [
                 "result" => "Correct password",
-                "OG_NAME" => "OG_8"
+                "OG_NAME" => base64_encode("OG_8")
 			];
 			$status = 200;
 		}
         else {
             $mydata = [
                 "result" => "Wrong password",
-                "OG_NAME" => "Exodia"
+                "OG_NAME" => base64_encode("Exodia")
 			];
 			$status = 403;
 		}
