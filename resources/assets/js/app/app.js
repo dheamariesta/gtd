@@ -58,11 +58,7 @@ class App extends React.Component {
 						<Switch>
 							<Route exact path="/" render = {() => (<Home isDesktop={isDesktop} /> )}/>
               <Route path="/exodia" render={() => (<Exodia />)} />
-						</Switch>
-					</Router>
-					<Router>
-						<Switch>
-							<Route exact path="/score" component = {Score} />
+							<Route exact path="/score" component={Score} />
 						</Switch>
 					</Router>
 				</Grid>
