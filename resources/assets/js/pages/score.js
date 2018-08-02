@@ -2,13 +2,14 @@ import React from "react";
 import axios from "axios";
 
 // Sections
-import { Row, Col, Button } from "react-bootstrap";
+import { Row, Col, Button, FormGroup } from "react-bootstrap";
 import { Day1_table } from "../sections/partials/Day1"
 import { Day2_table } from "../sections/partials/Day2"
 import { Day3_table } from "../sections/partials/Day3"
 import { FieldGroup } from "../components/Form";
 import Loading from "../components/Loading";
 import { HomeTopbar } from "../components/Topbar";
+import { AlertDismissable } from "../components/Alert";
 
 export class Score extends React.Component {
   constructor(props) {
@@ -17,9 +18,12 @@ export class Score extends React.Component {
       value: '',
       OG_NAME: '',
       loading: false,
+      status: '',
+      showAlert: false,
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.dismissAlert = this.dismissAlert.bind(this);
     this.check_pass = this.check_pass.bind(this);
   }
 
@@ -33,27 +37,41 @@ export class Score extends React.Component {
     this.check_pass();
   }
 
+  dismissAlert(){
+    this.setState({
+      showAlert: false,
+    });
+  }
+
   check_pass() {
-    this.setState({ loading: true}, () => {
+    this.setState({ loading: true, OG_NAME: ''}, () => {
       axios.post('/score', {
         pass_send: this.state.value,
       }).then(response => {
-        alert("Password is correct");
         const { OG_NAME } = response.data;
-        this.setState({ OG_NAME });
+        this.setState({
+          status: 'success',
+          OG_NAME,
+        });
       }).catch(err => {
         console.log(err);
-        alert("Error!");
+        this.setState({
+          status: 'error',
+        });
       }).then(() => {
         setTimeout(() => {
-          this.setState({ loading: false, value: '', });
-        }, 5000);
+          this.setState({
+            value: '',
+            loading: false,
+            showAlert: true,
+          });
+        }, 4000);
       });
     });
   }
 
   render() {
-    const { OG_NAME, value, loading } = this.state;
+    const { OG_NAME, value, loading, status, showAlert } = this.state;
     return (
       <React.Fragment>
         <HomeTopbar/>
@@ -62,16 +80,30 @@ export class Score extends React.Component {
             <h1 className="section-title title">Exodia Scores</h1>
             <form onSubmit={this.handleSubmit}>
               <FieldGroup
-                label={"Enter OG Password"}
+                required
+                label={"Enter OG Password *"}
                 id={"formControlText"}
                 type={"password"}
                 placeholder={"Enter OG Password"}
                 value={value}
                 onChange={this.handleChange}
               />
-              <Button bsStyle="primary" block type="submit" disabled={loading}>
-                {loading ? (<Loading text={"Submitting..."}/>) : 'Submit'}
-              </Button>
+              <FormGroup>
+                <Button bsStyle="primary" block type="submit" disabled={loading}>
+                  {loading ? (<Loading text={"Submitting..."}/>) : 'Submit'}
+                </Button>
+              </FormGroup>
+
+              {status === 'success' ? (
+                <AlertDismissable bsStyle="success" show={showAlert} onDismiss={this.dismissAlert}>
+                  Scores are successfully fetched!
+                </AlertDismissable>
+              ):(
+                <AlertDismissable show={showAlert} onDismiss={this.dismissAlert}>
+                  Error!
+                </AlertDismissable>
+              )
+              }
             </form>
             {OG_NAME ? (
               <div>
