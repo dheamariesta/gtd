@@ -6,15 +6,12 @@ import {
 	Switch,
 } from 'react-router-dom';
 import { Grid } from "react-bootstrap";
-import { Footer } from "../components/Footer";
+import Footer from "../components/Footer";
 
 // pages
 import  Home  from "../pages/Home";
 import Exodia from "../pages/Exodia";
 import { Score } from "../pages/score";
-
-// cookies
-//import { CookiesProvider } from 'react-cookie';
 
 class App extends React.Component {
     constructor(props){

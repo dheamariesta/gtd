@@ -1,6 +1,7 @@
 // Components
 import React from "react";
 import { Navbar, Nav, NavItem, Image } from "react-bootstrap";
+import Home from "../pages/Home";
 
 
 export class HomeTopbar extends React.Component {
@@ -50,7 +51,6 @@ export class HomeTopbar extends React.Component {
 						<NavItem eventKey={2} href="#history">History</NavItem>
 						<NavItem eventKey={3} href="#anthem">Anthem</NavItem>
             <NavItem eventKey={4} href="#faq">FAQ</NavItem>
-						<NavItem eventKey={4} href="#contact">Contact Us</NavItem>
 					</Nav>
 				</Navbar.Collapse>
 			</Navbar>
