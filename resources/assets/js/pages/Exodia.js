@@ -86,9 +86,11 @@ const Exodia = () => (
       <Section name={"handbook"} className={"height-65vh"}>
         <FontAwesome name={"heart-o"} size={"5x"} style={{ color: "white", borderRadius: "50%", }} border/>
         <h1 className={"exodia-section-title"}>Freshie, Get Your Handbook Here!</h1>
-        <Button bsSize={"large"} className={"download-button"}>
-          Download
-        </Button>
+        <a href="https://drive.google.com/file/d/1HpFHw0KwHp30FFItajVLnsSye39kATQK/view?usp=drivesdk" target="_blank">
+          <Button bsSize={"large"} className={"download-button"}>
+            Download
+          </Button>
+        </a>
       </Section>
     </Row>
   </React.Fragment>
