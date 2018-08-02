@@ -4,7 +4,7 @@ import axios from "axios";
 import Loading from "./Loading";
 
 
-const FieldGroup = ({ id, label, help, ...props }) => {
+export const FieldGroup = ({ id, label, help, ...props }) => {
   return (
     <FormGroup controlId={id}>
       <ControlLabel>{label}</ControlLabel>
