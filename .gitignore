@@ -19,3 +19,4 @@ credentials.json
 composer.lock
 package-lock.json
 webpack.mix.js
+*.map
