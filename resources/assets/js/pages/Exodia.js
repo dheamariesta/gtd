@@ -57,8 +57,8 @@ const Exodia = () => (
       </Section>
 
       <Section name={"leaders"} className={"full-height"}>
-        <Row className={"row-center"}>
-          <h1 className={"exodia-section-title"}>Meet Your Leaders</h1>
+				<h1 className={"exodia-section-title"}>Meet Your Leaders</h1>
+        <Row className={"flex-center row-center height-80vh"}>
           <Col xs={12} md={10} className={"col-center"}>
             <StyledLeaderSlider/>
           </Col>
