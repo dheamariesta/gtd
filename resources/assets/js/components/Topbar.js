@@ -35,17 +35,18 @@ export class HomeTopbar extends React.Component {
 
   render() {
     const { isDesktop } = this.props;
+    const isHome = window.location.pathname === '/';
     return (
       <Navbar fixedTop={isDesktop} id="navbar-scrollspy">
         <Navbar.Header>
           <Navbar.Brand>
             <a href="/">
-              <img src="/images/logo.png" alt="logo" className="img-responsive hidden-xs"/>
+              <Image src="/images/logo.png" alt="logo" responsive/>
             </a>
           </Navbar.Brand>
-          <Navbar.Toggle/>
+          {isHome ? <Navbar.Toggle/> : ''}
         </Navbar.Header>
-        {window.location.pathname === '/' ? (
+        {isHome ? (
           <Navbar.Collapse>
             <Nav pullRight>
               <NavItem eventKey={1} href="#about">About</NavItem>
