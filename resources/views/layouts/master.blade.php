@@ -8,7 +8,7 @@
   <title>GTD</title>
 
   {{-- favicon --}}
-  <link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon"/>
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
 
   <link rel="stylesheet" href="{{ asset('css/main.css') }}">
 
