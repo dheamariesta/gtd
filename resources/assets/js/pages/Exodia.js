@@ -1,10 +1,22 @@
 import React from "react";
 import FontAwesome from "react-fontawesome";
+import styled from "styled-components";
+import { exodiaBg } from "../helpers/color";
+
 import { ExodiaTopBar } from "../components/Topbar";
 import { Row, Col, Image, Button } from "react-bootstrap";
 import { StyledLeaderSlider, StyledPortfolioSlider } from "../containers/Slider";
 import Section from "../components/Section";
 
+const StyledButton = styled(Button)`
+  border-radius: 10em;
+	background-color: ${exodiaBg}
+	color: white;
+	&:hover, &:active, &:active:hover, &:active:focus, &:focus {
+		background-color: #4C1818;
+		color: white;
+	}
+`;
 
 const Exodia = () => (
   <React.Fragment>
@@ -87,9 +99,9 @@ const Exodia = () => (
         <FontAwesome name={"heart-o"} size={"5x"} style={{ color: "white", borderRadius: "50%", }} border/>
         <h1 className={"exodia-section-title"}>Freshie, Get Your Handbook Here!</h1>
         <a href="https://drive.google.com/file/d/1pKzErQSKaXGiQpqIVF1r0SCvHvLrk-Fh/view?usp=drivesdk" target="_blank">
-          <Button bsSize={"large"} className={"download-button"}>
+          <StyledButton bsSize={"large"}>
             Download
-          </Button>
+          </StyledButton>
         </a>
       </Section>
     </Row>
