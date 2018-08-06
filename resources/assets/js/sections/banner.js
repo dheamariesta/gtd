@@ -1,8 +1,7 @@
 import React from "react";
+import styled from "styled-components";
 import { Row, Image } from "react-bootstrap";
 import { screenMdMin } from "../helpers/breakpoint";
-
-import styled from "styled-components";
 
 
 const StyledContainer = styled.div`
@@ -21,7 +20,7 @@ export const Banner = () => {
     <Row className="flex-center">
       <StyledContainer>
         <a href="/exodia">
-          <Image src="/images/coming_soon.jpg" alt="banner" responsive />
+          <Image src="/images/exodia_banner.png" alt="banner" responsive />
         </a>
       </StyledContainer>
     </Row>
