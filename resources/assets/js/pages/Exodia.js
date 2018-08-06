@@ -98,7 +98,7 @@ const Exodia = () => (
       <Section name={"handbook"} className={"height-65vh"}>
         <FontAwesome name={"heart-o"} size={"5x"} style={{ color: "white", borderRadius: "50%", }} border/>
         <h1 className={"exodia-section-title"}>Freshie, Get Your Handbook Here!</h1>
-        <a href="https://drive.google.com/file/d/1pKzErQSKaXGiQpqIVF1r0SCvHvLrk-Fh/view?usp=drivesdk" target="_blank">
+        <a href={process.env.MIX_BOOKLET_LINK} target="_blank">
           <StyledButton bsSize={"large"}>
             Download
           </StyledButton>
