@@ -26,7 +26,7 @@ const StyledFooterSection = styled.div`
 
 const Footer = () => {
   return (
-    <Navbar>
+    <Navbar style={{ borderRadius: 0 }}>
       <StyledFooterSection>
         <a href="https://www.facebook.com/PINTUGTD" className="social-media" target="_blank">
           <FontAwesome name={"facebook-square"} style={{ fontSize: "1.5em" }}/>
