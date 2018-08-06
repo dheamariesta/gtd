@@ -1,15 +1,17 @@
 import React from "react";
 import axios from "axios";
 
-// Sections
+// components
 import { Row, Col, Button, FormGroup } from "react-bootstrap";
-import { Day1_table } from "../sections/partials/Day1"
-import { Day2_table } from "../sections/partials/Day2"
-import { Day3_table } from "../sections/partials/Day3"
 import { FieldGroup } from "../components/Form";
 import Loading from "../components/Loading";
 import { HomeTopbar } from "../components/Topbar";
 import { AlertDismissable } from "../components/Alert";
+
+// Sections
+import { Day1_table } from "../sections/partials/Day1"
+import { Day2_table } from "../sections/partials/Day2"
+import { Day3_table } from "../sections/partials/Day3"
 
 export class Score extends React.Component {
   constructor(props) {
