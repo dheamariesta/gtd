@@ -12,9 +12,9 @@ import { FAQ } from "../sections/faq";
 const Home = ({ isDesktop }) => {
   return (
     <div>
-      <HomeTopbar isDesktop={isDesktop} />
+      <HomeTopbar fixedTop={isDesktop} />
       <Banner/>
-      <About isDesktop={isDesktop}/>
+      <About/>
       <History/>
       <Anthem/>
       <FAQ/>
