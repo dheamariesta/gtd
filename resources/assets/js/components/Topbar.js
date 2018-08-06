@@ -34,10 +34,10 @@ export class HomeTopbar extends React.Component {
   }
 
   render() {
-    const { isDesktop } = this.props;
+    const { ...rest } = this.props;
     const isHome = window.location.pathname === '/';
     return (
-      <Navbar fixedTop={isDesktop} id="navbar-scrollspy">
+      <Navbar id="navbar-scrollspy" {...rest}>
         <Navbar.Header>
           <Navbar.Brand>
             <a href="/">
