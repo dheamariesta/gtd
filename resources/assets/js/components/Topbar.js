@@ -1,6 +1,8 @@
 // Components
 import React from "react";
+import styled from "styled-components";
 import { Navbar, Nav, NavItem, Image } from "react-bootstrap";
+import { ExodiaThemedButton } from "./Button";
 
 
 export class HomeTopbar extends React.Component {
@@ -62,9 +64,16 @@ export class HomeTopbar extends React.Component {
   }
 }
 
+const StyledNavbar = styled(Navbar)`
+  .container {
+    display: flex;
+    align-items: center;
+  }
+`;
+
 export const ExodiaTopBar = () => {
   return (
-    <Navbar className={"no-bg"}>
+    <StyledNavbar className={"no-bg"}>
       <Navbar.Header>
         <Navbar.Brand>
           <a href="/">
@@ -72,6 +81,13 @@ export const ExodiaTopBar = () => {
           </a>
         </Navbar.Brand>
       </Navbar.Header>
-    </Navbar>
+      <div style={{ marginLeft: "auto" }}>
+        <a href="https://gtd-xx-score.herokuapp.com/" target="_blank">
+          <ExodiaThemedButton>
+            Check Score
+          </ExodiaThemedButton>
+        </a>
+      </div>
+    </StyledNavbar>
   );
 };
