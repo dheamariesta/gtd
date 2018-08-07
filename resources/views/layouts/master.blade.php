@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <title>GTD - Get Together Day</title>
+  <meta name="description" content="Get Together Day (GTD) is an Indonesian Orientation Community under PINTU">
+  <meta name="keywords" content="GTD, Get Together Day, NTU, GTD NTU, Get Together Day NTU, NTU Indonesia, PINTU GTD, Orientasi NTU">
   {{-- favicon --}}
   <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"/>
 
