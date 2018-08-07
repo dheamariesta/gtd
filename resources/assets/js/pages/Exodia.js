@@ -1,9 +1,10 @@
 import React from "react";
 import FontAwesome from "react-fontawesome";
+import Section from "../components/Section";
+
 import { ExodiaTopBar } from "../components/Topbar";
 import { Col, Image, Row } from "react-bootstrap";
 import { StyledLeaderSlider, StyledPortfolioSlider } from "../containers/Slider";
-import Section from "../components/Section";
 import { ExodiaThemedButton } from "../components/Button";
 
 const Exodia = () => (
@@ -83,9 +84,9 @@ const Exodia = () => (
         </Row>
       </Section>
 
-      <Section name={"handbook"} className={"height-65vh"}>
+      <Section name={"booklet"} className={"height-65vh"}>
         <FontAwesome name={"heart-o"} size={"5x"} style={{ color: "white", borderRadius: "50%", }} border/>
-        <h1 className={"exodia-section-title"}>Freshie, Get Your Handbook Here!</h1>
+        <h1 className={"exodia-section-title"}>Freshie, Get Your Booklet Here!</h1>
         <a href={process.env.MIX_BOOKLET_LINK} target="_blank">
           <ExodiaThemedButton bsSize={"large"}>
             Download
