@@ -28,19 +28,19 @@ const Exodia = () => (
           </Col>
           <Col xs={12} md={5}>
             <h1 className={"exodia-section-title"}>Foreword</h1>
-            <p> Greetings to all Exodians, </p>
-            <p>Exodia has been a land of dream where we live peacefully and prosper here. People from all around the
+            <p>Greetings to all Exodians, </p>
+            <p>Exodia has been a land of dream where we live peacefully and prosper. People from all around the
               world are trying to achieve what we have. I cannot be more proud of that.
             </p>
             <p>
-              However, in the past few weeks, a lot of incidents has happened and disturbed our society. Our friends and
-              families are injured because of the chaos. Together with all the house leaders, we had an emergency
-              meeting to discuss this and we are still in search for the real cause of the incident. But we have learned
-              one thing: the traitor that once banished, Rick, has returned to this kingdom.
+              However, in the past few weeks, a lot of incidents have happened and disturbed our society. Our friends and
+              families have been injured because of the chaos. Together with all the house leaders, we had an emergency
+              meeting to discuss this and we are still searching for the real cause of the incidents. We have learned
+              one thing: the traitor who was once banished, Rick, has returned to this kingdom.
             </p>
 
             <p>
-              We do not know what is coming next. After all, the only certain thing is, we need to take action.
+              We do not know what is coming next. Nevertheless, the only certain thing is that we need to take actions.
               Therefore, I will see you at The Plaza under the judgment place.
             </p>
 
