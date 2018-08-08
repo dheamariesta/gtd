@@ -182,84 +182,67 @@ class GSheetController extends Controller
         $client->setAccessToken($google_client_token);
         $client->setAuthConfig($client_secret);
         $service = new Google_Service_Sheets($client);
-        $day2sheetID = '1o0FAMck7ASWijUkiCgf69_SSu1ZwZvyb2RGsqU20jO4';
-        $beach_desc_range = 'Main!B1';
+        $day2sheetID = '1barPIbd4ExqKMjcjJCgkx-7tvJU6XuZtw2I8nztvfzU';
         if($request->OG_NAME =="OG_1") {
-            $beach_balance_range = 'Main!B3';
+            $beach_balance_range = 'Main!B3:D3';
             $beach_score_response = $service->spreadsheets_values->get($day2sheetID, $beach_balance_range);
-            $beach_desc_response = $service->spreadsheets_values->get($day2sheetID, $beach_desc_range);
             $mydata = [
-                'game_titles_beach'=> $beach_desc_response->getValues(),
                 'game_balance_beach' => $beach_score_response->getValues(),
             ];
             $status = 200;
         }
         else if($request->OG_NAME =="OG_2") {
-            $beach_balance_range = 'Main!B4';
+            $beach_balance_range = 'Main!B4:D4';
             $beach_score_response = $service->spreadsheets_values->get($day2sheetID, $beach_balance_range);
-            $beach_desc_response = $service->spreadsheets_values->get($day2sheetID, $beach_desc_range);
             $mydata = [
-                'game_titles_beach'=> $beach_desc_response->getValues(),
                 'game_balance_beach' => $beach_score_response->getValues(),
             ];
             $status = 200;
         }
         else if($request->OG_NAME =="OG_3") {
-            $beach_balance_range = 'Main!B5';
+            $beach_balance_range = 'Main!B5:D5';
             $beach_score_response = $service->spreadsheets_values->get($day2sheetID, $beach_balance_range);
-            $beach_desc_response = $service->spreadsheets_values->get($day2sheetID, $beach_desc_range);
             $mydata = [
-                'game_titles_beach'=> $beach_desc_response->getValues(),
                 'game_balance_beach' => $beach_score_response->getValues(),
             ];
             $status = 200;
         }
         else if($request->OG_NAME =="OG_4") {
-            $beach_balance_range = 'Main!B6';
+            $beach_balance_range = 'Main!B6:D6';
             $beach_score_response = $service->spreadsheets_values->get($day2sheetID, $beach_balance_range);
-            $beach_desc_response = $service->spreadsheets_values->get($day2sheetID, $beach_desc_range);
             $mydata = [
-                'game_titles_beach'=> $beach_desc_response->getValues(),
                 'game_balance_beach' => $beach_score_response->getValues(),
             ];
             $status = 200;
         }
         else if($request->OG_NAME =="OG_5") {
-            $beach_balance_range = 'Main!B7';
+            $beach_balance_range = 'Main!B7:D7';
             $beach_score_response = $service->spreadsheets_values->get($day2sheetID, $beach_balance_range);
-            $beach_desc_response = $service->spreadsheets_values->get($day2sheetID, $beach_desc_range);
             $mydata = [
-                'game_titles_beach'=> $beach_desc_response->getValues(),
                 'game_balance_beach' => $beach_score_response->getValues(),
             ];
             $status = 200;
         }
         else if($request->OG_NAME =="OG_6") {
-            $beach_balance_range = 'Main!B8';
+            $beach_balance_range = 'Main!B8:D8';
             $beach_score_response = $service->spreadsheets_values->get($day2sheetID, $beach_balance_range);
-            $beach_desc_response = $service->spreadsheets_values->get($day2sheetID, $beach_desc_range);
             $mydata = [
-                'game_titles_beach'=> $beach_desc_response->getValues(),
                 'game_balance_beach' => $beach_score_response->getValues(),
             ];
             $status = 200;
         }
         else if($request->OG_NAME =="OG_7") {
-            $beach_balance_range = 'Main!B9';
+            $beach_balance_range = 'Main!B9:D9';
             $beach_score_response = $service->spreadsheets_values->get($day2sheetID, $beach_balance_range);
-            $beach_desc_response = $service->spreadsheets_values->get($day2sheetID, $beach_desc_range);
             $mydata = [
-                'game_titles_beach'=> $beach_desc_response->getValues(),
                 'game_balance_beach' => $beach_score_response->getValues(),
             ];
             $status = 200;
         }
         else if($request->OG_NAME =="OG_8") {
-            $beach_balance_range = 'Main!B10';
+            $beach_balance_range = 'Main!B10:D10';
             $beach_score_response = $service->spreadsheets_values->get($day2sheetID, $beach_balance_range);
-            $beach_desc_response = $service->spreadsheets_values->get($day2sheetID, $beach_desc_range);
             $mydata = [
-                'game_titles_beach'=> $beach_desc_response->getValues(),
                 'game_balance_beach' => $beach_score_response->getValues(),
             ];
             $status = 200;
