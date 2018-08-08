@@ -82,7 +82,7 @@ export const ExodiaTopBar = () => {
         </Navbar.Brand>
       </Navbar.Header>
       <div style={{ marginLeft: "auto" }}>
-        <a href="https://gtd-xx-score.herokuapp.com/" target="_blank">
+        <a href="/score" target="_blank">
           <ExodiaThemedButton>
             Check Score
           </ExodiaThemedButton>

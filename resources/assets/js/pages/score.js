@@ -7,6 +7,7 @@ import { Row, Col, Button } from "react-bootstrap";
 import { Day1_table } from "../sections/partials/Day1"
 import { Day2_table } from "../sections/partials/Day2"
 import { Day3_table } from "../sections/partials/Day3"
+import { HomeTopbar } from "../components/Topbar";
 
 export class Score extends React.Component {
 	constructor(props) {
@@ -89,7 +90,7 @@ export class Score extends React.Component {
         {
 		    return (
                 <section id="qscore">
-                    <Banner />
+                    <HomeTopbar/>
                     <Row className="default-bg flex-center">
                         <Col md={8} xs={12}>
                         <h1 className="section-title title">Exodia Scores</h1>
@@ -124,6 +125,7 @@ export class Score extends React.Component {
             const OG_nick = this.state.OG_nick;
             return (
                 <section id="score">
+                    <HomeTopbar/>
                     <Row className="default-bg flex-center">
                         <Col md={8} xs={12}>
                         <h1 className="section-title title">GTD XX: Exodia Scores</h1>
@@ -133,7 +135,7 @@ export class Score extends React.Component {
                     <div>
                         <Row className="default-bg">
                             <Col md={12}>
-                                <Day1_table component OG_NAME={this.state.OG_NAME}/>
+                                <Day1_table OG_NAME={this.state.OG_NAME}/>
                             </Col>
                         </Row>
                     </div>
@@ -144,7 +146,7 @@ export class Score extends React.Component {
                                 <h2 className="section-title title">Beach Games</h2>
                             </Col>
                             <Col md={12}>
-                                <Day2_table component OG_NAME={this.state.OG_NAME}/>
+                                <Day2_table OG_NAME={this.state.OG_NAME}/>
                             </Col>
                         </Row>
                     </div>
@@ -155,7 +157,7 @@ export class Score extends React.Component {
                                 <h2 className="section-title title">Field Games</h2>
                             </Col>
                             <Col md={12}>
-                                <Day3_table component OG_NAME={this.state.OG_NAME}/>
+                                <Day3_table OG_NAME={this.state.OG_NAME}/>
                             </Col>
                         </Row>
                     </div>
