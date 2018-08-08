@@ -128,10 +128,6 @@ export class Score extends React.Component {
                     <div>
                         <Row className="default-bg">
                             <Col md={12}>
-    
-                                <h2 className="section-title title">Outdoor and Night Games</h2>
-                            </Col>
-                            <Col md={12}>
                                 <Day1_table component OG_NAME={this.state.OG_NAME}/>
                             </Col>
                         </Row>

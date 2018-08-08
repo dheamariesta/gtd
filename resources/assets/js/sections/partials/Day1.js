@@ -136,23 +136,12 @@ export class Day1_table extends React.Component {
         // });
         return (
             <div className="Day1_table">
+            {OG_NAME}
                 <Row className="default-bg">
                 <div className="container">
-                <h3 className="section-title title"> Outdoor</h3>
-                    <table>
-                        <tbody>
-                            {objectList.map(obj => {
-                                return(
-                                    <tr key={obj.id}>
-                                        <td>{obj.name}</td>
-                                        <td>{obj.score}</td>
-                                    </tr>
-                                );
-                                
-                            })}
-                        </tbody>
-                    </table>
-                    <h3 className="section-title title">Night</h3>
+                <h2 className="section-title title"> Outdoor</h2>
+                    {listScores[0]}
+                    <h2 className="section-title title">Night</h2>
                     <table>
                         <tbody>
                             {objectList2.map(obj => {
