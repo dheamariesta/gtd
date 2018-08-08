@@ -56,13 +56,12 @@ export class Day1_table extends React.Component {
         }
         return (
             <div className="Day1_table">
-            {OG_NAME}
                 <Row className="default-bg">
                 <div className="container">
                     <h2 className="section-title title"> Outdoor</h2>
-                    <h3>{listScores[0]}</h3>
+                    <h2>{listScores[0]}</h2>
                     <h2 className="section-title title">Night</h2>
-                    <h3>{listScores2[0]}</h3>
+                    <h2>{listScores2[0]}</h2>
                 </div>
                 </Row>
             </div>

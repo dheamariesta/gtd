@@ -139,6 +139,7 @@ export class Score extends React.Component {
                                 <h2 className="section-title title">Beach Games</h2>
                             </Col>
                             <Col md={12}>
+                                <Day2_table component OG_NAME={this.state.OG_NAME}/>
                             </Col>
                         </Row>
                     </div>
@@ -149,6 +150,7 @@ export class Score extends React.Component {
                                 <h2 className="section-title title">Field Games</h2>
                             </Col>
                             <Col md={12}>
+                                <Day3_table component OG_NAME={this.state.OG_NAME}/>
                             </Col>
                         </Row>
                     </div>
