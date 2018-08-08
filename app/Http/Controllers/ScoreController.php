@@ -10,8 +10,7 @@ class ScoreController extends Controller
 
         $request->validate([
             'pass_send' => 'required'
-		];
-        $this->validate($request, $rules);
+		]);
         if($request->pass_send =="mag354") {
             $mydata = [
                 "result" => "Correct password",
