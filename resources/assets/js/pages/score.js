@@ -121,14 +121,15 @@ export class Score extends React.Component {
         }
         else
         {
+            const OG_nick = this.state.OG_nick;
             return (
                 <section id="score">
                     <Row className="default-bg flex-center">
                         <Col md={8} xs={12}>
                         <h1 className="section-title title">GTD XX: Exodia Scores</h1>
+                        <h2>{OG_nick}</h2>
                         </Col>
                     </Row>
-                    <h2>{OG_nick}</h2>
                     <div>
                         <Row className="default-bg">
                             <Col md={12}>
