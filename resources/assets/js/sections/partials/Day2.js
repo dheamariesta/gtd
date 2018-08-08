@@ -7,8 +7,9 @@ export class Day2_table extends React.Component {
         super(props);
         this.componentDidMount = this.componentDidMount.bind(this);
         this.state = {
-            game_titles_beach: '',
-            game_balance_beach: ''
+            game_balance_beach: '',
+            beach_min_bid: '',
+            beach_max_bid: ''
         };
     }
 
@@ -21,11 +22,13 @@ export class Day2_table extends React.Component {
             OG_NAME: this.props.OG_NAME,
         }).then(response => {
             //console.log(response.data);
-            const titles_beach = response.data.game_titles_beach;
             const balance_beach = response.data.game_balance_beach;
+            const max_bid = response.data.beach_max_bid;
+            const min_bid = response.data.beach_min_bid;
             this.setState({
-                game_titles_beach: titles_beach,
-                game_balance_beach: balance_beach
+                game_balance_beach: balance_beach,
+                beach_min_bid: min_bid,
+                beach_max_bid: max_bid
             });
             console.log("Day2 fetched!");
 
@@ -36,48 +39,23 @@ export class Day2_table extends React.Component {
     }
     
     render(){
-        const listItems = this.state.game_titles_beach;
-        const listElementsName = [];
         const listScores = this.state.game_balance_beach;
-        const listElementsScore =[];
-        for (let index = 0; index < listItems.length; index++) {
-            const element = listItems[index];
-            // console.log(element);
-            const name = element[0];
-            listElementsName.push(name);
-        }
-        for (let index = 0; index < listScores.length; index++) {
-            const element = listScores[index];
-            // console.log(element);
-            const name = element[0];
-            listElementsScore.push(name);
-        }
-        const objectList = [];
-        for(let index = 0; index < listScores.length; index++){
-            //console.log(index);
-            objectList.push({
-                id: index,
-                name: listElementsName[index],
-                score: listElementsScore[index],
-            });
-        }
+        const minBid = this.state.beach_min_bid;
+        const maxBid = this.state.beach_max_bid
         return(
 			<div className="Day2_table">
                 <Row className="default-bg">
                 <div className="container">
-                    <table>
-                        <tbody>
-                            {objectList.map(obj => {
-                                return(
-                                    <tr key={obj.id}>
-                                        <td>{obj.name}</td>
-                                        <td>{obj.score}</td>
-                                    </tr>
-                                );
-                                
-                            })}
-                        </tbody>
-                    </table>
+                <h3>Score:</h3>
+                <h3>{listScores[0]}</h3>
+                <Col md={6}>
+                <h3>Minimum Bet:</h3>
+                <h3>{minBid[0]}</h3>
+                </Col>
+                <Col md={6}>
+                <h3>Maximum Bet:</h3>
+                <h3>{maxBid[0]}</h3>
+                </Col>
                 </div>
                 </Row>
             </div>
