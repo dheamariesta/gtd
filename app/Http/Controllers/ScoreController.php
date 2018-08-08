@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 class ScoreController extends Controller
 {
     public function pass_send(Request $request) {
-        $rules = [
+
+        $request->validate([
             'pass_send' => 'required'
 		];
         $this->validate($request, $rules);
@@ -84,28 +85,5 @@ class ScoreController extends Controller
 			$status = 403;
 		}
         return response()->json($mydata, $status);
-        // redirect('/score')->with('test','hello');
-        // return \Redirect::route('score')->with('global', 'Your message');
-        // return redirect()->route('score');
-        // return redirect()->action('PagesController@score');
     }
-    /* //old code
-    public function pass_send(){
-        //testing
-        //dd(request()->all()); 
-        $Response = Request()->only(["pass_send"]);
-        if($Response["pass_send"]=="asdf")
-            $myJSON = "{
-                \"result\":\"Correct password\",
-                \"OG_name\":\"Exodia\"
-             }";
-        else
-            $myJSON = "{
-                \"result\":\"Wrong password\",
-                \"OG_name\":\"Exodia\"
-             }";
-        //$Response = Request();
-        //console.log($Response);
-        echo $myJSON;
-    }*/
 }

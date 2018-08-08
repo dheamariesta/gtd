@@ -1,10 +1,11 @@
 import React from "react";
 import FontAwesome from "react-fontawesome";
-import { ExodiaTopBar } from "../components/Topbar";
-import { Row, Col, Image, Button } from "react-bootstrap";
-import { StyledLeaderSlider, StyledPortfolioSlider } from "../containers/Slider";
 import Section from "../components/Section";
 
+import { ExodiaTopBar } from "../components/Topbar";
+import { Col, Image, Row } from "react-bootstrap";
+import { StyledLeaderSlider, StyledPortfolioSlider } from "../containers/Slider";
+import { ExodiaThemedButton } from "../components/Button";
 
 const Exodia = () => (
   <React.Fragment>
@@ -27,19 +28,19 @@ const Exodia = () => (
           </Col>
           <Col xs={12} md={5}>
             <h1 className={"exodia-section-title"}>Foreword</h1>
-            <p> Greetings to all Exodians, </p>
-            <p>Exodia has been a land of dream where we live peacefully and prosper here. People from all around the
+            <p>Greetings to all Exodians, </p>
+            <p>Exodia has been a land of dream where we live peacefully and prosper. People from all around the
               world are trying to achieve what we have. I cannot be more proud of that.
             </p>
             <p>
-              However, in the past few weeks, a lot of incidents has happened and disturbed our society. Our friends and
-              families are injured because of the chaos. Together with all the house leaders, we had an emergency
-              meeting to discuss this and we are still in search for the real cause of the incident. But we have learned
-              one thing: the traitor that once banished, Rick, has returned to this kingdom.
+              However, in the past few weeks, a lot of incidents have happened and disturbed our society. Our friends and
+              families have been injured because of the chaos. Together with all the house leaders, we had an emergency
+              meeting to discuss this and we are still searching for the real cause of the incidents. We have learned
+              one thing: the traitor who was once banished, Rick, has returned to this kingdom.
             </p>
 
             <p>
-              We do not know what is coming next. After all, the only certain thing is, we need to take action.
+              We do not know what is coming next. Nevertheless, the only certain thing is that we need to take actions.
               Therefore, I will see you at The Plaza under the judgment place.
             </p>
 
@@ -57,8 +58,8 @@ const Exodia = () => (
       </Section>
 
       <Section name={"leaders"} className={"full-height"}>
-        <Row className={"row-center"}>
-          <h1 className={"exodia-section-title"}>Meet Your Leaders</h1>
+				<h1 className={"exodia-section-title"}>Meet Your Leaders</h1>
+        <Row className={"flex-center row-center height-80vh"}>
           <Col xs={12} md={10} className={"col-center"}>
             <StyledLeaderSlider/>
           </Col>
@@ -83,12 +84,14 @@ const Exodia = () => (
         </Row>
       </Section>
 
-      <Section name={"handbook"} className={"height-65vh"}>
+      <Section name={"booklet"} className={"height-65vh"}>
         <FontAwesome name={"heart-o"} size={"5x"} style={{ color: "white", borderRadius: "50%", }} border/>
-        <h1 className={"exodia-section-title"}>Freshie, Get Your Handbook Here!</h1>
-        <Button bsSize={"large"} className={"download-button"}>
-          Download
-        </Button>
+        <h1 className={"exodia-section-title"}>Freshie, Get Your Booklet Here!</h1>
+        <a href={process.env.MIX_BOOKLET_LINK} target="_blank">
+          <ExodiaThemedButton bsSize={"large"}>
+            Download
+          </ExodiaThemedButton>
+        </a>
       </Section>
     </Row>
   </React.Fragment>

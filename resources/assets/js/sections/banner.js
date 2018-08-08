@@ -1,14 +1,28 @@
 import React from "react";
-import { Row, Col } from "react-bootstrap";
+import styled from "styled-components";
+import { Row, Image } from "react-bootstrap";
+import { screenMdMin } from "../helpers/breakpoint";
+
+
+const StyledContainer = styled.div`
+  padding-right: 0;  
+  padding-left: 0;
+  @media(min-width: ${screenMdMin}){
+    padding-top: 50px; 
+  }
+  img {
+    width: 100vw;
+  }
+`;
 
 export const Banner = () => {
   return (
-    <Row className="banner flex-center">
-      <Col md={12} className="banner-container">
+    <Row className="flex-center">
+      <StyledContainer>
         <a href="/exodia">
-          <img src="/images/coming_soon.jpg" alt="coming-soon" className="banner-responsive dhea"/>
+          <Image src="/images/exodia_banner.png" alt="banner" responsive />
         </a>
-      </Col>
+      </StyledContainer>
     </Row>
   )
 };

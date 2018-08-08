@@ -8,14 +8,13 @@
   - [via SSH](#via-ssh)
 
 ## Frameworks Used:
-**[Laravel 5.5 Framework](https://laravel.com/docs/5.5)**
-**[ReactJS 15.4 Framework](https://reactjs.org/)**
+- **[Laravel](https://laravel.com/docs/5.5)**
+- **[ReactJS](https://reactjs.org/)**
 
 ## Requirements:
 * PHP >= 7.0.0
 * composer
-* Google Sheet API
-* laravel/socialite
+* npm 
 
 # Development
 ## Installing Laravel
@@ -34,18 +33,33 @@ composer global require "laravel/installer"
 	* Windows: C:\Users\USERNAME\AppData\Roaming\Composer\vendor\bin
 > The executable `laravel` should now be available in your local machine.
 
-4. Follow the instructions from [Official Google Sheet Guide](https://developers.google.com/sheets/api/quickstart/php) to set up the API.
-Install laravel socialite as well, by typing:
+## Enabling Google API
+> This project is using Google Sheets API to fetch scores.
 
-```bash
+1. [Enable Google Sheets API (only step 1)](https://developers.google.com/sheets/api/quickstart/php).
+
+2. [Enable Google Plus API](https://developers.google.com/+/web/signin/)
+
+3. Install `Laravel Socialite`:
+```sh
 composer require laravel/socialite
 ```
 
-Put the details on the .env file with the following:
-GOOGLE_SERVER_KEY = (Create API Key, then put it here)
-GOOGLE_CLIENT_ID= (create Oauth2 , put ClientID here)
-GOOGLE_APP_SECRET= (create Oauth2, put Clientsecret here)
+4. Put the details on the `.env` file with the following:
+```dotenv
+GOOGLE_SERVER_KEY=[your_api_key]
+GOOGLE_CLIENT_ID=[Oauth2_client_ID]
+GOOGLE_APP_SECRET=[Oauth2_client_secret]
 GOOGLE_REDIRECT=http://localhost:8000/login/google/callback
+```
+> Don't forget to run `php artisan config:clear` after changing  the `.env` file.
+
+5. Navigate to `/login/google` and follow the instructions on the page.
+
+6. After seeing the success message, navigate to `/score`
+
+7. Key in the password for each OG (at the bottom of the page) to view the results
+
 
 ## Cloning Repository
 1. Clone this branch
@@ -65,7 +79,7 @@ composer install
 cp .env.example .env
 ```
 Note: For Windows, use `copy`: 
-```bash
+```sh
 copy .env.example .env
 ```
 
@@ -82,6 +96,19 @@ php artisan serve
 ```
 
 6. Visit `localhost:8000` in your web browser
+
+## Compiling Assets
+> You must have `npm` installed on your machine. Refer to [here](https://www.npmjs.com/)
+1. Install all npm dependencies
+```sh
+npm install
+```
+
+2. Compile assets
+```sh
+npm run dev
+```
+> Alternatively, you can use the watcher command: `npm run watch`.
 
 
 ## Production
@@ -102,7 +129,7 @@ npm run production
 4. Edit the `.env` file in the app's root directory
 ```sh
 APP_DEBUG=false
-APP_URL={your_domain_url}
+APP_URL=[your_domain_url]
 ```
 
 > If you need to use database, then create your own database in your server and then update the `.env` file accordingly:
@@ -177,8 +204,8 @@ public function boot()
 }
 ```
 
-- If you encounter any errors during npm run, probably you have not installed the npm. Just run the command below: 
-```bash
+- If you encounter any errors during compiling assets, probably you have not _fully installed_ the npm packages. Run the command below: 
+```sh
 npm install
 ```
 

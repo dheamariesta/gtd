@@ -1,14 +1,18 @@
-table {
-    border: 1px solid white;
-    width: 100%;
+tr {
+	cursor: pointer;
 }
-
 tr:nth-child(even){
-    background-color: #808080
+    background-color: #808080 !important;
+	&:hover {
+		background-color: rgba(128, 128, 128, 0.5) !important;
+	}
 }
 
 tr:nth-child(odd){
-    background-color: #505050
+    background-color: #505050 !important;
+	&:hover{
+		background-color: rgba(80, 80, 80, 0.5) !important;
+	}
 }
 
 th {
@@ -17,6 +21,6 @@ th {
     height: 50px;
 }
 
-td {
-    border: 1px solid white;
+.margin-bottom {
+	padding-bottom : 50px;
 }

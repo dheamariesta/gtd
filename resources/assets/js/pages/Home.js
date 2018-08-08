@@ -7,20 +7,17 @@ import { Banner } from "../sections/banner";
 import { About } from "../sections/about";
 import { History } from "../sections/history";
 import { Anthem } from "../sections/anthem";
-import { Contact } from "../sections/contact";
 import { FAQ } from "../sections/faq";
-import { Qscore } from "../sections/qscore";
 
 const Home = ({ isDesktop }) => {
   return (
     <div>
-      <HomeTopbar isDesktop={isDesktop} />
+      <HomeTopbar fixedTop={isDesktop} />
       <Banner/>
-      <About isDesktop={isDesktop}/>
+      <About/>
       <History/>
       <Anthem/>
       <FAQ/>
-      <Contact/>
     </div>
   );
  };
