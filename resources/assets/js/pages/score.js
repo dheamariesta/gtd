@@ -13,7 +13,9 @@ export class Score extends React.Component {
 		super(props);
 		this.state = {
             value: '',
-            OG_NAME: ''};
+            OG_NAME: '',
+            OG_nick: ''
+        };
 		this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.check_pass = this.check_pass.bind(this);
@@ -38,8 +40,10 @@ export class Score extends React.Component {
             //console.log(response.data);
             alert("Password is correct");
             const temp = response.data.OG_NAME;
+            const temp2 = response.data.OG_nick;
             this.setState({
-                OG_NAME : temp
+                OG_NAME : temp,
+                OG_nick : temp2
             });
             //console.log(temp);
             //console.log(this.state.OG_NAME);
@@ -119,12 +123,12 @@ export class Score extends React.Component {
         {
             return (
                 <section id="score">
-                    <Banner />
                     <Row className="default-bg flex-center">
                         <Col md={8} xs={12}>
                         <h1 className="section-title title">GTD XX: Exodia Scores</h1>
                         </Col>
                     </Row>
+                    <h2>{OG_nick}</h2>
                     <div>
                         <Row className="default-bg">
                             <Col md={12}>

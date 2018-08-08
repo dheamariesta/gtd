@@ -34,7 +34,7 @@ class GSheetController extends Controller
         $day1sheetID = '1KMuYbgablwJwOTZNhS-GM4abwYN86k2RXr8AxASpoXg';
         //$outdoor_desc_range = 'Outdoor!A7';
         //$night_desc_range = 'Night updated!A3:A10';
-        if($request->OG_NAME =="OG_1") {
+        if($request->OG_NAME =="OG_3") {
             $outdoor_score_range = 'Outdoor!B7';
             $night_score_range = 'Night updated!B10';
             //$night_score_range2 = 'Night!C3:C10';
@@ -49,7 +49,7 @@ class GSheetController extends Controller
             ];
             $status = 200;
         }
-        else if($request->OG_NAME =="OG_2") {
+        else if($request->OG_NAME =="OG_4") {
             $outdoor_score_range = 'Outdoor!C7';
             $night_score_range = 'Night updated!H10';
             //$night_score_range2 = 'Night!C3:C10';
@@ -64,7 +64,7 @@ class GSheetController extends Controller
             ];
             $status = 200;
         }
-        else if($request->OG_NAME =="OG_3") {
+        else if($request->OG_NAME =="OG_1") {
             $outdoor_score_range = 'Outdoor!D7';
             $night_score_range = 'Night updated!N10';
             //$night_score_range2 = 'Night!C3:C10';
@@ -79,7 +79,7 @@ class GSheetController extends Controller
             ];
             $status = 200;
         }
-        else if($request->OG_NAME =="OG_4") {
+        else if($request->OG_NAME =="OG_2") {
             $outdoor_score_range = 'Outdoor!E7';
             $night_score_range = 'Night updated!T10';
             //$night_score_range2 = 'Night!C3:C10';
@@ -124,7 +124,7 @@ class GSheetController extends Controller
             ];
             $status = 200;
         }
-        else if($request->OG_NAME =="OG_7") {
+        else if($request->OG_NAME =="OG_8") {
             $outdoor_score_range = 'Outdoor!H7';
             $night_score_range = 'Night updated!AL10';
             //$night_score_range2 = 'Night!C3:C10';
@@ -139,7 +139,7 @@ class GSheetController extends Controller
             ];
             $status = 200;
         }
-        else if($request->OG_NAME =="OG_8") {
+        else if($request->OG_NAME =="OG_7") {
             $outdoor_score_range = 'Outdoor!I7';
             $night_score_range = 'Night updated!AR10';
             //$night_score_range2 = 'Night!C3:C10';
@@ -183,7 +183,7 @@ class GSheetController extends Controller
         $client->setAuthConfig($client_secret);
         $service = new Google_Service_Sheets($client);
         $day2sheetID = '1barPIbd4ExqKMjcjJCgkx-7tvJU6XuZtw2I8nztvfzU';
-        if($request->OG_NAME =="OG_1") {
+        if($request->OG_NAME =="OG_2") {
             $beach_balance_range = 'Main!B3';
             $beach_min_bid = 'Main!C3';
             $beach_max_bid = 'Main!D3';
@@ -197,7 +197,7 @@ class GSheetController extends Controller
             ];
             $status = 200;
         }
-        else if($request->OG_NAME =="OG_2") {
+        else if($request->OG_NAME =="OG_1") {
             $beach_balance_range = 'Main!B4';
             $beach_min_bid = 'Main!C4';
             $beach_max_bid = 'Main!D4';
@@ -211,7 +211,7 @@ class GSheetController extends Controller
             ];
             $status = 200;
         }
-        else if($request->OG_NAME =="OG_3") {
+        else if($request->OG_NAME =="OG_7") {
             $beach_balance_range = 'Main!B5';
             $beach_min_bid = 'Main!C5';
             $beach_max_bid = 'Main!D5';
@@ -225,7 +225,7 @@ class GSheetController extends Controller
             ];
             $status = 200;
         }
-        else if($request->OG_NAME =="OG_4") {
+        else if($request->OG_NAME =="OG_8") {
             $beach_balance_range = 'Main!B6';
             $beach_min_bid = 'Main!C6';
             $beach_max_bid = 'Main!D6';
@@ -239,7 +239,7 @@ class GSheetController extends Controller
             ];
             $status = 200;
         }
-        else if($request->OG_NAME =="OG_5") {
+        else if($request->OG_NAME =="OG_3") {
             $beach_balance_range = 'Main!B7';
             $beach_min_bid = 'Main!C7';
             $beach_max_bid = 'Main!D7';
@@ -253,7 +253,7 @@ class GSheetController extends Controller
             ];
             $status = 200;
         }
-        else if($request->OG_NAME =="OG_6") {
+        else if($request->OG_NAME =="OG_4") {
             $beach_balance_range = 'Main!B8';
             $beach_min_bid = 'Main!C8';
             $beach_max_bid = 'Main!D8';
@@ -267,7 +267,7 @@ class GSheetController extends Controller
             ];
             $status = 200;
         }
-        else if($request->OG_NAME =="OG_7") {
+        else if($request->OG_NAME =="OG_5") {
             $beach_balance_range = 'Main!B9';
             $beach_min_bid = 'Main!C9';
             $beach_max_bid = 'Main!D9';
@@ -281,7 +281,7 @@ class GSheetController extends Controller
             ];
             $status = 200;
         }
-        else if($request->OG_NAME =="OG_8") {
+        else if($request->OG_NAME =="OG_6") {
             $beach_balance_range = 'Main!B10';
             $beach_min_bid = 'Main!C10';
             $beach_max_bid = 'Main!D10';
@@ -325,7 +325,7 @@ class GSheetController extends Controller
         $service = new Google_Service_Sheets($client);
         $day3sheetID = '1rqr8_7orpu6h1JUwm5wSol0arxSu3T8mZnTb8dhl_aE';
         //$field_desc_range = 'Poin field!B11';
-        if($request->OG_NAME =="OG_1") {
+        if($request->OG_NAME =="OG_2") {
             $field_point_range = 'Poin field!C16';
             $field_point_response = $service->spreadsheets_values->get($day3sheetID, $field_point_range);
             $mydata = [
@@ -333,7 +333,7 @@ class GSheetController extends Controller
             ];
             $status = 200;
         }
-        else if($request->OG_NAME =="OG_2") {
+        else if($request->OG_NAME =="OG_8") {
             $field_point_range = 'Poin field!D16';
             $field_point_response = $service->spreadsheets_values->get($day3sheetID, $field_point_range);
             $mydata = [
@@ -341,7 +341,7 @@ class GSheetController extends Controller
             ];
             $status = 200;
         }
-        else if($request->OG_NAME =="OG_3") {
+        else if($request->OG_NAME =="OG_5") {
             $field_point_range = 'Poin field!E16';
             $field_point_response = $service->spreadsheets_values->get($day3sheetID, $field_point_range);
             $mydata = [
@@ -349,7 +349,7 @@ class GSheetController extends Controller
             ];
             $status = 200;
         }
-        else if($request->OG_NAME =="OG_4") {
+        else if($request->OG_NAME =="OG_3") {
             $field_point_range = 'Poin field!F16';
             $field_point_response = $service->spreadsheets_values->get($day3sheetID, $field_point_range);
             $mydata = [
@@ -357,7 +357,7 @@ class GSheetController extends Controller
             ];
             $status = 200;
         }
-        else if($request->OG_NAME =="OG_5") {
+        else if($request->OG_NAME =="OG_1") {
             $field_point_range = 'Poin field!G16';
             $field_point_response = $service->spreadsheets_values->get($day3sheetID, $field_point_range);
             $mydata = [
@@ -365,7 +365,7 @@ class GSheetController extends Controller
             ];
             $status = 200;
         }
-        else if($request->OG_NAME =="OG_6") {
+        else if($request->OG_NAME =="OG_7") {
             $field_point_range = 'Poin field!H16';
             $field_point_response = $service->spreadsheets_values->get($day3sheetID, $field_point_range);
             $mydata = [
@@ -373,7 +373,7 @@ class GSheetController extends Controller
             ];
             $status = 200;
         }
-        else if($request->OG_NAME =="OG_7") {
+        else if($request->OG_NAME =="OG_4") {
             $field_point_range = 'Poin field!I16';
             $field_point_response = $service->spreadsheets_values->get($day3sheetID, $field_point_range);
             $mydata = [
@@ -381,7 +381,7 @@ class GSheetController extends Controller
             ];
             $status = 200;
         }
-        else if($request->OG_NAME =="OG_8") {
+        else if($request->OG_NAME =="OG_6") {
             $field_point_range = 'Poin field!J16';
             $field_point_response = $service->spreadsheets_values->get($day3sheetID, $field_point_range);
             $mydata = [
