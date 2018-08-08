@@ -15,7 +15,7 @@ class ScoreController extends Controller
             $mydata = [
                 "result" => "Correct password",
                 "OG_NAME" => base64_encode("OG_1"),
-                "OG_nick" => "AQUAT"
+                "OG_NICK" => "AQUAT"
 			];
 			$status = 200;
         }
@@ -23,7 +23,7 @@ class ScoreController extends Controller
             $mydata = [
                 "result" => "Correct password",
                 "OG_NAME" => base64_encode("OG_2"),
-                "OG_nick" => "TEHSOSTRONG"
+                "OG_NICK" => "TEHSOSTRONG"
 			];
 			$status = 200;
         }
@@ -31,7 +31,7 @@ class ScoreController extends Controller
             $mydata = [
                 "result" => "Correct password",
                 "OG_NAME" => base64_encode("OG_3"),
-                "OG_nick" => "PEPSWIFT"
+                "OG_NICK" => "PEPSWIFT"
 			];
 			$status = 200;
         }
@@ -39,7 +39,7 @@ class ScoreController extends Controller
             $mydata = [
                 "result" => "Correct password",
                 "OG_NAME" => base64_encode("OG_4"),
-                "OG_nick" => "QUICKACOLA"
+                "OG_NICK" => "QUICKACOLA"
 			];
 			$status = 200;
         }
@@ -47,7 +47,7 @@ class ScoreController extends Controller
             $mydata = [
                 "result" => "Correct password",
                 "OG_NAME" => base64_encode("OG_5"),
-                "OG_nick" => "NARUTARGET"
+                "OG_NICK" => "NARUTARGET"
 			];
 			$status = 200;
         }
@@ -55,7 +55,7 @@ class ScoreController extends Controller
             $mydata = [
                 "result" => "Correct password",
                 "OG_NAME" => base64_encode("OG_6"),
-                "OG_nick" => "SASUKEKER"
+                "OG_NICK" => "SASUKEKER"
 			];
 			$status = 200;
         }
@@ -63,7 +63,7 @@ class ScoreController extends Controller
             $mydata = [
                 "result" => "Correct password",
                 "OG_NAME" => base64_encode("OG_7"),
-                "OG_nick" => "SCARLETTJOHANSIP"
+                "OG_NICK" => "SCARLETTJOHANSIP"
 			];
 			$status = 200;
         }
@@ -71,7 +71,7 @@ class ScoreController extends Controller
             $mydata = [
                 "result" => "Correct password",
                 "OG_NAME" => base64_encode("OG_8"),
-                "OG_nick" => "HUGHJAGAMAN"
+                "OG_NICK" => "HUGHJAGAMAN"
 			];
 			$status = 200;
 		}
@@ -79,7 +79,7 @@ class ScoreController extends Controller
             $mydata = [
                 "result" => "Wrong password",
                 "OG_NAME" => base64_encode("Exodia"),
-                "OG_nick" => "None"
+                "OG_NICK" => "None"
 			];
 			$status = 403;
 		}

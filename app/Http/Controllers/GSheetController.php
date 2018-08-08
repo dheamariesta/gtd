@@ -7,8 +7,6 @@ use Socialite;
 use Google_Client;
 use Google_Service_Sheets;
 
-use App\Http\Controllers\Controller;
-use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 
 class GSheetController extends Controller
@@ -32,16 +30,10 @@ class GSheetController extends Controller
         $client->setAuthConfig($client_secret);
         $service = new Google_Service_Sheets($client);
         $day1sheetID = '1KMuYbgablwJwOTZNhS-GM4abwYN86k2RXr8AxASpoXg';
-        //$outdoor_desc_range = 'Outdoor!A7';
-        //$night_desc_range = 'Night updated!A3:A10';
         if($request->OG_NAME =="OG_3") {
             $outdoor_score_range = 'Outdoor!B7';
             $night_score_range = 'Night updated!B10';
-            //$night_score_range2 = 'Night!C3:C10';
-            //$night_score_response2 = $service->spreadsheets_values->get($day1sheetID, $night_score_range2);
-            //$outdoor_desc_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_desc_range);
             $outdoor_score_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_score_range);
-            //$night_desc_response = $service->spreadsheets_values->get($day1sheetID, $night_desc_range);
             $night_score_response = $service->spreadsheets_values->get($day1sheetID, $night_score_range);
             $mydata = [
                 'game_scores_outdoor' => $outdoor_score_response->getValues(),
@@ -52,11 +44,7 @@ class GSheetController extends Controller
         else if($request->OG_NAME =="OG_4") {
             $outdoor_score_range = 'Outdoor!C7';
             $night_score_range = 'Night updated!H10';
-            //$night_score_range2 = 'Night!C3:C10';
-            //$night_score_response2 = $service->spreadsheets_values->get($day1sheetID, $night_score_range2);
-            //$outdoor_desc_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_desc_range);
             $outdoor_score_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_score_range);
-            //$night_desc_response = $service->spreadsheets_values->get($day1sheetID, $night_desc_range);
             $night_score_response = $service->spreadsheets_values->get($day1sheetID, $night_score_range);
             $mydata = [
                 'game_scores_outdoor' => $outdoor_score_response->getValues(),
@@ -67,11 +55,7 @@ class GSheetController extends Controller
         else if($request->OG_NAME =="OG_1") {
             $outdoor_score_range = 'Outdoor!D7';
             $night_score_range = 'Night updated!N10';
-            //$night_score_range2 = 'Night!C3:C10';
-            //$night_score_response2 = $service->spreadsheets_values->get($day1sheetID, $night_score_range2);
-            //$outdoor_desc_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_desc_range);
             $outdoor_score_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_score_range);
-            //$night_desc_response = $service->spreadsheets_values->get($day1sheetID, $night_desc_range);
             $night_score_response = $service->spreadsheets_values->get($day1sheetID, $night_score_range);
             $mydata = [
                 'game_scores_outdoor' => $outdoor_score_response->getValues(),
@@ -82,11 +66,7 @@ class GSheetController extends Controller
         else if($request->OG_NAME =="OG_2") {
             $outdoor_score_range = 'Outdoor!E7';
             $night_score_range = 'Night updated!T10';
-            //$night_score_range2 = 'Night!C3:C10';
-            //$night_score_response2 = $service->spreadsheets_values->get($day1sheetID, $night_score_range2);
-            //$outdoor_desc_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_desc_range);
             $outdoor_score_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_score_range);
-            //$night_desc_response = $service->spreadsheets_values->get($day1sheetID, $night_desc_range);
             $night_score_response = $service->spreadsheets_values->get($day1sheetID, $night_score_range);
             $mydata = [
                 'game_scores_outdoor' => $outdoor_score_response->getValues(),
@@ -97,11 +77,7 @@ class GSheetController extends Controller
         else if($request->OG_NAME =="OG_5") {
             $outdoor_score_range = 'Outdoor!F7';
             $night_score_range = 'Night updated!Z10';
-            //$night_score_range2 = 'Night!C3:C10';
-            //$night_score_response2 = $service->spreadsheets_values->get($day1sheetID, $night_score_range2);
-            //$outdoor_desc_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_desc_range);
             $outdoor_score_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_score_range);
-            //$night_desc_response = $service->spreadsheets_values->get($day1sheetID, $night_desc_range);
             $night_score_response = $service->spreadsheets_values->get($day1sheetID, $night_score_range);
             $mydata = [
                 'game_scores_outdoor' => $outdoor_score_response->getValues(),
@@ -112,11 +88,7 @@ class GSheetController extends Controller
         else if($request->OG_NAME =="OG_6") {
             $outdoor_score_range = 'Outdoor!G7';
             $night_score_range = 'Night updated!AF10';
-            //$night_score_range2 = 'Night!C3:C10';
-            //$night_score_response2 = $service->spreadsheets_values->get($day1sheetID, $night_score_range2);
-            //$outdoor_desc_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_desc_range);
             $outdoor_score_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_score_range);
-            //$night_desc_response = $service->spreadsheets_values->get($day1sheetID, $night_desc_range);
             $night_score_response = $service->spreadsheets_values->get($day1sheetID, $night_score_range);
             $mydata = [
                 'game_scores_outdoor' => $outdoor_score_response->getValues(),
@@ -127,11 +99,7 @@ class GSheetController extends Controller
         else if($request->OG_NAME =="OG_8") {
             $outdoor_score_range = 'Outdoor!H7';
             $night_score_range = 'Night updated!AL10';
-            //$night_score_range2 = 'Night!C3:C10';
-            //$night_score_response2 = $service->spreadsheets_values->get($day1sheetID, $night_score_range2);
-            //$outdoor_desc_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_desc_range);
             $outdoor_score_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_score_range);
-            //$night_desc_response = $service->spreadsheets_values->get($day1sheetID, $night_desc_range);
             $night_score_response = $service->spreadsheets_values->get($day1sheetID, $night_score_range);
             $mydata = [
                 'game_scores_outdoor' => $outdoor_score_response->getValues(),
@@ -142,11 +110,7 @@ class GSheetController extends Controller
         else if($request->OG_NAME =="OG_7") {
             $outdoor_score_range = 'Outdoor!I7';
             $night_score_range = 'Night updated!AR10';
-            //$night_score_range2 = 'Night!C3:C10';
-            //$night_score_response2 = $service->spreadsheets_values->get($day1sheetID, $night_score_range2);
-            //$outdoor_desc_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_desc_range);
             $outdoor_score_response = $service->spreadsheets_values->get($day1sheetID, $outdoor_score_range);
-            //$night_desc_response = $service->spreadsheets_values->get($day1sheetID, $night_desc_range);
             $night_score_response = $service->spreadsheets_values->get($day1sheetID, $night_score_range);
             $mydata = [
                 'game_scores_outdoor' => $outdoor_score_response->getValues(),

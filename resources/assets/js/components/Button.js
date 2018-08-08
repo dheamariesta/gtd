@@ -7,7 +7,7 @@ export const ExodiaThemedButton = styled(Button)`
   border-radius: 10em;
 	background-color: ${exodiaBg}
 	color: white;
-	&:hover, &:active, &:active:hover, &:active:focus, &:focus {
+	&:hover, &:active, &:active:hover, &:active:focus, &:focus, &[disabled]:hover {
 		background-color: #4C1818;
 		color: white;
 	}
