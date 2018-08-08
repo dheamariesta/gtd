@@ -37,7 +37,6 @@ export class HomeTopbar extends React.Component {
 
   render() {
     const { ...rest } = this.props;
-    const isHome = window.location.pathname === '/';
     return (
       <Navbar id="navbar-scrollspy" {...rest}>
         <Navbar.Header>
@@ -46,19 +45,16 @@ export class HomeTopbar extends React.Component {
               <Image src="/images/logo.png" alt="logo" responsive/>
             </a>
           </Navbar.Brand>
-          {isHome ? <Navbar.Toggle/> : ''}
+          <Navbar.Toggle/>
         </Navbar.Header>
-        {isHome ? (
-          <Navbar.Collapse>
-            <Nav pullRight>
-              <NavItem eventKey={1} href="#about">About</NavItem>
-              <NavItem eventKey={2} href="#history">History</NavItem>
-              <NavItem eventKey={3} href="#anthem">Anthem</NavItem>
-              <NavItem eventKey={4} href="#faq">FAQ</NavItem>
-            </Nav>
-          </Navbar.Collapse>
-        ) : ("")
-        }
+        <Navbar.Collapse>
+          <Nav pullRight>
+            <NavItem eventKey={1} href="#about">About</NavItem>
+            <NavItem eventKey={2} href="#history">History</NavItem>
+            <NavItem eventKey={3} href="#anthem">Anthem</NavItem>
+            <NavItem eventKey={4} href="#faq">FAQ</NavItem>
+          </Nav>
+        </Navbar.Collapse>
       </Navbar>
     );
   }
@@ -82,7 +78,7 @@ export const ExodiaTopBar = () => {
         </Navbar.Brand>
       </Navbar.Header>
       <div style={{ marginLeft: "auto" }}>
-        <a href="https://gtd-xx-score.herokuapp.com/" target="_blank">
+        <a href="/score" target="_blank">
           <ExodiaThemedButton>
             Check Score
           </ExodiaThemedButton>

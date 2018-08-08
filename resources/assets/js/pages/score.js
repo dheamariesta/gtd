@@ -3,9 +3,10 @@ import axios from "axios";
 
 // components
 import { Row, Col, Button, FormGroup } from "react-bootstrap";
+import { ExodiaThemedButton } from "../components/Button";
 import { FieldGroup } from "../components/Form";
 import Loading from "../components/Loading";
-import { HomeTopbar } from "../components/Topbar";
+import { ExodiaTopBar } from "../components/Topbar";
 import { AlertDismissable } from "../components/Alert";
 
 // Sections
@@ -19,6 +20,7 @@ export class Score extends React.Component {
     this.state = {
       value: '',
       OG_NAME: '',
+      OG_NICK: '',
       loading: false,
       status: '',
       showAlert: false,
@@ -35,25 +37,27 @@ export class Score extends React.Component {
 
 
   handleSubmit(event) {
+    console.log("password has been submitted!");
     event.preventDefault();
     this.check_pass();
   }
 
-  dismissAlert(){
+  dismissAlert() {
     this.setState({
       showAlert: false,
     });
   }
 
   check_pass() {
-    this.setState({ loading: true, OG_NAME: ''}, () => {
+    this.setState({ loading: true, OG_NAME: '' }, () => {
       axios.post('/score', {
         pass_send: this.state.value,
       }).then(response => {
-        const { OG_NAME } = response.data;
+        const { OG_NAME, OG_NICK } = response.data;
         this.setState({
           status: 'success',
           OG_NAME,
+          OG_NICK,
         });
       }).catch(err => {
         console.log(err);
@@ -67,17 +71,17 @@ export class Score extends React.Component {
             loading: false,
             showAlert: true,
           });
-        }, 4000);
+        }, 3000);
       });
     });
   }
 
   render() {
-    const { OG_NAME, value, loading, status, showAlert } = this.state;
+    const { OG_NAME, OG_NICK, value, loading, status, showAlert } = this.state;
     return (
       <React.Fragment>
-        <HomeTopbar/>
-        <Row className="default-bg full-height row-center margin-bottom">
+        <Row className="bg-batik full-height row-center exodia margin-bottom">
+          <ExodiaTopBar/>
           <Col xs={12} md={8} className={"col-center"}>
             <h1 className="section-title title">Exodia Scores</h1>
             <form onSubmit={this.handleSubmit}>
@@ -91,32 +95,32 @@ export class Score extends React.Component {
                 onChange={this.handleChange}
               />
               <FormGroup>
-                <Button bsStyle="primary" block type="submit" disabled={loading}>
+                <ExodiaThemedButton block type="submit" disabled={loading}>
                   {loading ? (<Loading text={"Submitting..."}/>) : 'Submit'}
-                </Button>
+                </ExodiaThemedButton>
               </FormGroup>
 
               {status === 'success' ? (
                 <AlertDismissable bsStyle="success" show={showAlert} onDismiss={this.dismissAlert}>
                   Scores are successfully fetched!
                 </AlertDismissable>
-              ):(
-                <AlertDismissable show={showAlert} onDismiss={this.dismissAlert}>
-                  Error!
-                </AlertDismissable>
-              )
+              ) : (
+                 <AlertDismissable show={showAlert} onDismiss={this.dismissAlert}>
+                   Error!
+                 </AlertDismissable>
+               )
               }
             </form>
             {OG_NAME ? (
               <div>
-                <h2 className="section-title title">Outdoor and Night Games</h2>
-                <Day1_table OG_NAME={OG_NAME}/>
+                <h1>{OG_NICK}</h1>
+                <Day1_table OG_NAME={OG_NAME} />
 
                 <h2 className="section-title title">Beach Games</h2>
-                <Day2_table OG_NAME={OG_NAME}/>
+                <Day2_table OG_NAME={OG_NAME} />
 
                 <h2 className="section-title title">Field Games</h2>
-                <Day3_table OG_NAME={OG_NAME}/>
+                <Day3_table OG_NAME={OG_NAME} />
               </div>
             ) : ("")}
           </Col>
